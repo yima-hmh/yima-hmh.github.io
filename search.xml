@@ -1,58 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Linux连接数据库的问题</title>
-    <url>/2023/01/14/Linux%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h3 id="远程连接linux服务器的坑"><a href="#远程连接linux服务器的坑" class="headerlink" title="远程连接linux服务器的坑"></a>远程连接linux服务器的坑</h3><ul>
-<li>需要linux路由模式是桥接模式</li>
-</ul>
-<span id="more"></span>
-
-<h3 id="想不明白的问题及其猜想"><a href="#想不明白的问题及其猜想" class="headerlink" title="想不明白的问题及其猜想"></a>想不明白的问题及其猜想</h3><ul>
-<li>之所以能连接本地虚拟机，是因为本来数据库就是放在内网之中的，通过NAT协议解析或者添加VPS服务器来访问。如果要直接连接数据库，那么就必须和数据库在同一个内网之中。</li>
-<li>那个时候和凯子能连到，乃是因为我们两个人同处与同一个局域网之下，但是分给彼此的内网IP地址又是各不相同的。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用Hexo布置个人网页的一些问题</title>
-    <url>/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="/.io//image-20230701202125916.png" alt="image-20230701202125916"></p>
-<ul>
-<li><p>配置URL</p>
-<p><img src="/.io//image-20230701202211848.png" alt="image-20230701202211848"></p>
-</li>
-<li><p>当初那个图片工具的配置就应该一动不动。</p>
-</li>
-<li><p>我想构造的是一个分类文件夹里面放相同的文件，然后图片存进去img目录中，以文件名建立一个文件夹存。像这样</p>
-<p><img src="/.io//image-20230710174450967.png" alt="image-20230710174450967"></p>
-<h4 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h4><ol>
-<li><p>修改markdown内的图片设置,设置如下<img src="/.io//image-20230710174721892.png" alt="image-20230710174721892"></p>
-</li>
-<li><p>此时插进去图片都将变成相对路径只有文件名的样子,需要添加一个typora-root-url,去修改骨架文件夹下的(scaffolds)_post模板文件<img src="/.io//image-20230710174815323.png" alt="image-20230710174815323"></p>
-</li>
-<li><p>修改为如下<img src="/.io//image-20230710175000041.png" alt="image-20230710175000041"></p>
-</li>
-<li><p>然后就在typora上可见,部署到网页中也可见啦。没想到本地的话，url不会起作用，所以-s命令看不到照片，</p>
-</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具部署</category>
-      </categories>
-      <tags>
-        <tag>工具部署</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>selenium爬取动态网页</title>
     <url>/2023/06/30/selenium%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5/</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
@@ -90,5 +38,57 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Linux连接数据库的问题</title>
+    <url>/2023/01/14/Linux%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h3 id="远程连接linux服务器的坑"><a href="#远程连接linux服务器的坑" class="headerlink" title="远程连接linux服务器的坑"></a>远程连接linux服务器的坑</h3><ul>
+<li>需要linux路由模式是桥接模式</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="想不明白的问题及其猜想"><a href="#想不明白的问题及其猜想" class="headerlink" title="想不明白的问题及其猜想"></a>想不明白的问题及其猜想</h3><ul>
+<li>之所以能连接本地虚拟机，是因为本来数据库就是放在内网之中的，通过NAT协议解析或者添加VPS服务器来访问。如果要直接连接数据库，那么就必须和数据库在同一个内网之中。</li>
+<li>那个时候和凯子能连到，乃是因为我们两个人同处与同一个局域网之下，但是分给彼此的内网IP地址又是各不相同的。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Hexo布置个人网页的一些问题</title>
+    <url>/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p><img src="/image-20230701202125916.png" alt="image-20230701202125916"></p>
+<ul>
+<li><p>配置URL</p>
+<p><img src="/image-20230701202211848.png" alt="image-20230701202211848"></p>
+</li>
+<li><p>当初那个图片工具的配置就应该一动不动。</p>
+</li>
+<li><p>我想构造的是一个分类文件夹里面放相同的文件，然后图片存进去img目录中，以文件名建立一个文件夹存。像这样</p>
+<p><img src="/image-20230710174450967.png" alt="image-20230710174450967"></p>
+<h4 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h4><ol>
+<li><p>修改markdown内的图片设置,设置如下<img src="/image-20230710174721892.png" alt="image-20230710174721892"></p>
+</li>
+<li><p>此时插进去图片都将变成相对路径只有文件名的样子,需要添加一个typora-root-url,去修改骨架文件夹下的(scaffolds)_post模板文件<img src="/image-20230710174815323.png" alt="image-20230710174815323"></p>
+</li>
+<li><p>修改为如下<img src="/image-20230710175000041.png" alt="image-20230710175000041"></p>
+</li>
+<li><p>然后就在typora上可见,部署到网页中也可见啦。没想到本地的话，url不会起作用，所以-s命令看不到照片，</p>
+</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具部署</category>
+      </categories>
+      <tags>
+        <tag>工具部署</tag>
+      </tags>
   </entry>
 </search>
