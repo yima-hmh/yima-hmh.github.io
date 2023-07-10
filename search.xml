@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Linux连接数据库的问题</title>
-    <url>/2023/01/14/Linux%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h3 id="远程连接linux服务器的坑"><a href="#远程连接linux服务器的坑" class="headerlink" title="远程连接linux服务器的坑"></a>远程连接linux服务器的坑</h3><ul>
-<li>需要linux路由模式是桥接模式</li>
-</ul>
-<span id="more"></span>
-
-<h3 id="想不明白的问题及其猜想"><a href="#想不明白的问题及其猜想" class="headerlink" title="想不明白的问题及其猜想"></a>想不明白的问题及其猜想</h3><ul>
-<li>之所以能连接本地虚拟机，是因为本来数据库就是放在内网之中的，通过NAT协议解析或者添加VPS服务器来访问。如果要直接连接数据库，那么就必须和数据库在同一个内网之中。</li>
-<li>那个时候和凯子能连到，乃是因为我们两个人同处与同一个局域网之下，但是分给彼此的内网IP地址又是各不相同的。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>selenium爬取动态网页</title>
     <url>/2023/06/30/selenium%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5/</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
@@ -39,6 +19,26 @@
       <tags>
         <tag>python</tag>
         <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux连接数据库的问题</title>
+    <url>/2023/01/14/Linux%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h3 id="远程连接linux服务器的坑"><a href="#远程连接linux服务器的坑" class="headerlink" title="远程连接linux服务器的坑"></a>远程连接linux服务器的坑</h3><ul>
+<li>需要linux路由模式是桥接模式</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="想不明白的问题及其猜想"><a href="#想不明白的问题及其猜想" class="headerlink" title="想不明白的问题及其猜想"></a>想不明白的问题及其猜想</h3><ul>
+<li>之所以能连接本地虚拟机，是因为本来数据库就是放在内网之中的，通过NAT协议解析或者添加VPS服务器来访问。如果要直接连接数据库，那么就必须和数据库在同一个内网之中。</li>
+<li>那个时候和凯子能连到，乃是因为我们两个人同处与同一个局域网之下，但是分给彼此的内网IP地址又是各不相同的。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
