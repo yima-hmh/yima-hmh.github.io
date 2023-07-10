@@ -67,6 +67,21 @@
 <li><p>配置URL</p>
 <p><img src="/.io//image-20230701202211848.png" alt="image-20230701202211848"></p>
 </li>
+<li><p>当初那个图片工具的配置就应该一动不动。</p>
+</li>
+<li><p>我想构造的是一个分类文件夹里面放相同的文件，然后图片存进去img目录中，以文件名建立一个文件夹存。像这样</p>
+<p><img src="/.io//image-20230710174450967.png" alt="image-20230710174450967"></p>
+<h4 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h4><ol>
+<li><p>修改markdown内的图片设置,设置如下<img src="/.io//image-20230710174721892.png" alt="image-20230710174721892"></p>
+</li>
+<li><p>此时插进去图片都将变成相对路径只有文件名的样子,需要添加一个typora-root-url,去修改骨架文件夹下的(scaffolds)_post模板文件<img src="/.io//image-20230710174815323.png" alt="image-20230710174815323"></p>
+</li>
+<li><p>修改为如下<img src="/.io//image-20230710175000041.png" alt="image-20230710175000041"></p>
+</li>
+<li><p>然后就在typora上可见,部署到网页中也可见啦。</p>
+</li>
+</ol>
+</li>
 </ul>
 ]]></content>
       <categories>
