@@ -43,7 +43,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2023/07/09/hello-world/</url>
+    <url>/2023/02/01/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -78,7 +78,7 @@
 </li>
 <li><p>修改为如下<img src="/.io//image-20230710175000041.png" alt="image-20230710175000041"></p>
 </li>
-<li><p>然后就在typora上可见,部署到网页中也可见啦。</p>
+<li><p>然后就在typora上可见,部署到网页中也可见啦。没想到本地的话，url不会起作用，所以-s命令看不到照片，</p>
 </li>
 </ol>
 </li>
