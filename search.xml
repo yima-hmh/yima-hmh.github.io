@@ -1,45 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/01/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>selenium爬取动态网页</title>
-    <url>/2023/06/30/selenium%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5/</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
-<li>什么是动态网页?<br>使用异步加载。现在动态网页的数量大于静态网页的数量</li>
-<li>静态网页的爬虫<br>scrapy，beautiful-soup，bs4</li>
-<li>为什么用selenium？<br> a. selenium是网页浏览器的模拟器，通常用来做网页测试-八爪鱼<br> b. 优点：<br> ⅰ. 简单直接：直接模拟用户的行为，用户加载网页获取网页源码<br> ⅱ. 直接和scrapy结合（middlewire中间件）<br> ⅲ. 支持多种浏览器驱动器web-driver：phantomjs（无头，指不用打开，直接访问代码），chorme（le，firefox）<br> c. 用来做爬虫的缺点：<br> ⅰ. 容易被识别<br> ⅱ. 容易崩溃，网速，网站的稳定性都会崩掉<br> ⅲ. 不易做成可执行程序（打包成exe可执行文件，可以直接打开，不用对方安装python或者安装python的各种依赖库。使用pyinstaller）<br> 如何使用</li>
-<li>安装浏览器和驱动器以及对应版本的驱动器</li>
-<li>pip安装selenium</li>
-<li>打开&#x2F;关闭浏览器</li>
-</ol>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux连接数据库的问题</title>
     <url>/2023/01/14/Linux%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h3 id="远程连接linux服务器的坑"><a href="#远程连接linux服务器的坑" class="headerlink" title="远程连接linux服务器的坑"></a>远程连接linux服务器的坑</h3><ul>
@@ -85,10 +46,49 @@
 </ul>
 ]]></content>
       <categories>
-        <category>spring</category>
+        <category>工具部署</category>
       </categories>
       <tags>
-        <tag>spring</tag>
+        <tag>工具部署</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>selenium爬取动态网页</title>
+    <url>/2023/06/30/selenium%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5/</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
+<li>什么是动态网页?<br>使用异步加载。现在动态网页的数量大于静态网页的数量</li>
+<li>静态网页的爬虫<br>scrapy，beautiful-soup，bs4</li>
+<li>为什么用selenium？<br> a. selenium是网页浏览器的模拟器，通常用来做网页测试-八爪鱼<br> b. 优点：<br> ⅰ. 简单直接：直接模拟用户的行为，用户加载网页获取网页源码<br> ⅱ. 直接和scrapy结合（middlewire中间件）<br> ⅲ. 支持多种浏览器驱动器web-driver：phantomjs（无头，指不用打开，直接访问代码），chorme（le，firefox）<br> c. 用来做爬虫的缺点：<br> ⅰ. 容易被识别<br> ⅱ. 容易崩溃，网速，网站的稳定性都会崩掉<br> ⅲ. 不易做成可执行程序（打包成exe可执行文件，可以直接打开，不用对方安装python或者安装python的各种依赖库。使用pyinstaller）<br> 如何使用</li>
+<li>安装浏览器和驱动器以及对应版本的驱动器</li>
+<li>pip安装selenium</li>
+<li>打开&#x2F;关闭浏览器</li>
+</ol>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/01/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
