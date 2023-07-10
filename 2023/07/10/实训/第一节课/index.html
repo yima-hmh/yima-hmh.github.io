@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yima-hmh.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="网络工程实训第一节课,有所收获的是kali的一些功能使用,上传渗透攻击,端口分析(踩点),主要是给了我一个进步的方向,以及发现网络攻防其实也没有很高大上（俗称给了勇气去研究）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo布置个人网页的一些问题">
+<meta property="og:url" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/index.html">
+<meta property="og:site_name" content="Yima">
+<meta property="og:description" content="网络工程实训第一节课,有所收获的是kali的一些功能使用,上传渗透攻击,端口分析(踩点),主要是给了我一个进步的方向,以及发现网络攻防其实也没有很高大上（俗称给了勇气去研究）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710102359531.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710102532407.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710103727921.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710103849128.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710112503534.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710143348548.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144456315.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144756866.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145410694.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150042770.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150512970.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150820527.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710151140553.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710151429814.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710154335851.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710152919368.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144938110.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145102613.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144152991.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144237525.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144350854.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155243374.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155633036.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160136642.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160508616.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160500692.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160716273.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160646404.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161248115.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161202125.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162552949.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161805469.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161914015.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162036339.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162142335.png">
+<meta property="og:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162238709.png">
+<meta property="article:published_time" content="2023-07-10T14:14:06.000Z">
+<meta property="article:modified_time" content="2023-07-10T15:54:06.647Z">
+<meta property="article:author" content="Yima Zheng">
+<meta property="article:tag" content="网络工程实训">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710102359531.png">
+
+<link rel="canonical" href="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>使用Hexo布置个人网页的一些问题 | Yima</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Yima</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">剑未佩妥，出门已是江湖；酒尚余温，入口不识乾坤。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yima-hmh.github.io/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yima Zheng">
+      <meta itemprop="description" content="记录一些成长">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yima">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用Hexo布置个人网页的一些问题
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-10 22:14:06 / 修改时间：23:54:06" itemprop="dateCreated datePublished" datetime="2023-07-10T22:14:06+08:00">2023-07-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5/" itemprop="url" rel="index"><span itemprop="name">实践</span></a>
+                </span>
+            </span>
+
+          
+
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+            <div class="post-description">网络工程实训第一节课,有所收获的是kali的一些功能使用,上传渗透攻击,端口分析(踩点),主要是给了我一个进步的方向,以及发现网络攻防其实也没有很高大上（俗称给了勇气去研究）</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="实训课第一节"><a href="#实训课第一节" class="headerlink" title="实训课第一节"></a>实训课第一节</h3><h4 id="CISAW认证"><a href="#CISAW认证" class="headerlink" title="CISAW认证"></a>CISAW认证</h4><p>大学预备级</p>
+<h4 id="网络攻防两个角度"><a href="#网络攻防两个角度" class="headerlink" title="网络攻防两个角度"></a>网络攻防两个角度</h4><p>第一个就是攻击者角度</p>
+<p>第二个就是被攻击者角度</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710102359531.png" alt="image-20230710102359531"></p>
+<p>看的内容</p>
+<ul>
+<li><p>看数据内容<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710102532407.png" alt="image-20230710102532407"></p>
+</li>
+<li><p>看到SSO,single sign on单点登录功能,只要黑客方能模仿被认证的IP地址,再去访问某个地址就不需要登录直接访问数据库。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710103727921.png" alt="image-20230710103727921"></p>
+</li>
+<li><p>黑客工具<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710103849128.png" alt="image-20230710103849128"></p>
+<ul>
+<li>导入肉鸡，在同一个宽带之下，就可以获取信息</li>
+<li>积分配合短信验证码，伪造基站收验证码</li>
+</ul>
+</li>
+</ul>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><h5 id="护网"><a href="#护网" class="headerlink" title="护网"></a>护网</h5><p>红黑对抗</p>
+<p>先踩点，获得丰厚的信息。</p>
+<p>单位对外的系统</p>
+<h4 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h4><p>在防火墙对外端口上，能不开就不开，做到最小化。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710112503534.png" alt="image-20230710112503534"></p>
+<p>WEB端口工具</p>
+<ul>
+<li>sql注入</li>
+</ul>
+<h4 id="实操"><a href="#实操" class="headerlink" title="实操"></a>实操</h4><h5 id="对web服务器进行一次攻防演练"><a href="#对web服务器进行一次攻防演练" class="headerlink" title="对web服务器进行一次攻防演练"></a>对web服务器进行一次攻防演练</h5><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710143348548.png" alt="image-20230710143348548"></p>
+<ul>
+<li><p>首先是踩点,收集信息<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144456315.png" alt="image-20230710144456315"></p>
+<ul>
+<li><p>确认好域名</p>
+</li>
+<li><p>端口开放情况，也就是<strong>端口扫描</strong><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144756866.png" alt="image-20230710144756866"></p>
+<ul>
+<li><p>模拟环境。同一个局域网下，xp远程连接到kali，扫描ubuntu</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145410694.png" alt="image-20230710145410694"></p>
+</li>
+<li><p>先ping一下看看能否正常连接</p>
+</li>
+<li><p>nmap -sT -sV  -P0 -O -n 202.1.160.100，使用这些工具要建立自己的工作表，常用的记住，其它的再去查。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150042770.png" alt="image-20230710150042770"></p>
+</li>
+<li><p>得到端口分析结果<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150512970.png" alt="image-20230710150512970"></p>
+</li>
+<li><p>端口扫描防范<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150820527.png" alt="image-20230710150820527"></p>
+<ul>
+<li><p>防范过程如下，使用iptables</p>
+<ul>
+<li><p>首先登进去，然后查看一下规则<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710151140553.png" alt="image-20230710151140553"></p>
+</li>
+<li><p>添加规则，首先封禁下icmp访问，iptables会先执行上面的规则，下面的若冲突会直接放弃。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710151429814.png" alt="image-20230710151429814"></p>
+</li>
+<li><p>只要能穿过企业布置在外面的防火墙，去拿到内网的一台服务器，就能将所有服务器的内容拿到手。因为内网的服务器一般比较脆弱，因为业务需要。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>netcat（NC工具）做指<strong>纹检测攻击实验</strong>。瑞士军刀写这个的是超级天才。一般要指定端口</p>
+<ul>
+<li>指纹识别理论，所以说知道服务器的版本是很重要的<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710154335851.png" alt="image-20230710154335851"></li>
+<li>burp suiteWEB渗透里面最常用的工具，模拟发包<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710152919368.png" alt="image-20230710152919368"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>端口上运行着的服务,服务的版本,每个版本都有弱点,不是最新版非常有可能有漏洞<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144938110.png" alt="image-20230710144938110"></p>
+<p>一般使用半连接扫描，回复RST扫描<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145102613.png" alt="image-20230710145102613"></p>
+<p>使用namp工具，扫描器之王。</p>
+</li>
+<li><p>拿到真实的IP地址，有时候是反向代理。</p>
+</li>
+<li><p>通过域名寻找ip，直接通过IP地址无法用域名访问</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144152991.png" alt="image-20230710144152991"></p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144237525.png"></p>
+<p>freebus看各种安全漏洞</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144350854.png" alt="image-20230710144350854"></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>​	</p>
+<ul>
+<li><p>上传漏洞利用分析</p>
+<ul>
+<li><p>存在就是高危<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155243374.png" alt="image-20230710155243374"></p>
+</li>
+<li><p>解决方式</p>
+<ul>
+<li>在这个目录的都不能执行</li>
+<li>严格过滤，不允许上传错误的东西</li>
+<li>将对外开放的权限设置的极低</li>
+</ul>
+</li>
+<li><p>存在的条件<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155633036.png" alt="image-20230710155633036"></p>
+</li>
+<li><p>模拟</p>
+<ul>
+<li><p>将某文件夹里面的文件用text执行这个功能取消<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160136642.png" alt="image-20230710160136642"></p>
+</li>
+<li><p>暴力破解后台，登进去<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160508616.png" alt="image-20230710160508616"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160500692.png" alt="image-20230710160500692"></p>
+</li>
+<li><p>上传之后，就在后台登进去。最好给木马设置密码，不要给别人做了嫁衣。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160716273.png" alt="image-20230710160716273"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160646404.png" alt="image-20230710160646404"></p>
+</li>
+<li><p>搜索配置文件，看看有没有密码写明的数据库。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161248115.png" alt="image-20230710161248115">这里表示直接网站和数据库在同一个机器上面<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161202125.png" alt="image-20230710161202125"></p>
+<p>还可以远程代码植入</p>
+</li>
+<li><p>接着上传脚本提权，提高用户权力来删库跑路。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162552949.png" alt="image-20230710162552949"></p>
+</li>
+</ul>
+</li>
+<li><p>上传漏洞监测，开源的企业不会用。无法追责</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161805469.png" alt="image-20230710161805469"></p>
+<ul>
+<li>不给用户上传php文件。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161914015.png" alt="image-20230710161914015"><ul>
+<li>编写shell文件检查脚本<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162036339.png" alt="image-20230710162036339"></li>
+<li>加入计划任务，每个星号分，小时，日，月，周<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162142335.png" alt="image-20230710162142335">crontab -e 用shell脚本执行一遍。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162238709.png" alt="image-20230710162238709"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>系统提权分析</p>
+</li>
+<li><p>后门植入分析</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD/" rel="tag"># 网络工程实训</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" rel="prev" title="使用Hexo布置个人网页的一些问题">
+      <i class="fa fa-chevron-left"></i> 使用Hexo布置个人网页的一些问题
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E8%AE%AD%E8%AF%BE%E7%AC%AC%E4%B8%80%E8%8A%82"><span class="nav-number">1.</span> <span class="nav-text">实训课第一节</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CISAW%E8%AE%A4%E8%AF%81"><span class="nav-number">1.1.</span> <span class="nav-text">CISAW认证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E4%B8%A4%E4%B8%AA%E8%A7%92%E5%BA%A6"><span class="nav-number">1.2.</span> <span class="nav-text">网络攻防两个角度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A1%88%E4%BE%8B"><span class="nav-number">1.3.</span> <span class="nav-text">案例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8A%A4%E7%BD%91"><span class="nav-number">1.3.1.</span> <span class="nav-text">护网</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%8F%E9%AA%8C"><span class="nav-number">1.4.</span> <span class="nav-text">经验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E6%93%8D"><span class="nav-number">1.5.</span> <span class="nav-text">实操</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AF%B9web%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9B%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%94%BB%E9%98%B2%E6%BC%94%E7%BB%83"><span class="nav-number">1.5.1.</span> <span class="nav-text">对web服务器进行一次攻防演练</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yima Zheng</p>
+  <div class="site-description" itemprop="description">记录一些成长</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yima Zheng</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">5k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        我的第<span id="busuanzi_value_site_uv"></span>位朋友
+      </span>
+    <span class="post-meta-divider">|</span>
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        经过<span id="busuanzi_value_site_pv"></span>次回眸与你相遇
+      </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

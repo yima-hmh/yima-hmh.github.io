@@ -58,7 +58,17 @@
 </li>
 <li><p>修改为如下<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710175000041.png" alt="image-20230710175000041"></p>
 </li>
-<li><p>然后就在typora上可见,部署到网页中也可见啦。没想到本地的话，url不会起作用，所以-s命令看不到照片，</p>
+<li><p>然后就在typora上可见,部署到网页中也可见啦。没想到本地的话，url不会起作用，所以-s命令看不到照片。然后我就然后这个插件好像无法使用部署耳机目录，会出错，暂时使用这种分类方式了,寻找了一天修改hexo-asset-image这个包的方式无果,就这样吧。<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232400529.png" alt="image-20230710232400529"></p>
+</li>
+<li><p>修改回配置<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232525256.png" alt="image-20230710232525256"></p>
+</li>
+<li><p>成功部署</p>
+<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232643369.png" alt="image-20230710232556693"></p>
+<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232707053.png" alt="image-20230710232707053"></p>
+<p>配上hexo-asset-image里的index.js的代码,就是修改这个修改了一天</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">&#x27;cheerio&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这是个获取某个字符或者字符串片段在整个字符串种的起始位置</span></span><br><span class="line"><span class="comment">//split(a,b):根据a进行字符串的划分,结果为大小为b的字符串数组,a不会出现在任何数组元素的部分而返回.</span></span><br><span class="line"><span class="comment">//join(m):将字符串数组使用m来连接而返回比如[&#x27;a&#x27;,&#x27;b&#x27;].join(&#x27;-&#x27;)=&#x27;a-b&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getPosition</span>(<span class="params">str, m, i</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> str.<span class="title function_">split</span>(m, i).<span class="title function_">join</span>(m).<span class="property">length</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_post_render&#x27;</span>, <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.<span class="property">config</span>;</span><br><span class="line">  <span class="keyword">if</span>(config.<span class="property">post_asset_folder</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> link = data.<span class="property">permalink</span>;</span><br><span class="line">    <span class="keyword">var</span> beginPos = <span class="title function_">getPosition</span>(link, <span class="string">&#x27;/&#x27;</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> appendLink = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="comment">// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span></span><br><span class="line">    <span class="comment">// if not with index.html endpos = link.lastIndexOf(&#x27;.&#x27;) + 1 support hexo-abbrlink</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="regexp">/.*\/index\.html$/</span>.<span class="title function_">test</span>(link)) &#123;</span><br><span class="line">      <span class="comment">// when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span></span><br><span class="line">      <span class="comment">// image in xxtitle/ will go to xxtitle/index/</span></span><br><span class="line">      appendLink = <span class="string">&#x27;index/&#x27;</span>;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.<span class="property">length</span>-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    link = link.<span class="title function_">substring</span>(beginPos, endPos) + <span class="string">&#x27;/&#x27;</span> + appendLink;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">&#x27;excerpt&#x27;</span>, <span class="string">&#x27;more&#x27;</span>, <span class="string">&#x27;content&#x27;</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.<span class="property">length</span>; i++)&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.<span class="title function_">load</span>(data[key], &#123;</span><br><span class="line">        <span class="attr">ignoreWhitespace</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">xmlMode</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">lowerCaseTags</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">decodeEntities</span>: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">&#x27;img&#x27;</span>).<span class="title function_">each</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">if</span> ($(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>))&#123;</span><br><span class="line">          <span class="comment">// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span></span><br><span class="line">          <span class="keyword">var</span> src = $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>).<span class="title function_">replace</span>(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">          <span class="keyword">if</span>(!(<span class="regexp">/http[s]*.*|\/\/.*/</span>.<span class="title function_">test</span>(src)</span><br><span class="line">            || <span class="regexp">/^\s+\//</span>.<span class="title function_">test</span>(src)</span><br><span class="line">            || <span class="regexp">/^\s*\/uploads|images\//</span>.<span class="title function_">test</span>(src))) &#123;</span><br><span class="line">            <span class="comment">// For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span></span><br><span class="line">            <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">            <span class="keyword">var</span> linkArray = link.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">var</span> srcArray = src.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span> &amp;&amp; elem != <span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">if</span>(srcArray.<span class="property">length</span> &gt; <span class="number">1</span>)</span><br><span class="line">            srcArray.<span class="title function_">shift</span>();</span><br><span class="line">            src = srcArray.<span class="title function_">join</span>(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line"></span><br><span class="line">            $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>, config.<span class="property">root</span> + link + src);</span><br><span class="line">            <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;update link as:--&gt;&quot;</span>+config.<span class="property">root</span> + link + src);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;no src attr, skipped...&quot;</span>);</span><br><span class="line">          <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>($(<span class="variable language_">this</span>));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.<span class="title function_">html</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>靠北,布置个博客,上传个图片可真难,真得好好学下英语.认真看文档才行，总是想着吃别人嚼碎了的东西可不行。。。。</p>
 </li>
 </ol>
 </li>
@@ -89,6 +99,146 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Hexo布置个人网页的一些问题</title>
+    <url>/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/</url>
+    <content><![CDATA[<h3 id="实训课第一节"><a href="#实训课第一节" class="headerlink" title="实训课第一节"></a>实训课第一节</h3><h4 id="CISAW认证"><a href="#CISAW认证" class="headerlink" title="CISAW认证"></a>CISAW认证</h4><p>大学预备级</p>
+<h4 id="网络攻防两个角度"><a href="#网络攻防两个角度" class="headerlink" title="网络攻防两个角度"></a>网络攻防两个角度</h4><p>第一个就是攻击者角度</p>
+<p>第二个就是被攻击者角度</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710102359531.png" alt="image-20230710102359531"></p>
+<p>看的内容</p>
+<ul>
+<li><p>看数据内容<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710102532407.png" alt="image-20230710102532407"></p>
+</li>
+<li><p>看到SSO,single sign on单点登录功能,只要黑客方能模仿被认证的IP地址,再去访问某个地址就不需要登录直接访问数据库。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710103727921.png" alt="image-20230710103727921"></p>
+</li>
+<li><p>黑客工具<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710103849128.png" alt="image-20230710103849128"></p>
+<ul>
+<li>导入肉鸡，在同一个宽带之下，就可以获取信息</li>
+<li>积分配合短信验证码，伪造基站收验证码</li>
+</ul>
+</li>
+</ul>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><h5 id="护网"><a href="#护网" class="headerlink" title="护网"></a>护网</h5><p>红黑对抗</p>
+<p>先踩点，获得丰厚的信息。</p>
+<p>单位对外的系统</p>
+<h4 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h4><p>在防火墙对外端口上，能不开就不开，做到最小化。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710112503534.png" alt="image-20230710112503534"></p>
+<p>WEB端口工具</p>
+<ul>
+<li>sql注入</li>
+</ul>
+<h4 id="实操"><a href="#实操" class="headerlink" title="实操"></a>实操</h4><h5 id="对web服务器进行一次攻防演练"><a href="#对web服务器进行一次攻防演练" class="headerlink" title="对web服务器进行一次攻防演练"></a>对web服务器进行一次攻防演练</h5><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710143348548.png" alt="image-20230710143348548"></p>
+<ul>
+<li><p>首先是踩点,收集信息<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144456315.png" alt="image-20230710144456315"></p>
+<ul>
+<li><p>确认好域名</p>
+</li>
+<li><p>端口开放情况，也就是<strong>端口扫描</strong><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144756866.png" alt="image-20230710144756866"></p>
+<ul>
+<li><p>模拟环境。同一个局域网下，xp远程连接到kali，扫描ubuntu</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145410694.png" alt="image-20230710145410694"></p>
+</li>
+<li><p>先ping一下看看能否正常连接</p>
+</li>
+<li><p>nmap -sT -sV  -P0 -O -n 202.1.160.100，使用这些工具要建立自己的工作表，常用的记住，其它的再去查。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150042770.png" alt="image-20230710150042770"></p>
+</li>
+<li><p>得到端口分析结果<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150512970.png" alt="image-20230710150512970"></p>
+</li>
+<li><p>端口扫描防范<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150820527.png" alt="image-20230710150820527"></p>
+<ul>
+<li><p>防范过程如下，使用iptables</p>
+<ul>
+<li><p>首先登进去，然后查看一下规则<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710151140553.png" alt="image-20230710151140553"></p>
+</li>
+<li><p>添加规则，首先封禁下icmp访问，iptables会先执行上面的规则，下面的若冲突会直接放弃。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710151429814.png" alt="image-20230710151429814"></p>
+</li>
+<li><p>只要能穿过企业布置在外面的防火墙，去拿到内网的一台服务器，就能将所有服务器的内容拿到手。因为内网的服务器一般比较脆弱，因为业务需要。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>netcat（NC工具）做指<strong>纹检测攻击实验</strong>。瑞士军刀写这个的是超级天才。一般要指定端口</p>
+<ul>
+<li>指纹识别理论，所以说知道服务器的版本是很重要的<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710154335851.png" alt="image-20230710154335851"></li>
+<li>burp suiteWEB渗透里面最常用的工具，模拟发包<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710152919368.png" alt="image-20230710152919368"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>端口上运行着的服务,服务的版本,每个版本都有弱点,不是最新版非常有可能有漏洞<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144938110.png" alt="image-20230710144938110"></p>
+<p>一般使用半连接扫描，回复RST扫描<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145102613.png" alt="image-20230710145102613"></p>
+<p>使用namp工具，扫描器之王。</p>
+</li>
+<li><p>拿到真实的IP地址，有时候是反向代理。</p>
+</li>
+<li><p>通过域名寻找ip，直接通过IP地址无法用域名访问</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144152991.png" alt="image-20230710144152991"></p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144237525.png"></p>
+<p>freebus看各种安全漏洞</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144350854.png" alt="image-20230710144350854"></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>​	</p>
+<ul>
+<li><p>上传漏洞利用分析</p>
+<ul>
+<li><p>存在就是高危<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155243374.png" alt="image-20230710155243374"></p>
+</li>
+<li><p>解决方式</p>
+<ul>
+<li>在这个目录的都不能执行</li>
+<li>严格过滤，不允许上传错误的东西</li>
+<li>将对外开放的权限设置的极低</li>
+</ul>
+</li>
+<li><p>存在的条件<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155633036.png" alt="image-20230710155633036"></p>
+</li>
+<li><p>模拟</p>
+<ul>
+<li><p>将某文件夹里面的文件用text执行这个功能取消<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160136642.png" alt="image-20230710160136642"></p>
+</li>
+<li><p>暴力破解后台，登进去<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160508616.png" alt="image-20230710160508616"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160500692.png" alt="image-20230710160500692"></p>
+</li>
+<li><p>上传之后，就在后台登进去。最好给木马设置密码，不要给别人做了嫁衣。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160716273.png" alt="image-20230710160716273"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160646404.png" alt="image-20230710160646404"></p>
+</li>
+<li><p>搜索配置文件，看看有没有密码写明的数据库。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161248115.png" alt="image-20230710161248115">这里表示直接网站和数据库在同一个机器上面<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161202125.png" alt="image-20230710161202125"></p>
+<p>还可以远程代码植入</p>
+</li>
+<li><p>接着上传脚本提权，提高用户权力来删库跑路。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162552949.png" alt="image-20230710162552949"></p>
+</li>
+</ul>
+</li>
+<li><p>上传漏洞监测，开源的企业不会用。无法追责</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161805469.png" alt="image-20230710161805469"></p>
+<ul>
+<li>不给用户上传php文件。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161914015.png" alt="image-20230710161914015"><ul>
+<li>编写shell文件检查脚本<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162036339.png" alt="image-20230710162036339"></li>
+<li>加入计划任务，每个星号分，小时，日，月，周<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162142335.png" alt="image-20230710162142335">crontab -e 用shell脚本执行一遍。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162238709.png" alt="image-20230710162238709"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>系统提权分析</p>
+</li>
+<li><p>后门植入分析</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>实践</category>
+      </categories>
+      <tags>
+        <tag>网络工程实训</tag>
       </tags>
   </entry>
 </search>
