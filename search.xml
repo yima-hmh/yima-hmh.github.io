@@ -291,14 +291,30 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>leetcode每日一题</title>
     <url>/2023/07/11/leetcode/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>算法</tag>
+        <tag>leetcode</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>正则表达式</title>
     <url>/2023/07/11/python/%E7%88%AC%E8%99%AB/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
   </entry>
   <entry>
     <title>selenium爬取动态网页</title>
