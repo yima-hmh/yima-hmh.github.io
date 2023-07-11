@@ -269,6 +269,19 @@
 </ul>
 <h4 id="额外查的老师上课装逼不讲明白的名词解释"><a href="#额外查的老师上课装逼不讲明白的名词解释" class="headerlink" title="额外查的老师上课装逼不讲明白的名词解释"></a>额外查的老师上课装逼不讲明白的名词解释</h4><hr>
 <h5 id="SSO：单点登录系统"><a href="#SSO：单点登录系统" class="headerlink" title="SSO：单点登录系统"></a>SSO：单点登录系统</h5><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711003957630.png" alt="image-20230711003957630"></p>
+<p><a href="https://zhuanlan.zhihu.com/p/66037342">什么是单点登录？</a></p>
+<h5 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h5><hr>
+<p>POC，proof of Concept，观点证明。漏洞报告中使用。一段说明或者一个攻击的样例。</p>
+<p>EXP。exploit，漏洞利用，对漏洞的利用说明，或者一个演示的漏洞攻击代码，让读者了解漏洞的机理以及利用的方法。</p>
+<p>VUL vulnerability。漏洞</p>
+<p>CVE common vulnerabilities exposure公共漏洞和暴露。广泛认同的信息安全漏洞会有一个公共的名称。在网址上搜CVE名称（相当于番号），就能找到。</p>
+<p>零日漏洞：初体验的漏洞发现。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711194740750.png" alt="image-20230711194740750"></p>
+<p><a href="https://blog.csdn.net/heikeyouyou/article/details/130766071?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-5-130766071-blog-88048847.235%5Ev38%5Epc_relevant_sort&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-5-130766071-blog-88048847.235%5Ev38%5Epc_relevant_sort&utm_relevant_index=10">漏洞案例</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/585377081">nmap教程</a></p>
+<p>DMZ 是英文“Demilitarized Zone”的缩写，中文名称为“隔离区”。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711195216391.png" alt="image-20230711195216391"></p>
+<p><a href="https://zhuanlan.zhihu.com/p/599801515">2分钟看懂DMZ区</a></p>
 ]]></content>
       <categories>
         <category>实践</category>
