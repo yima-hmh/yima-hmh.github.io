@@ -1,45 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>selenium爬取动态网页</title>
-    <url>/2023/06/30/selenium%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5/</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
-<li>什么是动态网页?<br>使用异步加载。现在动态网页的数量大于静态网页的数量</li>
-<li>静态网页的爬虫<br>scrapy，beautiful-soup，bs4</li>
-<li>为什么用selenium？<br> a. selenium是网页浏览器的模拟器，通常用来做网页测试-八爪鱼<br> b. 优点：<br> ⅰ. 简单直接：直接模拟用户的行为，用户加载网页获取网页源码<br> ⅱ. 直接和scrapy结合（middlewire中间件）<br> ⅲ. 支持多种浏览器驱动器web-driver：phantomjs（无头，指不用打开，直接访问代码），chorme（le，firefox）<br> c. 用来做爬虫的缺点：<br> ⅰ. 容易被识别<br> ⅱ. 容易崩溃，网速，网站的稳定性都会崩掉<br> ⅲ. 不易做成可执行程序（打包成exe可执行文件，可以直接打开，不用对方安装python或者安装python的各种依赖库。使用pyinstaller）<br> 如何使用</li>
-<li>安装浏览器和驱动器以及对应版本的驱动器</li>
-<li>pip安装selenium</li>
-<li>打开&#x2F;关闭浏览器</li>
-</ol>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/01/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>使用Hexo布置个人网页的一些问题</title>
     <url>/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230701202125916.png" alt="image-20230701202125916"></p>
@@ -82,26 +43,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux连接数据库的问题</title>
-    <url>/2023/01/14/Linux%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h3 id="远程连接linux服务器的坑"><a href="#远程连接linux服务器的坑" class="headerlink" title="远程连接linux服务器的坑"></a>远程连接linux服务器的坑</h3><ul>
-<li>需要linux路由模式是桥接模式</li>
-</ul>
-<span id="more"></span>
-
-<h3 id="想不明白的问题及其猜想"><a href="#想不明白的问题及其猜想" class="headerlink" title="想不明白的问题及其猜想"></a>想不明白的问题及其猜想</h3><ul>
-<li>之所以能连接本地虚拟机，是因为本来数据库就是放在内网之中的，通过NAT协议解析或者添加VPS服务器来访问。如果要直接连接数据库，那么就必须和数据库在同一个内网之中。</li>
-<li>那个时候和凯子能连到，乃是因为我们两个人同处与同一个局域网之下，但是分给彼此的内网IP地址又是各不相同的。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>引至kali，web攻防模拟上传渗透，端口扫描</title>
     <url>/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/</url>
     <content><![CDATA[<h3 id="实训课第一节"><a href="#实训课第一节" class="headerlink" title="实训课第一节"></a>实训课第一节</h3><h4 id="CISAW认证"><a href="#CISAW认证" class="headerlink" title="CISAW认证"></a>CISAW认证</h4><p>大学预备级</p>
@@ -130,14 +71,12 @@
 <ul>
 <li>sql注入</li>
 </ul>
-<h4 id="实操"><a href="#实操" class="headerlink" title="实操"></a>实操</h4><h5 id="对web服务器进行一次攻防演练"><a href="#对web服务器进行一次攻防演练" class="headerlink" title="对web服务器进行一次攻防演练"></a>对web服务器进行一次攻防演练</h5><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710143348548.png" alt="image-20230710143348548"></p>
-<ul>
-<li><p>首先是踩点,收集信息<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144456315.png" alt="image-20230710144456315"></p>
-<ul>
-<li><p>确认好域名</p>
-</li>
-<li><p>端口开放情况，也就是<strong>端口扫描</strong><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144756866.png" alt="image-20230710144756866"></p>
-<ul>
+<p>普遍的网络拓扑</p>
+<p>各种云最大的问题：从内往外出的流量几乎不会管。而只管从外面访问里面的流量管得特别严。有些云服务商特别垃圾，要不就全部拒绝，就只能对特定端口进行拒绝，而不能控制对特定端口进行访问。</p>
+<p>机房里面的设备还好。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711110022013.png" alt="image-20230711110022013"></p>
+<h3 id="实操-对web服务器进行一次攻防演练"><a href="#实操-对web服务器进行一次攻防演练" class="headerlink" title="实操:对web服务器进行一次攻防演练"></a>实操:对web服务器进行一次攻防演练</h3><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710143348548.png" alt="image-20230710143348548"></p>
+<h4 id="首先是踩点-收集信息"><a href="#首先是踩点-收集信息" class="headerlink" title="首先是踩点,收集信息"></a>首先是踩点,收集信息<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144456315.png" alt="image-20230710144456315"></h4><h5 id="确认好域名-进行端口扫描-查看端口开放情况"><a href="#确认好域名-进行端口扫描-查看端口开放情况" class="headerlink" title="确认好域名,进行端口扫描,查看端口开放情况"></a>确认好域名,进行端口扫描,查看端口开放情况<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144756866.png" alt="image-20230710144756866"></h5><ul>
 <li><p>模拟环境。同一个局域网下，xp远程连接到kali，扫描ubuntu</p>
 <p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145410694.png" alt="image-20230710145410694"></p>
 </li>
@@ -148,8 +87,8 @@
 </li>
 <li><p>得到端口分析结果<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150512970.png" alt="image-20230710150512970"></p>
 </li>
-<li><p>端口扫描防范<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150820527.png" alt="image-20230710150820527"></p>
-<ul>
+</ul>
+<h5 id="端口扫描防范"><a href="#端口扫描防范" class="headerlink" title="端口扫描防范"></a>端口扫描防范</h5><h4 id><a href="#" class="headerlink" title></a><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150820527.png" alt="image-20230710150820527"></h4><ul>
 <li><p>防范过程如下，使用iptables</p>
 <ul>
 <li><p>首先登进去，然后查看一下规则<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710151140553.png" alt="image-20230710151140553"></p>
@@ -162,17 +101,15 @@
 </ul>
 </li>
 </ul>
-</li>
+<h5 id="指纹识别攻击”吗”-没上太懂"><a href="#指纹识别攻击”吗”-没上太懂" class="headerlink" title="指纹识别攻击”吗”:没上太懂"></a>指纹识别攻击”吗”:没上太懂</h5><ul>
 <li><p>netcat（NC工具）做指<strong>纹检测攻击实验</strong>。瑞士军刀写这个的是超级天才。一般要指定端口</p>
 <ul>
 <li>指纹识别理论，所以说知道服务器的版本是很重要的<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710154335851.png" alt="image-20230710154335851"></li>
 <li>burp suiteWEB渗透里面最常用的工具，模拟发包<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710152919368.png" alt="image-20230710152919368"></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><p>端口上运行着的服务,服务的版本,每个版本都有弱点,不是最新版非常有可能有漏洞<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144938110.png" alt="image-20230710144938110"></p>
-<p>一般使用半连接扫描，回复RST扫描<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145102613.png" alt="image-20230710145102613"></p>
+<li><p>端口上运行着的服务,服务的版本,每个版本都有弱点,不是最新版非常有可能有漏洞,所以说要知道每个端口运行的软件的版本是很重要的,因为这和数据库种记录的每个版本的漏洞一对比,就可以实现高效的一个打击。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144938110.png" alt="image-20230710144938110"></p>
+<p><strong>一般使用半连接扫描，也就是回复RST扫描</strong><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145102613.png" alt="image-20230710145102613"></p>
 <p>使用namp工具，扫描器之王。</p>
 </li>
 <li><p>拿到真实的IP地址，有时候是反向代理。</p>
@@ -184,12 +121,14 @@
 <p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144350854.png" alt="image-20230710144350854"></p>
 </li>
 </ul>
+<p>​		HTTP指纹探测,nc工具获取banner信息</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711181911052.png" alt="image-20230711181911052"></p>
+<ul>
+<li><p>指纹识别工具:HTTprint来签名<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711182216322.png" alt="image-20230711182216322"></p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711182228407.png" alt="image-20230711182228407"></p>
 </li>
 </ul>
-<p>​	</p>
-<ul>
-<li><p>上传漏洞利用分析</p>
-<ul>
+<h5 id="上传漏洞利用分析"><a href="#上传漏洞利用分析" class="headerlink" title="上传漏洞利用分析"></a>上传漏洞利用分析</h5><ul>
 <li><p>存在就是高危<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155243374.png" alt="image-20230710155243374"></p>
 </li>
 <li><p>解决方式</p>
@@ -201,18 +140,39 @@
 </li>
 <li><p>存在的条件<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155633036.png" alt="image-20230710155633036"></p>
 </li>
-<li><p>模拟</p>
+<li><p>绕过技术<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711182354949.png" alt="image-20230711182354949"></p>
 <ul>
-<li><p>将某文件夹里面的文件用text执行这个功能取消<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160136642.png" alt="image-20230710160136642"></p>
+<li><p>修改文件的类型<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711182511819.png" alt="image-20230711182511819"></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/71b8b554d9b3">oo截断</a>博文,构造文件名,上传过滤程序以为是jpg文件,实际上,服务器解析该文件时将其当作php文件交由PHP引擎解释和执行.<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711183506893.png" alt="image-20230711183506893"></p>
+</li>
+<li><p>获取到web服务器版本之后,可以使用不同版本下已经出现的解析漏洞<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711183624367.png" alt="image-20230711183624367"></p>
+</li>
+<li><p>这个没看懂<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711183739563.png" alt="image-20230711183739563"></p>
+</li>
+</ul>
+</li>
+<li><p>模拟:登录后台,寻找上传点,创建PHP webshell上传php后门,登录后门</p>
+<ul>
+<li><p>RD工具扫描后台</p>
+</li>
+<li><p>SQL注入拿到账号名和密码</p>
+</li>
+<li><p>上传webshell到后台，如果不筛选上传文件，说明这个系统做得非常垃圾，至少加个扫描文件名，限制后缀为.php的不给上传<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711183933563.png" alt="image-20230711183933563"></p>
+</li>
+<li><p>将某文件夹里面的文件用text执行这个功能取消。也就是要关掉apache的安全加固，将php变成txt来处理。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711102154913.png" alt="image-20230711102154913"></p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711102317636.png" alt="image-20230711102317636"></p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160136642.png" alt="image-20230710160136642"></p>
 </li>
 <li><p>暴力破解后台，登进去<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160508616.png" alt="image-20230710160508616"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160500692.png" alt="image-20230710160500692"></p>
 </li>
-<li><p>上传之后，就在后台登进去。最好给木马设置密码，不要给别人做了嫁衣。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160716273.png" alt="image-20230710160716273"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160646404.png" alt="image-20230710160646404"></p>
+<li><p>上传之后，就在后台登进去。最好给木马设置密码，不要给别人做了嫁衣。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711102527207.png" alt="image-20230711102527207"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160646404.png" alt="image-20230710160646404"></p>
 </li>
 <li><p>搜索配置文件，看看有没有密码写明的数据库。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161248115.png" alt="image-20230710161248115">这里表示直接网站和数据库在同一个机器上面<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161202125.png" alt="image-20230710161202125"></p>
 <p>还可以远程代码植入</p>
-</li>
-<li><p>接着上传脚本提权，提高用户权力来删库跑路。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162552949.png" alt="image-20230710162552949"></p>
+<h6 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h6><hr>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184101097.png" alt="image-20230711184101097"></p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184116712.png" alt="image-20230711184116712"></p>
 </li>
 </ul>
 </li>
@@ -227,12 +187,88 @@
 </ul>
 </li>
 </ul>
+<h5 id="系统提权分析"><a href="#系统提权分析" class="headerlink" title="系统提权分析"></a>系统提权分析</h5><hr>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184451617.png" alt="image-20230711184451617"></p>
+<h6 id="高难度的一步"><a href="#高难度的一步" class="headerlink" title="高难度的一步"></a>高难度的一步</h6><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184524480.png" alt="image-20230711184524480"></p>
+<ul>
+<li><p>利用UDEV设备管理器的内核漏洞进行提权<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184657977.png" alt="image-20230711184657977"></p>
+<ul>
+<li><p>步骤<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184741381.png" alt="image-20230711184741381"></p>
+<ul>
+<li><p>看不懂的一步<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711185018396.png" alt="image-20230711185018396"></p>
 </li>
-<li><p>系统提权分析</p>
+<li><p>看懂了:其实就是将服务器中的命令行解释这个功能发送到kali的9999端口上,只要kali监听9999端口,就能在kali上操纵web服务器所在的linux,我的推测是方便于后面编译文件,以及添加执行文件。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711192005530.png" alt="image-20230711192005530"></p>
 </li>
-<li><p>后门植入分析</p>
+<li><p>写run文件配合8572<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711192214065.png" alt="image-20230711192214065"></p>
+</li>
+<li><p>提权成功，结果返回5555号端口，此时的用户uid&#x3D;0，超级无敌权限，接下来随便删文件都行了。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711192300039.png" alt="image-20230711192300039"></p>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>后台连接</strong></p>
+<p><strong>攻击端</strong>连接</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711104902455.png" alt="image-20230711104902455"></p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711104921691.png" alt="image-20230711104921691"></p>
+<p><strong>反向连接。</strong>使用服务器去连接黑客自己的端口。正向连接是很容易查出来的。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711103910765.png" alt="image-20230711103910765"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711105013155.png" alt="image-20230711105013155"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711105027887.png" alt="image-20230711105027887"></p>
+<h5 id="后门植入分析"><a href="#后门植入分析" class="headerlink" title="后门植入分析"></a>后门植入分析</h5><hr>
+<h6 id="后门检测"><a href="#后门检测" class="headerlink" title="后门检测"></a>后门检测</h6><p>使用后门检测</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711105112683.png" alt="image-20230711105112683"></p>
+<p>接着上传脚本提权，提高用户权力来删库跑路。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162552949.png" alt="image-20230710162552949"></p>
+<p>提高到sudo ，<strong>id&#x3D;0的时候最大</strong>。</p>
+<p>github上有，上传到tmp目录，这个目录容易下的文件夹下面能操作的比较多。执行权限管理得比较松。</p>
+<p>udev漏洞</p>
+<h5 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h5><hr>
+<ul>
+<li><p>绝对的高危</p>
+</li>
+<li><p>SQL发生在对方的数据库之上，而且一定有web中间件，不是静态页面，才能搞SQL注入。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711143418788.png" alt="image-20230711143418788"></p>
+<ul>
+<li>web中间件以为加入的一些指令也是请求，发数据库服务器中去了。请求中，加入一些指令，没有文本化处理。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711143728149.png" alt="image-20230711143728149"></li>
+</ul>
+</li>
+<li><p>实践</p>
+<ul>
+<li><p>找SQL注入在哪里</p>
+<ul>
+<li>人工试</li>
+<li>使用工具SQLMAP这种工具（装好python环境就行了）扫描windows和linux命令之下有点不同，开始命令有些不同罢了。</li>
+</ul>
+</li>
+<li><p>寻找注入点，加了个and 1&#x3D;&#x3D;1没有报错，成功返回数据，此时属于SQL注入。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711144741498.png" alt="image-20230711144741498"></p>
+</li>
+<li><p>识别数据库类型（对应的SQL语句不同，SQL语句对应的包围符号一定要成对出现）<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711145108983.png" alt="image-20230711145108983"></p>
+<ul>
+<li>经典的万能密码漏洞<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150012705.png" alt="image-20230711150012705"></li>
+</ul>
+</li>
+<li><p>猜数据库列长度。union 跟的东西一定要跟字段数（列数）匹配，若不报错就是那个字段。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150148190.png" alt="image-20230711150148190"></p>
+<p>这一招非常之漂亮，前面select由于and 1&#x3D;2的原因什么都无法显示，而union将前后两张表的信息联合起来，填上1，2之后，相应的表就会天上对应的数字，且一定要和表中的列匹配才有得显示，此时就能同时知道表的列数以及每列的字段分别表示什么。1&#x3D;2初看不知道什么鸡巴意思，后来发现真尼玛牛逼。</p>
+<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711152908506.png" alt="image-20230711152908506"></p>
+</li>
+<li><p>获取数据库版本信息<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150313125.png" alt="image-20230711150313125"></p>
+</li>
+<li><p>查看数据库用户<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150324798.png" alt="image-20230711150324798"></p>
+</li>
+<li><p>查看数据库名<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150335293.png" alt="image-20230711150335293"></p>
+</li>
+<li><p>查看数据库安装路径</p>
+</li>
+<li><p>查看网站数据库中表名一直查到具体的字段值<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711154353230.png" alt="image-20230711154353230"></p>
+</li>
+<li><p>获取的密码若是密文，暴力破解（cmd5.com）。</p>
+</li>
+<li><p>读取文件<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711160041549.png" alt="image-20230711160041549">passwd为用户名信息，shadow为密码。shadow文件权限不够，读不出来的捏。</p>
+</li>
+</ul>
+<h6 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h6><p> <img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711162539182.png" alt="image-20230711162539182"></p>
+</li>
+</ul>
+<h4 id="额外查的老师上课装逼不讲明白的名词解释"><a href="#额外查的老师上课装逼不讲明白的名词解释" class="headerlink" title="额外查的老师上课装逼不讲明白的名词解释"></a>额外查的老师上课装逼不讲明白的名词解释</h4><hr>
+<h5 id="SSO：单点登录系统"><a href="#SSO：单点登录系统" class="headerlink" title="SSO：单点登录系统"></a>SSO：单点登录系统</h5><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711003957630.png" alt="image-20230711003957630"></p>
 ]]></content>
       <categories>
         <category>实践</category>
@@ -240,5 +276,54 @@
       <tags>
         <tag>网络工程实训</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/07/11/leetcode/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/07/11/python/%E7%88%AC%E8%99%AB/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>selenium爬取动态网页</title>
+    <url>/2023/06/30/python/%E7%88%AC%E8%99%AB/selenium%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5/</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
+<li>什么是动态网页?<br>使用异步加载。现在动态网页的数量大于静态网页的数量</li>
+<li>静态网页的爬虫<br>scrapy，beautiful-soup，bs4</li>
+<li>为什么用selenium？<br> a. selenium是网页浏览器的模拟器，通常用来做网页测试-八爪鱼<br> b. 优点：<br> ⅰ. 简单直接：直接模拟用户的行为，用户加载网页获取网页源码<br> ⅱ. 直接和scrapy结合（middlewire中间件）<br> ⅲ. 支持多种浏览器驱动器web-driver：phantomjs（无头，指不用打开，直接访问代码），chorme（le，firefox）<br> c. 用来做爬虫的缺点：<br> ⅰ. 容易被识别<br> ⅱ. 容易崩溃，网速，网站的稳定性都会崩掉<br> ⅲ. 不易做成可执行程序（打包成exe可执行文件，可以直接打开，不用对方安装python或者安装python的各种依赖库。使用pyinstaller）<br> 如何使用</li>
+<li>安装浏览器和驱动器以及对应版本的驱动器</li>
+<li>pip安装selenium</li>
+<li>打开&#x2F;关闭浏览器</li>
+</ol>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/01/12/%E6%9D%82%E9%A1%B9/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
