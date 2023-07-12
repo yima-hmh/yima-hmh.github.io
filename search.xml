@@ -385,6 +385,9 @@
 <li><p>一般现在服务器大一点的企业都三四百台服务器，不采用中心化管理的话每一台安装防火墙配置安全措施太几把麻烦了，一般采用中心化的管理。<img src="/2023/01/14/linux/Linux%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/image-20230711161455703.png" alt="image-20230711161455703"></p>
 </li>
 </ul>
+<p>权限</p>
+<p><img src="/2023/01/14/linux/Linux%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/image-20230712144616676.png" alt="image-20230712144616676"></p>
+<p>chmod 777 -R *</p>
 <h3 id="Linux一些经验"><a href="#Linux一些经验" class="headerlink" title="Linux一些经验"></a>Linux一些经验</h3><hr>
 <h4 id="远程连接linux服务器的坑"><a href="#远程连接linux服务器的坑" class="headerlink" title="远程连接linux服务器的坑"></a>远程连接linux服务器的坑</h4><ul>
 <li>需要linux路由模式是桥接模式</li>
@@ -405,5 +408,150 @@
       <tags>
         <tag>Linux</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>xss反向注入</title>
+    <url>/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><hr>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712114832040.png" alt="image-20230712114832040"></p>
+<ul>
+<li>绝对的高危,一个网站有一个就是绝对的不行</li>
+</ul>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712115102097.png" alt="image-20230712115102097"></p>
+<p>有可能考公的就是去做国产化的工作<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712115702339.png" alt="image-20230712115702339"></p>
+<p>国产化有很多不完美的地方。但是整个中国就是在推进这个进程。</p>
+<p>能考研就考研，能考编就考编，想工作的考证。</p>
+<p>计算机等级考试三级，相同条件下，比别人更有优势一点。</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712120123241.png" alt="image-20230712120123241"></p>
+<p>网站将该当成文本的字符串当成了可执行命令去执行了</p>
+<h4 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h4><hr>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712120315081.png" alt="image-20230712120315081"></p>
+<p>用社会工程学去钓鱼。</p>
+<p>XSS</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121129549.png" alt="image-20230712121129549"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121227166.png" alt="image-20230712121227166"></p>
+<p>原理</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121316898.png" alt="image-20230712121316898"></p>
+<h3 id="过程重现与分析"><a href="#过程重现与分析" class="headerlink" title="过程重现与分析"></a>过程重现与分析</h3><hr>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121753786.png" alt="image-20230712121753786"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121813933.png" alt="image-20230712121813933"></p>
+<p> <img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121928599.png" alt="image-20230712121928599"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121942630.png" alt="image-20230712121942630"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121953144.png" alt="image-20230712121953144"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122005576.png" alt="image-20230712122005576"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122015930.png" alt="image-20230712122015930"></p>
+<h5 id="篡改页面"><a href="#篡改页面" class="headerlink" title="篡改页面"></a>篡改页面</h5><p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122048507.png" alt="image-20230712122048507"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122113525.png" alt="image-20230712122113525"></p>
+<h5 id="钓鱼伪造"><a href="#钓鱼伪造" class="headerlink" title="钓鱼伪造"></a>钓鱼伪造</h5><hr>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122213599.png" alt="image-20230712122213599"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122254360.png" alt="image-20230712122254360"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122307298.png" alt="image-20230712122307298"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122327134.png" alt="image-20230712122327134"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122340657.png" alt="image-20230712122340657"></p>
+<h5 id="xss攻击盗取COokie"><a href="#xss攻击盗取COokie" class="headerlink" title="xss攻击盗取COokie"></a>xss攻击盗取COokie</h5><hr>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122406707.png" alt="image-20230712122406707"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122416992.png" alt="image-20230712122416992"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122428606.png" alt="image-20230712122428606"></p>
+<h5 id="beef框架攻击"><a href="#beef框架攻击" class="headerlink" title="beef框架攻击"></a>beef框架攻击</h5><hr>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122451708.png" alt="image-20230712122451708"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122500656.png" alt="image-20230712122500656"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122513309.png" alt="image-20230712122513309"></p>
+<h4 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h4><hr>
+<p>存储型跨站攻击，成功在数据库中植入一条简单的alert语句</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712123450122.png" alt="image-20230712123450122"></p>
+<p>源代码中可以看见<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712124129590.png" alt="image-20230712124129590"></p>
+<ul>
+<li><p>篡改页面<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712124455616.png" alt="image-20230712124455616"></p>
+</li>
+<li><p>钓鱼网站</p>
+<p>首先自己搭建一个一模一样的。</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212135314.png" alt="image-20230712212135314"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212255987.png" alt="image-20230712212255987"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212342575.png" alt="image-20230712212342575"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712125050157.png" alt="image-20230712125050157"></p>
+<p>将鱼饵做好</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712142950023.png" alt="image-20230712142950023"></p>
+</li>
+</ul>
+<p>抛勾，提交评论，诱导人去评论（登录两次就是偷）</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712143641230.png" alt="image-20230712143641230"></p>
+<p>上钩</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212420911.png" alt="image-20230712212420911"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212429528.png" alt="image-20230712212429528"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212436943.png" alt="image-20230712212436943"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212444847.png" alt="image-20230712212444847"></p>
+<h4 id="cookie攻击"><a href="#cookie攻击" class="headerlink" title="cookie攻击"></a>cookie攻击</h4><hr>
+<p>cookie原理</p>
+<p>其实就是存在客户端浏览器的一些和网站交互的信息.</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212906175.png" alt="image-20230712212906175"></p>
+<p>session原理</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712213025733.png" alt="image-20230712213025733"></p>
+<p>其实就是存在服务器之上的客户端身份信息.</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712213238237.png" alt="image-20230712213238237"></p>
+<p>sessionID还是要通过cookie来返回\返回服务器.</p>
+<h6 id="XSS盗取cookie实验环境"><a href="#XSS盗取cookie实验环境" class="headerlink" title="XSS盗取cookie实验环境"></a>XSS盗取cookie实验环境</h6><p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712213327543.png" alt="image-20230712213327543"></p>
+<p>原理就是冒充了别人的身份(通过使用cookie)</p>
+<hr>
+<p>kali黑客机子装好攻击脚本,功能是将当前网页的cookie发送到黑客的个人网站之中.<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712214453380.png" alt="image-20230712214453380"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712214616253.png" alt="image-20230712214616253"></p>
+<p>JS脚本传来数据,php接收,信息保存到cookie.html文件中</p>
+<p>将html文件清零,同时可以看到xss下有3个文件,专门用来做cookie.</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712214757273.png" alt="image-20230712214757273"></p>
+<p>设置一下目标网站的配置配合实验.<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712214907439.png" alt="image-20230712214907439"></p>
+<p>提交评论后就马上刷新了,打开了kali设置的文件</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215000685.png" alt="image-20230712215000685"></p>
+<p>管理员上钩</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215050372.png" alt="image-20230712215050372"></p>
+<p>成功看到</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215100529.png" alt="image-20230712215100529"></p>
+<p>使用一个能自定义cookie访问的工具</p>
+<p>用刚刚获取到的cookie去访问原网站,发现自己不用用户密码,照样能登录后台.</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215443954.png" alt="image-20230712215443954"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215451894.png" alt="image-20230712215451894"></p>
+<h6 id="跨站攻击平台"><a href="#跨站攻击平台" class="headerlink" title="跨站攻击平台"></a>跨站攻击平台</h6><hr>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215642843.png" alt="image-20230712215642843"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215657677.png" alt="image-20230712215657677"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215846501.png" alt="image-20230712215846501"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215852694.png" alt="image-20230712215852694"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215900426.png" alt="image-20230712215900426"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215921973.png" alt="image-20230712215921973"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215929779.png" alt="image-20230712215929779"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215938099.png" alt="image-20230712215938099"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220005675.png" alt="image-20230712220005675"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220028895.png" alt="image-20230712220028895"></p>
+<hr>
+<p>在beef黑进去的情况下,进行flash钓鱼攻击</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220112158.png" alt="image-20230712220112158"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220200484.png" alt="image-20230712220200484"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220208636.png" alt="image-20230712220208636"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220254120.png" alt="image-20230712220254120"></p>
+<h3 id="跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型"><a href="#跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型" class="headerlink" title="跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型"></a>跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型</h3><hr>
+<ul>
+<li><p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220529105.png" alt="image-20230712220529105"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220611942.png" alt="image-20230712220611942"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220620638.png" alt="image-20230712220620638"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220742950.png" alt="image-20230712220742950"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220756658-16891708773671.png" alt="image-20230712220756658"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220809506-16891708901293.png" alt="image-20230712220809506"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221057950.png" alt="image-20230712221057950"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221104685.png" alt="image-20230712221104685"></p>
+</li>
+</ul>
+<p>防范</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221159317.png" alt="image-20230712221159317"></p>
+<h4 id="跨站请求伪造攻击与防范"><a href="#跨站请求伪造攻击与防范" class="headerlink" title="跨站请求伪造攻击与防范."></a>跨站请求伪造攻击与防范.</h4><hr>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221215222.png" alt="image-20230712221215222"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221223558.png"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221605842.png" alt="image-20230712221605842"></p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221641510.png" alt="image-20230712221641510"></p>
+<p>有着get和post方式</p>
+<p>XSS和CSRF区别</p>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221901276.png" alt="image-20230712221901276"></p>
+<h5 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h5><hr>
+<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221918754.png" alt="image-20230712221918754"></p>
+]]></content>
+      <categories>
+        <category>实践</category>
+      </categories>
   </entry>
 </search>
