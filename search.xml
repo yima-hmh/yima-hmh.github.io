@@ -1,45 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>使用Hexo布置个人网页的一些问题</title>
-    <url>/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230701202125916.png" alt="image-20230701202125916"></p>
-<ul>
-<li><p>配置URL</p>
-<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230701202211848.png" alt="image-20230701202211848"></p>
-</li>
-<li><p>当初那个图片工具的配置就应该一动不动。</p>
-</li>
-<li><p>我想构造的是一个分类文件夹里面放相同的文件，然后图片存进去img目录中，以文件名建立一个文件夹存。像这样</p>
-<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710174450967.png" alt="image-20230710174450967"></p>
-<h4 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h4><ol>
-<li><p>修改markdown内的图片设置,设置如下<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710174721892.png" alt="image-20230710174721892"></p>
-</li>
-<li><p>此时插进去图片都将变成相对路径只有文件名的样子,需要添加一个typora-root-url,去修改骨架文件夹下的(scaffolds)_post模板文件<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710174815323.png" alt="image-20230710174815323"></p>
-</li>
-<li><p>修改为如下<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710175000041.png" alt="image-20230710175000041"></p>
-</li>
-<li><p>然后就在typora上可见,部署到网页中也可见啦。没想到本地的话，url不会起作用，所以-s命令看不到照片。然后我就然后这个插件好像无法使用部署耳机目录，会出错，暂时使用这种分类方式了,寻找了一天修改hexo-asset-image这个包的方式无果,就这样吧。<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232400529.png" alt="image-20230710232400529"></p>
-</li>
-<li><p>修改回配置<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232525256.png" alt="image-20230710232525256"></p>
-</li>
-<li><p>成功部署</p>
-<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232643369.png" alt="image-20230710232556693"></p>
-<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232707053.png" alt="image-20230710232707053"></p>
-<p>配上hexo-asset-image里的index.js的代码,就是修改这个修改了一天</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">&#x27;cheerio&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这是个获取某个字符或者字符串片段在整个字符串种的起始位置</span></span><br><span class="line"><span class="comment">//split(a,b):根据a进行字符串的划分,结果为大小为b的字符串数组,a不会出现在任何数组元素的部分而返回.</span></span><br><span class="line"><span class="comment">//join(m):将字符串数组使用m来连接而返回比如[&#x27;a&#x27;,&#x27;b&#x27;].join(&#x27;-&#x27;)=&#x27;a-b&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getPosition</span>(<span class="params">str, m, i</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> str.<span class="title function_">split</span>(m, i).<span class="title function_">join</span>(m).<span class="property">length</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_post_render&#x27;</span>, <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.<span class="property">config</span>;</span><br><span class="line">  <span class="keyword">if</span>(config.<span class="property">post_asset_folder</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> link = data.<span class="property">permalink</span>;</span><br><span class="line">    <span class="keyword">var</span> beginPos = <span class="title function_">getPosition</span>(link, <span class="string">&#x27;/&#x27;</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> appendLink = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="comment">// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span></span><br><span class="line">    <span class="comment">// if not with index.html endpos = link.lastIndexOf(&#x27;.&#x27;) + 1 support hexo-abbrlink</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="regexp">/.*\/index\.html$/</span>.<span class="title function_">test</span>(link)) &#123;</span><br><span class="line">      <span class="comment">// when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span></span><br><span class="line">      <span class="comment">// image in xxtitle/ will go to xxtitle/index/</span></span><br><span class="line">      appendLink = <span class="string">&#x27;index/&#x27;</span>;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.<span class="property">length</span>-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    link = link.<span class="title function_">substring</span>(beginPos, endPos) + <span class="string">&#x27;/&#x27;</span> + appendLink;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">&#x27;excerpt&#x27;</span>, <span class="string">&#x27;more&#x27;</span>, <span class="string">&#x27;content&#x27;</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.<span class="property">length</span>; i++)&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.<span class="title function_">load</span>(data[key], &#123;</span><br><span class="line">        <span class="attr">ignoreWhitespace</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">xmlMode</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">lowerCaseTags</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">decodeEntities</span>: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">&#x27;img&#x27;</span>).<span class="title function_">each</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">if</span> ($(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>))&#123;</span><br><span class="line">          <span class="comment">// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span></span><br><span class="line">          <span class="keyword">var</span> src = $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>).<span class="title function_">replace</span>(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">          <span class="keyword">if</span>(!(<span class="regexp">/http[s]*.*|\/\/.*/</span>.<span class="title function_">test</span>(src)</span><br><span class="line">            || <span class="regexp">/^\s+\//</span>.<span class="title function_">test</span>(src)</span><br><span class="line">            || <span class="regexp">/^\s*\/uploads|images\//</span>.<span class="title function_">test</span>(src))) &#123;</span><br><span class="line">            <span class="comment">// For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span></span><br><span class="line">            <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">            <span class="keyword">var</span> linkArray = link.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">var</span> srcArray = src.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span> &amp;&amp; elem != <span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">if</span>(srcArray.<span class="property">length</span> &gt; <span class="number">1</span>)</span><br><span class="line">            srcArray.<span class="title function_">shift</span>();</span><br><span class="line">            src = srcArray.<span class="title function_">join</span>(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line"></span><br><span class="line">            $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>, config.<span class="property">root</span> + link + src);</span><br><span class="line">            <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;update link as:--&gt;&quot;</span>+config.<span class="property">root</span> + link + src);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;no src attr, skipped...&quot;</span>);</span><br><span class="line">          <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>($(<span class="variable language_">this</span>));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.<span class="title function_">html</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>靠北,布置个博客,上传个图片可真难,真得好好学下英语.认真看文档才行，总是想着吃别人嚼碎了的东西可不行。。。。</p>
-</li>
-</ol>
-</li>
-</ul>
-]]></content>
+    <title>leetcode每日一题</title>
+    <url>/2023/07/11/leetcode/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>工具部署</category>
+        <category>leetcode</category>
       </categories>
       <tags>
-        <tag>工具部署</tag>
+        <tag>数据结构</tag>
+        <tag>算法</tag>
+        <tag>leetcode</tag>
       </tags>
   </entry>
   <entry>
@@ -291,17 +262,64 @@
       </tags>
   </entry>
   <entry>
-    <title>leetcode每日一题</title>
-    <url>/2023/07/11/leetcode/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
+    <title>使用Hexo布置个人网页的一些问题</title>
+    <url>/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230701202125916.png" alt="image-20230701202125916"></p>
+<ul>
+<li><p>配置URL</p>
+<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230701202211848.png" alt="image-20230701202211848"></p>
+</li>
+<li><p>当初那个图片工具的配置就应该一动不动。</p>
+</li>
+<li><p>我想构造的是一个分类文件夹里面放相同的文件，然后图片存进去img目录中，以文件名建立一个文件夹存。像这样</p>
+<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710174450967.png" alt="image-20230710174450967"></p>
+<h4 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h4><ol>
+<li><p>修改markdown内的图片设置,设置如下<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710174721892.png" alt="image-20230710174721892"></p>
+</li>
+<li><p>此时插进去图片都将变成相对路径只有文件名的样子,需要添加一个typora-root-url,去修改骨架文件夹下的(scaffolds)_post模板文件<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710174815323.png" alt="image-20230710174815323"></p>
+</li>
+<li><p>修改为如下<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710175000041.png" alt="image-20230710175000041"></p>
+</li>
+<li><p>然后就在typora上可见,部署到网页中也可见啦。没想到本地的话，url不会起作用，所以-s命令看不到照片。然后我就然后这个插件好像无法使用部署耳机目录，会出错，暂时使用这种分类方式了,寻找了一天修改hexo-asset-image这个包的方式无果,就这样吧。<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232400529.png" alt="image-20230710232400529"></p>
+</li>
+<li><p>修改回配置<img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232525256.png" alt="image-20230710232525256"></p>
+</li>
+<li><p>成功部署</p>
+<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232643369.png" alt="image-20230710232556693"></p>
+<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232707053.png" alt="image-20230710232707053"></p>
+<p>配上hexo-asset-image里的index.js的代码,就是修改这个修改了一天</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">&#x27;cheerio&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这是个获取某个字符或者字符串片段在整个字符串种的起始位置</span></span><br><span class="line"><span class="comment">//split(a,b):根据a进行字符串的划分,结果为大小为b的字符串数组,a不会出现在任何数组元素的部分而返回.</span></span><br><span class="line"><span class="comment">//join(m):将字符串数组使用m来连接而返回比如[&#x27;a&#x27;,&#x27;b&#x27;].join(&#x27;-&#x27;)=&#x27;a-b&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getPosition</span>(<span class="params">str, m, i</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> str.<span class="title function_">split</span>(m, i).<span class="title function_">join</span>(m).<span class="property">length</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_post_render&#x27;</span>, <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.<span class="property">config</span>;</span><br><span class="line">  <span class="keyword">if</span>(config.<span class="property">post_asset_folder</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> link = data.<span class="property">permalink</span>;</span><br><span class="line">    <span class="keyword">var</span> beginPos = <span class="title function_">getPosition</span>(link, <span class="string">&#x27;/&#x27;</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> appendLink = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="comment">// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span></span><br><span class="line">    <span class="comment">// if not with index.html endpos = link.lastIndexOf(&#x27;.&#x27;) + 1 support hexo-abbrlink</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="regexp">/.*\/index\.html$/</span>.<span class="title function_">test</span>(link)) &#123;</span><br><span class="line">      <span class="comment">// when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span></span><br><span class="line">      <span class="comment">// image in xxtitle/ will go to xxtitle/index/</span></span><br><span class="line">      appendLink = <span class="string">&#x27;index/&#x27;</span>;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.<span class="property">length</span>-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    link = link.<span class="title function_">substring</span>(beginPos, endPos) + <span class="string">&#x27;/&#x27;</span> + appendLink;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">&#x27;excerpt&#x27;</span>, <span class="string">&#x27;more&#x27;</span>, <span class="string">&#x27;content&#x27;</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.<span class="property">length</span>; i++)&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.<span class="title function_">load</span>(data[key], &#123;</span><br><span class="line">        <span class="attr">ignoreWhitespace</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">xmlMode</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">lowerCaseTags</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">decodeEntities</span>: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">&#x27;img&#x27;</span>).<span class="title function_">each</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">if</span> ($(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>))&#123;</span><br><span class="line">          <span class="comment">// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span></span><br><span class="line">          <span class="keyword">var</span> src = $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>).<span class="title function_">replace</span>(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">          <span class="keyword">if</span>(!(<span class="regexp">/http[s]*.*|\/\/.*/</span>.<span class="title function_">test</span>(src)</span><br><span class="line">            || <span class="regexp">/^\s+\//</span>.<span class="title function_">test</span>(src)</span><br><span class="line">            || <span class="regexp">/^\s*\/uploads|images\//</span>.<span class="title function_">test</span>(src))) &#123;</span><br><span class="line">            <span class="comment">// For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span></span><br><span class="line">            <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">            <span class="keyword">var</span> linkArray = link.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">var</span> srcArray = src.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span> &amp;&amp; elem != <span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">if</span>(srcArray.<span class="property">length</span> &gt; <span class="number">1</span>)</span><br><span class="line">            srcArray.<span class="title function_">shift</span>();</span><br><span class="line">            src = srcArray.<span class="title function_">join</span>(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line"></span><br><span class="line">            $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>, config.<span class="property">root</span> + link + src);</span><br><span class="line">            <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;update link as:--&gt;&quot;</span>+config.<span class="property">root</span> + link + src);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;no src attr, skipped...&quot;</span>);</span><br><span class="line">          <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>($(<span class="variable language_">this</span>));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.<span class="title function_">html</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>靠北,布置个博客,上传个图片可真难,真得好好学下英语.认真看文档才行，总是想着吃别人嚼碎了的东西可不行。。。。</p>
+</li>
+</ol>
+</li>
+</ul>
+]]></content>
       <categories>
-        <category>leetcode</category>
+        <category>工具部署</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
-        <tag>算法</tag>
-        <tag>leetcode</tag>
+        <tag>工具部署</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/01/12/%E6%9D%82%E9%A1%B9/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>正则表达式</title>
@@ -338,21 +356,54 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/01/12/%E6%9D%82%E9%A1%B9/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Linux学习经验</title>
+    <url>/2023/01/14/linux/Linux%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/</url>
+    <content><![CDATA[<h3 id="Linux基础知识"><a href="#Linux基础知识" class="headerlink" title="Linux基础知识"></a>Linux基础知识</h3><hr>
+<h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><ul>
+<li>shift+g在vim编辑器中滚到最下面一行</li>
+<li>kali是一个集成了大部分渗透工具的LINUX操作系统。</li>
+<li>Ubuntu中vi编辑器有问题，最好使用VIM编辑器。</li>
+</ul>
+<h4 id="运维圈内认知"><a href="#运维圈内认知" class="headerlink" title="运维圈内认知"></a>运维圈内认知</h4><ul>
+<li><p>国产化操作系统很简单，就是LINUX系统。做运维一定要懂LINUX</p>
+</li>
+<li><p>业务规划初期，先规划好用什么数据库和安全，做安全的很卑微。没出事，你的安全就是60分，出了事，你的安全就是0分。让他们签责任书，不要把责任揽在身上。</p>
+</li>
+<li><p>干运维的没事就写手册，也就是说明书，是我们的工作量的表示，也好拿工资。</p>
+</li>
+<li><p>等级保护测评师的证，去等保二级，每两年测一次。</p>
+<ul>
+<li>等保三级有一点：对数据库里所有敏感的东西加密存储，不允许使用MD5存储目前不行，过去可以，所以很头疼。</li>
+</ul>
+</li>
+<li><p>等保四级指定单位</p>
+</li>
+<li><p>等保五级更加严格，军方单位。是国标，不是法律，但是网络安全法要求做等保五级。没写怎么测。每个单位做自己的等保条例。</p>
+</li>
+<li><p>不要去老单位，真的会被搞疯，去新单位干，旧单位太多历史遗留问题。</p>
+</li>
+<li><p>一般现在服务器大一点的企业都三四百台服务器，不采用中心化管理的话每一台安装防火墙配置安全措施太几把麻烦了，一般采用中心化的管理。<img src="/2023/01/14/linux/Linux%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/image-20230711161455703.png" alt="image-20230711161455703"></p>
+</li>
+</ul>
+<h3 id="Linux一些经验"><a href="#Linux一些经验" class="headerlink" title="Linux一些经验"></a>Linux一些经验</h3><hr>
+<h4 id="远程连接linux服务器的坑"><a href="#远程连接linux服务器的坑" class="headerlink" title="远程连接linux服务器的坑"></a>远程连接linux服务器的坑</h4><ul>
+<li>需要linux路由模式是桥接模式</li>
+</ul>
+<span id="more"></span>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="想不明白的问题及其猜想"><a href="#想不明白的问题及其猜想" class="headerlink" title="想不明白的问题及其猜想"></a>想不明白的问题及其猜想</h3><hr>
+<ul>
+<li><p>之所以能连接本地虚拟机，是因为本来数据库就是放在内网之中的，通过NAT协议解析或者添加VPS服务器来访问。如果要直接连接数据库，那么就必须和数据库在同一个内网之中。</p>
+</li>
+<li><p>那个时候和凯子能连到，乃是因为我们两个人同处与同一个局域网之下，但是分给彼此的内网IP地址又是各不相同的。</p>
+</li>
+</ul>
 ]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
 </search>
