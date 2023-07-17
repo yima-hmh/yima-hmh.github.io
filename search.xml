@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>leetcode每日一题</title>
-    <url>/2023/07/11/leetcode/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</url>
+    <url>/posts/41ea</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>leetcode</category>
@@ -14,308 +14,26 @@
       </tags>
   </entry>
   <entry>
-    <title>引至kali，web攻防模拟上传渗透，端口扫描</title>
-    <url>/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/</url>
-    <content><![CDATA[<h3 id="实训课第一节"><a href="#实训课第一节" class="headerlink" title="实训课第一节"></a>实训课第一节</h3><h4 id="CISAW认证"><a href="#CISAW认证" class="headerlink" title="CISAW认证"></a>CISAW认证</h4><p>大学预备级</p>
-<h4 id="网络攻防两个角度"><a href="#网络攻防两个角度" class="headerlink" title="网络攻防两个角度"></a>网络攻防两个角度</h4><p>第一个就是攻击者角度</p>
-<p>第二个就是被攻击者角度</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710102359531.png" alt="image-20230710102359531"></p>
-<p>看的内容</p>
-<ul>
-<li><p>看数据内容<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710102532407.png" alt="image-20230710102532407"></p>
-</li>
-<li><p>看到SSO,single sign on单点登录功能,只要黑客方能模仿被认证的IP地址,再去访问某个地址就不需要登录直接访问数据库。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710103727921.png" alt="image-20230710103727921"></p>
-</li>
-<li><p>黑客工具<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710103849128.png" alt="image-20230710103849128"></p>
-<ul>
-<li>导入肉鸡，在同一个宽带之下，就可以获取信息</li>
-<li>积分配合短信验证码，伪造基站收验证码</li>
-</ul>
-</li>
-</ul>
-<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><h5 id="护网"><a href="#护网" class="headerlink" title="护网"></a>护网</h5><p>红黑对抗</p>
-<p>先踩点，获得丰厚的信息。</p>
-<p>单位对外的系统</p>
-<h4 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h4><p>在防火墙对外端口上，能不开就不开，做到最小化。</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710112503534.png" alt="image-20230710112503534"></p>
-<p>WEB端口工具</p>
-<ul>
-<li>sql注入</li>
-</ul>
-<p>普遍的网络拓扑</p>
-<p>各种云最大的问题：从内往外出的流量几乎不会管。而只管从外面访问里面的流量管得特别严。有些云服务商特别垃圾，要不就全部拒绝，就只能对特定端口进行拒绝，而不能控制对特定端口进行访问。</p>
-<p>机房里面的设备还好。</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711110022013.png" alt="image-20230711110022013"></p>
-<h3 id="实操-对web服务器进行一次攻防演练"><a href="#实操-对web服务器进行一次攻防演练" class="headerlink" title="实操:对web服务器进行一次攻防演练"></a>实操:对web服务器进行一次攻防演练</h3><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710143348548.png" alt="image-20230710143348548"></p>
-<h4 id="首先是踩点-收集信息"><a href="#首先是踩点-收集信息" class="headerlink" title="首先是踩点,收集信息"></a>首先是踩点,收集信息<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144456315.png" alt="image-20230710144456315"></h4><h5 id="确认好域名-进行端口扫描-查看端口开放情况"><a href="#确认好域名-进行端口扫描-查看端口开放情况" class="headerlink" title="确认好域名,进行端口扫描,查看端口开放情况"></a>确认好域名,进行端口扫描,查看端口开放情况<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144756866.png" alt="image-20230710144756866"></h5><ul>
-<li><p>模拟环境。同一个局域网下，xp远程连接到kali，扫描ubuntu</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145410694.png" alt="image-20230710145410694"></p>
-</li>
-<li><p>先ping一下看看能否正常连接</p>
-</li>
-<li><p>nmap -sT -sV  -P0 -O -n 202.1.160.100，使用这些工具要建立自己的工作表，常用的记住，其它的再去查。</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150042770.png" alt="image-20230710150042770"></p>
-</li>
-<li><p>得到端口分析结果<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150512970.png" alt="image-20230710150512970"></p>
-</li>
-</ul>
-<h5 id="端口扫描防范"><a href="#端口扫描防范" class="headerlink" title="端口扫描防范"></a>端口扫描防范</h5><h4 id><a href="#" class="headerlink" title></a><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710150820527.png" alt="image-20230710150820527"></h4><ul>
-<li><p>防范过程如下，使用iptables</p>
-<ul>
-<li><p>首先登进去，然后查看一下规则<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710151140553.png" alt="image-20230710151140553"></p>
-</li>
-<li><p>添加规则，首先封禁下icmp访问，iptables会先执行上面的规则，下面的若冲突会直接放弃。</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710151429814.png" alt="image-20230710151429814"></p>
-</li>
-<li><p>只要能穿过企业布置在外面的防火墙，去拿到内网的一台服务器，就能将所有服务器的内容拿到手。因为内网的服务器一般比较脆弱，因为业务需要。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="指纹识别攻击”吗”-没上太懂"><a href="#指纹识别攻击”吗”-没上太懂" class="headerlink" title="指纹识别攻击”吗”:没上太懂"></a>指纹识别攻击”吗”:没上太懂</h5><ul>
-<li><p>netcat（NC工具）做指<strong>纹检测攻击实验</strong>。瑞士军刀写这个的是超级天才。一般要指定端口</p>
-<ul>
-<li>指纹识别理论，所以说知道服务器的版本是很重要的<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710154335851.png" alt="image-20230710154335851"></li>
-<li>burp suiteWEB渗透里面最常用的工具，模拟发包<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710152919368.png" alt="image-20230710152919368"></li>
-</ul>
-</li>
-<li><p>端口上运行着的服务,服务的版本,每个版本都有弱点,不是最新版非常有可能有漏洞,所以说要知道每个端口运行的软件的版本是很重要的,因为这和数据库种记录的每个版本的漏洞一对比,就可以实现高效的一个打击。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144938110.png" alt="image-20230710144938110"></p>
-<p><strong>一般使用半连接扫描，也就是回复RST扫描</strong><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710145102613.png" alt="image-20230710145102613"></p>
-<p>使用namp工具，扫描器之王。</p>
-</li>
-<li><p>拿到真实的IP地址，有时候是反向代理。</p>
-</li>
-<li><p>通过域名寻找ip，直接通过IP地址无法用域名访问</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144152991.png" alt="image-20230710144152991"></p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144237525.png"></p>
-<p>freebus看各种安全漏洞</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710144350854.png" alt="image-20230710144350854"></p>
-</li>
-</ul>
-<p>​		HTTP指纹探测,nc工具获取banner信息</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711181911052.png" alt="image-20230711181911052"></p>
-<ul>
-<li><p>指纹识别工具:HTTprint来签名<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711182216322.png" alt="image-20230711182216322"></p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711182228407.png" alt="image-20230711182228407"></p>
-</li>
-</ul>
-<h5 id="上传漏洞利用分析"><a href="#上传漏洞利用分析" class="headerlink" title="上传漏洞利用分析"></a>上传漏洞利用分析</h5><ul>
-<li><p>存在就是高危<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155243374.png" alt="image-20230710155243374"></p>
-</li>
-<li><p>解决方式</p>
-<ul>
-<li>在这个目录的都不能执行</li>
-<li>严格过滤，不允许上传错误的东西</li>
-<li>将对外开放的权限设置的极低</li>
-</ul>
-</li>
-<li><p>存在的条件<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710155633036.png" alt="image-20230710155633036"></p>
-</li>
-<li><p>绕过技术<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711182354949.png" alt="image-20230711182354949"></p>
-<ul>
-<li><p>修改文件的类型<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711182511819.png" alt="image-20230711182511819"></p>
-</li>
-<li><p><a href="https://www.jianshu.com/p/71b8b554d9b3">oo截断</a>博文,构造文件名,上传过滤程序以为是jpg文件,实际上,服务器解析该文件时将其当作php文件交由PHP引擎解释和执行.<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711183506893.png" alt="image-20230711183506893"></p>
-</li>
-<li><p>获取到web服务器版本之后,可以使用不同版本下已经出现的解析漏洞<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711183624367.png" alt="image-20230711183624367"></p>
-</li>
-<li><p>这个没看懂<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711183739563.png" alt="image-20230711183739563"></p>
-</li>
-</ul>
-</li>
-<li><p>模拟:登录后台,寻找上传点,创建PHP webshell上传php后门,登录后门</p>
-<ul>
-<li><p>RD工具扫描后台</p>
-</li>
-<li><p>SQL注入拿到账号名和密码</p>
-</li>
-<li><p>上传webshell到后台，如果不筛选上传文件，说明这个系统做得非常垃圾，至少加个扫描文件名，限制后缀为.php的不给上传<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711183933563.png" alt="image-20230711183933563"></p>
-</li>
-<li><p>将某文件夹里面的文件用text执行这个功能取消。也就是要关掉apache的安全加固，将php变成txt来处理。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711102154913.png" alt="image-20230711102154913"></p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711102317636.png" alt="image-20230711102317636"></p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160136642.png" alt="image-20230710160136642"></p>
-</li>
-<li><p>暴力破解后台，登进去<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160508616.png" alt="image-20230710160508616"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160500692.png" alt="image-20230710160500692"></p>
-</li>
-<li><p>上传之后，就在后台登进去。最好给木马设置密码，不要给别人做了嫁衣。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711102527207.png" alt="image-20230711102527207"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710160646404.png" alt="image-20230710160646404"></p>
-</li>
-<li><p>搜索配置文件，看看有没有密码写明的数据库。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161248115.png" alt="image-20230710161248115">这里表示直接网站和数据库在同一个机器上面<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161202125.png" alt="image-20230710161202125"></p>
-<p>还可以远程代码植入</p>
-<h6 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h6><hr>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184101097.png" alt="image-20230711184101097"></p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184116712.png" alt="image-20230711184116712"></p>
-</li>
-</ul>
-</li>
-<li><p>上传漏洞监测，开源的企业不会用。无法追责</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161805469.png" alt="image-20230710161805469"></p>
-<ul>
-<li>不给用户上传php文件。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710161914015.png" alt="image-20230710161914015"><ul>
-<li>编写shell文件检查脚本<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162036339.png" alt="image-20230710162036339"></li>
-<li>加入计划任务，每个星号分，小时，日，月，周<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162142335.png" alt="image-20230710162142335">crontab -e 用shell脚本执行一遍。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162238709.png" alt="image-20230710162238709"></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="系统提权分析"><a href="#系统提权分析" class="headerlink" title="系统提权分析"></a>系统提权分析</h5><hr>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184451617.png" alt="image-20230711184451617"></p>
-<h6 id="高难度的一步"><a href="#高难度的一步" class="headerlink" title="高难度的一步"></a>高难度的一步</h6><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184524480.png" alt="image-20230711184524480"></p>
-<ul>
-<li><p>利用UDEV设备管理器的内核漏洞进行提权<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184657977.png" alt="image-20230711184657977"></p>
-<ul>
-<li><p>步骤<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711184741381.png" alt="image-20230711184741381"></p>
-<ul>
-<li><p>看不懂的一步<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711185018396.png" alt="image-20230711185018396"></p>
-</li>
-<li><p>看懂了:其实就是将服务器中的命令行解释这个功能发送到kali的9999端口上,只要kali监听9999端口,就能在kali上操纵web服务器所在的linux,我的推测是方便于后面编译文件,以及添加执行文件。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711192005530.png" alt="image-20230711192005530"></p>
-</li>
-<li><p>写run文件配合8572<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711192214065.png" alt="image-20230711192214065"></p>
-</li>
-<li><p>提权成功，结果返回5555号端口，此时的用户uid&#x3D;0，超级无敌权限，接下来随便删文件都行了。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711192300039.png" alt="image-20230711192300039"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>后台连接</strong></p>
-<p><strong>攻击端</strong>连接</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711104902455.png" alt="image-20230711104902455"></p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711104921691.png" alt="image-20230711104921691"></p>
-<p><strong>反向连接。</strong>使用服务器去连接黑客自己的端口。正向连接是很容易查出来的。</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711103910765.png" alt="image-20230711103910765"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711105013155.png" alt="image-20230711105013155"><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711105027887.png" alt="image-20230711105027887"></p>
-<h5 id="后门植入分析"><a href="#后门植入分析" class="headerlink" title="后门植入分析"></a>后门植入分析</h5><hr>
-<h6 id="后门检测"><a href="#后门检测" class="headerlink" title="后门检测"></a>后门检测</h6><p>使用后门检测</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711105112683.png" alt="image-20230711105112683"></p>
-<p>接着上传脚本提权，提高用户权力来删库跑路。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230710162552949.png" alt="image-20230710162552949"></p>
-<p>提高到sudo ，<strong>id&#x3D;0的时候最大</strong>。</p>
-<p>github上有，上传到tmp目录，这个目录容易下的文件夹下面能操作的比较多。执行权限管理得比较松。</p>
-<p>udev漏洞</p>
-<h5 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h5><hr>
-<ul>
-<li><p>绝对的高危</p>
-</li>
-<li><p>SQL发生在对方的数据库之上，而且一定有web中间件，不是静态页面，才能搞SQL注入。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711143418788.png" alt="image-20230711143418788"></p>
-<ul>
-<li>web中间件以为加入的一些指令也是请求，发数据库服务器中去了。请求中，加入一些指令，没有文本化处理。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711143728149.png" alt="image-20230711143728149"></li>
-</ul>
-</li>
-<li><p>实践</p>
-<ul>
-<li><p>找SQL注入在哪里</p>
-<ul>
-<li>人工试</li>
-<li>使用工具SQLMAP这种工具（装好python环境就行了）扫描windows和linux命令之下有点不同，开始命令有些不同罢了。</li>
-</ul>
-</li>
-<li><p>寻找注入点，加了个and 1&#x3D;&#x3D;1没有报错，成功返回数据，此时属于SQL注入。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711144741498.png" alt="image-20230711144741498"></p>
-</li>
-<li><p>识别数据库类型（对应的SQL语句不同，SQL语句对应的包围符号一定要成对出现）<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711145108983.png" alt="image-20230711145108983"></p>
-<ul>
-<li>经典的万能密码漏洞<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150012705.png" alt="image-20230711150012705"></li>
-</ul>
-</li>
-<li><p>猜数据库列长度。union 跟的东西一定要跟字段数（列数）匹配，若不报错就是那个字段。<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150148190.png" alt="image-20230711150148190"></p>
-<p>这一招非常之漂亮，前面select由于and 1&#x3D;2的原因什么都无法显示，而union将前后两张表的信息联合起来，填上1，2之后，相应的表就会天上对应的数字，且一定要和表中的列匹配才有得显示，此时就能同时知道表的列数以及每列的字段分别表示什么。1&#x3D;2初看不知道什么鸡巴意思，后来发现真尼玛牛逼。</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711152908506.png" alt="image-20230711152908506"></p>
-</li>
-<li><p>获取数据库版本信息<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150313125.png" alt="image-20230711150313125"></p>
-</li>
-<li><p>查看数据库用户<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150324798.png" alt="image-20230711150324798"></p>
-</li>
-<li><p>查看数据库名<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711150335293.png" alt="image-20230711150335293"></p>
-</li>
-<li><p>查看数据库安装路径</p>
-</li>
-<li><p>查看网站数据库中表名一直查到具体的字段值<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711154353230.png" alt="image-20230711154353230"></p>
-</li>
-<li><p>获取的密码若是密文，暴力破解（cmd5.com）。</p>
-</li>
-<li><p>读取文件<img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711160041549.png" alt="image-20230711160041549">passwd为用户名信息，shadow为密码。shadow文件权限不够，读不出来的捏。</p>
-</li>
-</ul>
-<h6 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h6><p> <img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711162539182.png" alt="image-20230711162539182"></p>
-</li>
-</ul>
-<h4 id="额外查的老师上课装逼不讲明白的名词解释"><a href="#额外查的老师上课装逼不讲明白的名词解释" class="headerlink" title="额外查的老师上课装逼不讲明白的名词解释"></a>额外查的老师上课装逼不讲明白的名词解释</h4><hr>
-<h5 id="SSO：单点登录系统"><a href="#SSO：单点登录系统" class="headerlink" title="SSO：单点登录系统"></a>SSO：单点登录系统</h5><p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711003957630.png" alt="image-20230711003957630"></p>
-<p><a href="https://zhuanlan.zhihu.com/p/66037342">什么是单点登录？</a></p>
-<h5 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h5><hr>
-<p>POC，proof of Concept，观点证明。漏洞报告中使用。一段说明或者一个攻击的样例。</p>
-<p>EXP。exploit，漏洞利用，对漏洞的利用说明，或者一个演示的漏洞攻击代码，让读者了解漏洞的机理以及利用的方法。</p>
-<p>VUL vulnerability。漏洞</p>
-<p>CVE common vulnerabilities exposure公共漏洞和暴露。广泛认同的信息安全漏洞会有一个公共的名称。在网址上搜CVE名称（相当于番号），就能找到。</p>
-<p>零日漏洞：初体验的漏洞发现。</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711194740750.png" alt="image-20230711194740750"></p>
-<p><a href="https://blog.csdn.net/heikeyouyou/article/details/130766071?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-5-130766071-blog-88048847.235%5Ev38%5Epc_relevant_sort&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-5-130766071-blog-88048847.235%5Ev38%5Epc_relevant_sort&utm_relevant_index=10">漏洞案例</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/585377081">nmap教程</a></p>
-<p>DMZ 是英文“Demilitarized Zone”的缩写，中文名称为“隔离区”。</p>
-<p><img src="/2023/07/10/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/image-20230711195216391.png" alt="image-20230711195216391"></p>
-<p><a href="https://zhuanlan.zhihu.com/p/599801515">2分钟看懂DMZ区</a></p>
+    <title>sandBox使用指南</title>
+    <url>/posts/60c7</url>
+    <content><![CDATA[<h3 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h3><p><img src="/posts/60c/image-20230717162046833.png" alt="image-20230717162046833"></p>
+<p>点了OK</p>
+<p>这个不知道是什么</p>
+<p><img src="/posts/60c/image-20230717162334494.png" alt="image-20230717162334494"></p>
+<p>新建沙盒</p>
+<p><img src="/posts/60c/image-20230717162731444.png" alt="image-20230717162731444"></p>
+<p>然后就可以随便在沙盒上面打开软件了,有一个和主机系统隔离的运行环境,方便测试,也方便删除。这里用TubeGet试了一下，发现TubeGet是一个很垃圾的软件，然后就清除了快照，电脑本地环境没有受影响，一切的工作和文件夹交由sandbox为我们来创建。好！！</p>
 ]]></content>
       <categories>
-        <category>实践</category>
+        <category>-实用工具</category>
       </categories>
       <tags>
-        <tag>网络工程实训</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/01/12/%E6%9D%82%E9%A1%B9/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>正则表达式</title>
-    <url>/2023/07/11/python/%E7%88%AC%E8%99%AB/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>selenium爬取动态网页</title>
-    <url>/2023/06/30/python/%E7%88%AC%E8%99%AB/selenium%E7%88%AC%E5%8F%96%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5/</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
-<li>什么是动态网页?<br>使用异步加载。现在动态网页的数量大于静态网页的数量</li>
-<li>静态网页的爬虫<br>scrapy，beautiful-soup，bs4</li>
-<li>为什么用selenium？<br> a. selenium是网页浏览器的模拟器，通常用来做网页测试-八爪鱼<br> b. 优点：<br> ⅰ. 简单直接：直接模拟用户的行为，用户加载网页获取网页源码<br> ⅱ. 直接和scrapy结合（middlewire中间件）<br> ⅲ. 支持多种浏览器驱动器web-driver：phantomjs（无头，指不用打开，直接访问代码），chorme（le，firefox）<br> c. 用来做爬虫的缺点：<br> ⅰ. 容易被识别<br> ⅱ. 容易崩溃，网速，网站的稳定性都会崩掉<br> ⅲ. 不易做成可执行程序（打包成exe可执行文件，可以直接打开，不用对方安装python或者安装python的各种依赖库。使用pyinstaller）<br> 如何使用</li>
-<li>安装浏览器和驱动器以及对应版本的驱动器</li>
-<li>pip安装selenium</li>
-<li>打开&#x2F;关闭浏览器</li>
-</ol>
-]]></content>
-      <categories>
-        <category>python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
+        <tag>-工具</tag>
       </tags>
   </entry>
   <entry>
     <title>Linux学习经验</title>
-    <url>/2023/01/14/linux/Linux%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/</url>
+    <url>/posts/7096</url>
     <content><![CDATA[<h3 id="Linux基础知识"><a href="#Linux基础知识" class="headerlink" title="Linux基础知识"></a>Linux基础知识</h3><hr>
 <h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><ul>
 <li>shift+g在vim编辑器中滚到最下面一行</li>
@@ -340,11 +58,11 @@
 </li>
 <li><p>不要去老单位，真的会被搞疯，去新单位干，旧单位太多历史遗留问题。</p>
 </li>
-<li><p>一般现在服务器大一点的企业都三四百台服务器，不采用中心化管理的话每一台安装防火墙配置安全措施太几把麻烦了，一般采用中心化的管理。<img src="/2023/01/14/linux/Linux%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/image-20230711161455703.png" alt="image-20230711161455703"></p>
+<li><p>一般现在服务器大一点的企业都三四百台服务器，不采用中心化管理的话每一台安装防火墙配置安全措施太几把麻烦了，一般采用中心化的管理。<img src="/posts/709/image-20230711161455703.png" alt="image-20230711161455703"></p>
 </li>
 </ul>
 <p>权限</p>
-<p><img src="/2023/01/14/linux/Linux%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/image-20230712144616676.png" alt="image-20230712144616676"></p>
+<p><img src="/posts/709/image-20230712144616676.png" alt="image-20230712144616676"></p>
 <p>chmod 777 -R *</p>
 <h3 id="Linux一些经验"><a href="#Linux一些经验" class="headerlink" title="Linux一些经验"></a>Linux一些经验</h3><hr>
 <h4 id="远程连接linux服务器的坑"><a href="#远程连接linux服务器的坑" class="headerlink" title="远程连接linux服务器的坑"></a>远程连接linux服务器的坑</h4><ul>
@@ -368,254 +86,8 @@
       </tags>
   </entry>
   <entry>
-    <title>xss反向注入</title>
-    <url>/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><hr>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712114832040.png" alt="image-20230712114832040"></p>
-<ul>
-<li>绝对的高危,一个网站有一个就是绝对的不行</li>
-</ul>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712115102097.png" alt="image-20230712115102097"></p>
-<p>有可能考公的就是去做国产化的工作<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712115702339.png" alt="image-20230712115702339"></p>
-<p>国产化有很多不完美的地方。但是整个中国就是在推进这个进程。</p>
-<p>能考研就考研，能考编就考编，想工作的考证。</p>
-<p>计算机等级考试三级，相同条件下，比别人更有优势一点。</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712120123241.png" alt="image-20230712120123241"></p>
-<p>网站将该当成文本的字符串当成了可执行命令去执行了</p>
-<h4 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h4><hr>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712120315081.png" alt="image-20230712120315081"></p>
-<p>用社会工程学去钓鱼。</p>
-<p>XSS</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121129549.png" alt="image-20230712121129549"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121227166.png" alt="image-20230712121227166"></p>
-<p>原理</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121316898.png" alt="image-20230712121316898"></p>
-<h3 id="过程重现与分析"><a href="#过程重现与分析" class="headerlink" title="过程重现与分析"></a>过程重现与分析</h3><hr>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121753786.png" alt="image-20230712121753786"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121813933.png" alt="image-20230712121813933"></p>
-<p> <img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121928599.png" alt="image-20230712121928599"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121942630.png" alt="image-20230712121942630"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712121953144.png" alt="image-20230712121953144"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122005576.png" alt="image-20230712122005576"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122015930.png" alt="image-20230712122015930"></p>
-<h5 id="篡改页面"><a href="#篡改页面" class="headerlink" title="篡改页面"></a>篡改页面</h5><p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122048507.png" alt="image-20230712122048507"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122113525.png" alt="image-20230712122113525"></p>
-<h5 id="钓鱼伪造"><a href="#钓鱼伪造" class="headerlink" title="钓鱼伪造"></a>钓鱼伪造</h5><hr>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122213599.png" alt="image-20230712122213599"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122254360.png" alt="image-20230712122254360"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122307298.png" alt="image-20230712122307298"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122327134.png" alt="image-20230712122327134"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122340657.png" alt="image-20230712122340657"></p>
-<h5 id="xss攻击盗取COokie"><a href="#xss攻击盗取COokie" class="headerlink" title="xss攻击盗取COokie"></a>xss攻击盗取COokie</h5><hr>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122406707.png" alt="image-20230712122406707"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122416992.png" alt="image-20230712122416992"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122428606.png" alt="image-20230712122428606"></p>
-<h5 id="beef框架攻击"><a href="#beef框架攻击" class="headerlink" title="beef框架攻击"></a>beef框架攻击</h5><hr>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122451708.png" alt="image-20230712122451708"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122500656.png" alt="image-20230712122500656"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712122513309.png" alt="image-20230712122513309"></p>
-<h4 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h4><hr>
-<p>存储型跨站攻击，成功在数据库中植入一条简单的alert语句</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712123450122.png" alt="image-20230712123450122"></p>
-<p>源代码中可以看见<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712124129590.png" alt="image-20230712124129590"></p>
-<ul>
-<li><p>篡改页面<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712124455616.png" alt="image-20230712124455616"></p>
-</li>
-<li><p>钓鱼网站</p>
-<p>首先自己搭建一个一模一样的。</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212135314.png" alt="image-20230712212135314"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212255987.png" alt="image-20230712212255987"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212342575.png" alt="image-20230712212342575"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712125050157.png" alt="image-20230712125050157"></p>
-<p>将鱼饵做好</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712142950023.png" alt="image-20230712142950023"></p>
-</li>
-</ul>
-<p>抛勾，提交评论，诱导人去评论（登录两次就是偷）</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712143641230.png" alt="image-20230712143641230"></p>
-<p>上钩</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212420911.png" alt="image-20230712212420911"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212429528.png" alt="image-20230712212429528"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212436943.png" alt="image-20230712212436943"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212444847.png" alt="image-20230712212444847"></p>
-<h4 id="cookie攻击"><a href="#cookie攻击" class="headerlink" title="cookie攻击"></a>cookie攻击</h4><hr>
-<p>cookie原理</p>
-<p>其实就是存在客户端浏览器的一些和网站交互的信息.</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712212906175.png" alt="image-20230712212906175"></p>
-<p>session原理</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712213025733.png" alt="image-20230712213025733"></p>
-<p>其实就是存在服务器之上的客户端身份信息.</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712213238237.png" alt="image-20230712213238237"></p>
-<p>sessionID还是要通过cookie来返回\返回服务器.</p>
-<h6 id="XSS盗取cookie实验环境"><a href="#XSS盗取cookie实验环境" class="headerlink" title="XSS盗取cookie实验环境"></a>XSS盗取cookie实验环境</h6><p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712213327543.png" alt="image-20230712213327543"></p>
-<p>原理就是冒充了别人的身份(通过使用cookie)</p>
-<hr>
-<p>kali黑客机子装好攻击脚本,功能是将当前网页的cookie发送到黑客的个人网站之中.<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712214453380.png" alt="image-20230712214453380"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712214616253.png" alt="image-20230712214616253"></p>
-<p>JS脚本传来数据,php接收,信息保存到cookie.html文件中</p>
-<p>将html文件清零,同时可以看到xss下有3个文件,专门用来做cookie.</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712214757273.png" alt="image-20230712214757273"></p>
-<p>设置一下目标网站的配置配合实验.<img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712214907439.png" alt="image-20230712214907439"></p>
-<p>提交评论后就马上刷新了,打开了kali设置的文件</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215000685.png" alt="image-20230712215000685"></p>
-<p>管理员上钩</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215050372.png" alt="image-20230712215050372"></p>
-<p>成功看到</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215100529.png" alt="image-20230712215100529"></p>
-<p>使用一个能自定义cookie访问的工具</p>
-<p>用刚刚获取到的cookie去访问原网站,发现自己不用用户密码,照样能登录后台.</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215443954.png" alt="image-20230712215443954"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215451894.png" alt="image-20230712215451894"></p>
-<h6 id="跨站攻击平台"><a href="#跨站攻击平台" class="headerlink" title="跨站攻击平台"></a>跨站攻击平台</h6><hr>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215642843.png" alt="image-20230712215642843"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215657677.png" alt="image-20230712215657677"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215846501.png" alt="image-20230712215846501"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215852694.png" alt="image-20230712215852694"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215900426.png" alt="image-20230712215900426"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215921973.png" alt="image-20230712215921973"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215929779.png" alt="image-20230712215929779"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712215938099.png" alt="image-20230712215938099"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220005675.png" alt="image-20230712220005675"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220028895.png" alt="image-20230712220028895"></p>
-<hr>
-<p>在beef黑进去的情况下,进行flash钓鱼攻击</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220112158.png" alt="image-20230712220112158"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220200484.png" alt="image-20230712220200484"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220208636.png" alt="image-20230712220208636"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220254120.png" alt="image-20230712220254120"></p>
-<h3 id="跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型"><a href="#跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型" class="headerlink" title="跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型"></a>跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型</h3><hr>
-<ul>
-<li><p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220529105.png" alt="image-20230712220529105"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220611942.png" alt="image-20230712220611942"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220620638.png" alt="image-20230712220620638"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220742950.png" alt="image-20230712220742950"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220756658-16891708773671.png" alt="image-20230712220756658"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712220809506-16891708901293.png" alt="image-20230712220809506"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221057950.png" alt="image-20230712221057950"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221104685.png" alt="image-20230712221104685"></p>
-</li>
-</ul>
-<p>防范</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221159317.png" alt="image-20230712221159317"></p>
-<h4 id="跨站请求伪造攻击与防范"><a href="#跨站请求伪造攻击与防范" class="headerlink" title="跨站请求伪造攻击与防范."></a>跨站请求伪造攻击与防范.</h4><hr>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221215222.png" alt="image-20230712221215222"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221223558.png"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221605842.png" alt="image-20230712221605842"></p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221641510.png" alt="image-20230712221641510"></p>
-<p>有着get和post方式</p>
-<p>XSS和CSRF区别</p>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221901276.png" alt="image-20230712221901276"></p>
-<h5 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h5><hr>
-<p><img src="/2023/07/12/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/image-20230712221918754.png" alt="image-20230712221918754"></p>
-]]></content>
-      <categories>
-        <category>实践</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>第三节课</title>
-    <url>/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/</url>
-    <content><![CDATA[<h3 id="SQL注入设置后门操作方式"><a href="#SQL注入设置后门操作方式" class="headerlink" title="SQL注入设置后门操作方式"></a>SQL注入设置后门操作方式</h3><hr>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200455603.png" alt="image-20230714200455603"></p>
-<p>寻找到SQL注入漏洞,然后注入后门,然后创建一个新linux新用户,</p>
-<p>用新用户远程登录linux,然后反向连接黑客机子,防止防火墙,接着就可以控制服务器了.</p>
-<h4 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h4><hr>
-<h5 id="黑进网站后台"><a href="#黑进网站后台" class="headerlink" title="黑进网站后台"></a>黑进网站后台</h5><p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200649779.png" alt="image-20230714200649779"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200703646.png" alt="image-20230714200703646"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200711097.png" alt="image-20230714200711097"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200717685.png" alt="image-20230714200717685"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200723746.png" alt="image-20230714200723746"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200729472.png" alt="image-20230714200729472"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200737626.png" alt="image-20230714200737626"></p>
-<h5 id="借助网站后台-黑进linux。"><a href="#借助网站后台-黑进linux。" class="headerlink" title="借助网站后台,黑进linux。"></a>借助网站后台,黑进linux。</h5><p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200828953.png" alt="image-20230714200828953"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200835482.png" alt="image-20230714200835482"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200843706.png" alt="image-20230714200843706"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200851815.png" alt="image-20230714200851815"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200858767.png" alt="image-20230714200858767"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200906869.png" alt="image-20230714200906869"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200918059.png" alt="image-20230714200918059"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200924248.png" alt="image-20230714200924248"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200935795.png" alt="image-20230714200935795"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200945784.png" alt="image-20230714200945784"></p>
-<p>、<img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714200952795.png" alt="image-20230714200952795"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201000283.png" alt="image-20230714201000283"></p>
-<h5 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h5><hr>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201013421.png" alt="image-20230714201013421"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201019656.png" alt="image-20230714201019656"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201104819.png" alt="image-20230714201104819"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201111713.png" alt="image-20230714201111713"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201119641.png" alt="image-20230714201119641"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201129200.png" alt="image-20230714201129200"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201200151.png" alt="image-20230714201200151"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201218669.png" alt="image-20230714201218669"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201228701.png" alt="image-20230714201228701"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201239177.png" alt="image-20230714201239177"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201306535.png" alt="image-20230714201306535"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201320934.png" alt="image-20230714201320934"></p>
-<h3 id="XSS跨站攻击"><a href="#XSS跨站攻击" class="headerlink" title="XSS跨站攻击"></a>XSS跨站攻击</h3><hr>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201418258.png" alt="image-20230714201418258"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201433330.png" alt="image-20230714201433330"></p>
-<h5 id="rootkit后门"><a href="#rootkit后门" class="headerlink" title="rootkit后门"></a>rootkit后门</h5><hr>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201454309.png" alt="image-20230714201454309"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201543258.png" alt="image-20230714201543258"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201632198.png" alt="image-20230714201632198"></p>
-<hr>
-<h5 id="解决rootkit后门"><a href="#解决rootkit后门" class="headerlink" title="解决rootkit后门"></a>解决rootkit后门</h5><p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201741817.png" alt="image-20230714201741817"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201749649.png" alt="image-20230714201749649"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201829896.png" alt="image-20230714201829896"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201842923.png" alt="image-20230714201842923"></p>
-<h5 id="钓鱼攻击"><a href="#钓鱼攻击" class="headerlink" title="钓鱼攻击"></a>钓鱼攻击</h5><hr>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201918286.png" alt="image-20230714201918286"></p>
-<h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><hr>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201938095.png" alt="image-20230714201938095"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714201951685.png" alt="image-20230714201951685"></p>
-<h3 id="配置web日志服务器实验"><a href="#配置web日志服务器实验" class="headerlink" title="配置web日志服务器实验"></a>配置web日志服务器实验</h3><hr>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202301075.png" alt="image-20230714202301075"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202308119.png" alt="image-20230714202308119"></p>
-<p>首先使用公钥和密钥验证免密登录</p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202605880.png" alt="image-20230714202605880"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202613058.png" alt="image-20230714202613058"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202620019.png" alt="image-20230714202620019"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202626205.png" alt="image-20230714202626205"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202636307.png" alt="image-20230714202636307"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202654149.png" alt="image-20230714202654149"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202711708.png" alt="image-20230714202711708"></p>
-<h3 id="系统加固"><a href="#系统加固" class="headerlink" title="系统加固"></a>系统加固</h3><hr>
-<h4 id="mysql加固"><a href="#mysql加固" class="headerlink" title="mysql加固"></a>mysql加固</h4><hr>
-<p>給特定的数据库一个特定的低权限用户</p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202822559.png" alt="image-20230714202822559"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202933716.png" alt="image-20230714202933716"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714202946485.png" alt="image-20230714202946485"></p>
-<h4 id="账户安全策略"><a href="#账户安全策略" class="headerlink" title="账户安全策略"></a>账户安全策略</h4><hr>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203146611.png" alt="image-20230714203146611"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203153422.png" alt="image-20230714203153422"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203238471.png" alt="image-20230714203238471"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203309152.png" alt="image-20230714203309152"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203324689.png" alt="image-20230714203324689"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203333280.png" alt="image-20230714203333280"></p>
-<h5 id="APACHE加固"><a href="#APACHE加固" class="headerlink" title="APACHE加固"></a>APACHE加固</h5><p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203453529.png" alt="image-20230714203453529"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203513690.png" alt="image-20230714203513690"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203529936.png" alt="image-20230714203529936"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203549853.png" alt="image-20230714203549853"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203611312.png" alt="image-20230714203611312"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203618670.png" alt="image-20230714203618670"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203720915.png" alt="image-20230714203720915"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203727400.png" alt="image-20230714203727400"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203803336.png" alt="image-20230714203803336"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203812132.png" alt="image-20230714203812132"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203838928.png" alt="image-20230714203838928"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203854174.png" alt="image-20230714203854174"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203914094.png" alt="image-20230714203914094"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203933980.png" alt="image-20230714203933980"></p>
-<p><img src="/2023/07/14/%E5%AE%9E%E8%AE%AD/%E7%AC%AC%E4%B8%89%E8%8A%82%E8%AF%BE/image-20230714203940408.png" alt="image-20230714203940408"></p>
-]]></content>
-      <categories>
-        <category>实践</category>
-      </categories>
-  </entry>
-  <entry>
     <title>yt不良林自搭VPS科学上网教程</title>
-    <url>/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/</url>
+    <url>/posts/5d8d</url>
     <content><![CDATA[<h2 id="没有GFW时访问国外网站的步骤"><a href="#没有GFW时访问国外网站的步骤" class="headerlink" title="没有GFW时访问国外网站的步骤"></a>没有GFW时访问国外网站的步骤</h2><h3 id="DNS域名解析"><a href="#DNS域名解析" class="headerlink" title="DNS域名解析"></a>DNS域名解析</h3><p>首先先查询本地DNS缓存,然后是本地DNS配置文件,也就是hosts文件。</p>
 <p>查询不到会向设置的DNS服务器发送访问包。</p>
 <h3 id="封装和解封装"><a href="#封装和解封装" class="headerlink" title="封装和解封装"></a>封装和解封装</h3><h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>应用层产生一个有特殊目的的数据包</p>
@@ -624,104 +96,104 @@
 <p>数据链路层封装上源MAC地址，目的MAC地址</p>
 <p>物理层通过网卡将数据包传输到其它设备。</p>
 <h4 id="解封装"><a href="#解封装" class="headerlink" title="解封装"></a>解封装</h4><p>多少层的设备就能够解封装到第几层,比如交换机,是一个两层设备，那么就可以读到mac地址头，路由是一个三层设备，（加了NAT功能的路由器有读到端口的功能，因为要建立NAT映射表），就可以读到IP地址层。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717181701936.png" alt="image-20230717181701936"></p>
+<p><img src="/posts/5d8/image-20230717181701936.png" alt="image-20230717181701936"></p>
 <h2 id="GFW如何阻断我们和谷歌的连接"><a href="#GFW如何阻断我们和谷歌的连接" class="headerlink" title="GFW如何阻断我们和谷歌的连接"></a>GFW如何阻断我们和谷歌的连接</h2><p>要想如何突破GFW的封锁，首先就是要知道GFW的工作原理，实际上，就是要学会如何做一个GFW。这个和世间所有的道理是相似的，你想行正义之事，那么首先的就是知道如何去做坏事；你想找到一个女朋友，那么首先就该想到的是，如何可以永远找不到一个女朋友。想知道怎么成功，首先就是要去知道怎么失败。这就是我认为的逆向思维。</p>
 <h4 id="DNS污染"><a href="#DNS污染" class="headerlink" title="DNS污染"></a>DNS污染</h4><hr>
 <p>不让你查到正确的域名IP。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717183120232.png" alt="image-20230717183120232"></p>
+<p><img src="/posts/5d8/image-20230717183120232.png" alt="image-20230717183120232"></p>
 <p>DNS污染的话，就使用修改host的方式避免进行DNS查询请求</p>
 <h4 id="TCP重置攻击"><a href="#TCP重置攻击" class="headerlink" title="TCP重置攻击"></a>TCP重置攻击</h4><hr>
 <p>GFW冒充目标服务器，向我们发送一个拒绝连接的回应。这是因为http的话数据包是可以直接看到内容，可以看到你在寻求与目标服务器做一个连接，而这个目标服务器就在GFW的黑名单之上，所以就会进行一个冒充操作。而你根本不知道这是防火墙伪造给你的一个数据包。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717183706257.png" alt="image-20230717183706257"></p>
-<p>而SS的存在就是对数据包进行一个加密，来混淆进出GFW的流量，和在国外的一个VPS进行连接但如今GFW已经可以进行一个主动探测（重放攻击，用我的数据包再发送一次，叫做探测包，AEAD加密可以拦截这个攻击，因为可以认证了对方的身份，也就是有防重放攻击。），也就是可以知道linux到底有没有在运行ss服务。<img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717185643151.png" alt="image-20230717185643151"></p>
+<p><img src="/posts/5d8/image-20230717183706257.png" alt="image-20230717183706257"></p>
+<p>而SS的存在就是对数据包进行一个加密，来混淆进出GFW的流量，和在国外的一个VPS进行连接但如今GFW已经可以进行一个主动探测（重放攻击，用我的数据包再发送一次，叫做探测包，AEAD加密可以拦截这个攻击，因为可以认证了对方的身份，也就是有防重放攻击。），也就是可以知道linux到底有没有在运行ss服务。<img src="/posts/5d8/image-20230717185643151.png" alt="image-20230717185643151"></p>
 <h4 id="购买VPS服务器"><a href="#购买VPS服务器" class="headerlink" title="购买VPS服务器"></a>购买VPS服务器</h4><hr>
 <p>就像在淘宝上购物一样。比较大型的VPS商家有</p>
 <p> Google cloud，amazon web services，Microsoft Azure ，甲骨文，</p>
 <p>阿里云，腾讯云，刚开始学习不用使用那么贵的，使用vultr，线路比较烂，不适合用来当作主力，但是无限的IP提供。</p>
 <h4 id="使用plugin"><a href="#使用plugin" class="headerlink" title="使用plugin"></a>使用plugin</h4><hr>
 <p>由于运行的服务能被探测，可以使用plugin功能对数据流量进行伪装，伪装成http，websocket流量，寄希望于防火墙认为这个数据包是http时数据包时，不会往服务器发送探测包。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717193601217.png" alt="image-20230717191322332"></p>
+<p><img src="/posts/5d8/image-20230717193601217.png" alt="image-20230717191322332"></p>
 <p>SSR节点就是类似加了插件的ss节点。</p>
-<p>SSR有混淆参数和协议参数（用于用户认证），已经逐渐被淘汰了。<img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717191421327.png" alt="image-20230717191421327"></p>
+<p>SSR有混淆参数和协议参数（用于用户认证），已经逐渐被淘汰了。<img src="/posts/5d8/image-20230717191421327.png" alt="image-20230717191421327"></p>
 <p>使用shadowshock才有插件的功能，然后在v2ray上面开一个socks代理</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717192653302.png" alt="image-20230717192653302"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717192706681.png" alt="image-20230717192706681"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717192545536.png" alt="image-20230717192545536"></p>
+<p><img src="/posts/5d8/image-20230717192653302.png" alt="image-20230717192653302"></p>
+<p><img src="/posts/5d8/image-20230717192706681.png" alt="image-20230717192706681"></p>
+<p><img src="/posts/5d8/image-20230717192545536.png" alt="image-20230717192545536"></p>
 <p>搭建ss是很简单的捏，如果是全部加密的无规则字节流，经过GFW时会被怀疑，就会被GFW发送探测包，但是如果你加入一个http头，让GFW能看懂，但是不知道你发这个是上什么网页（？是这样吗，我先这样理解），搭建裸奔的ss节点是不再推荐了，<strong>下节课讲用插件伪装成https</strong>。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717193253725.png" alt="image-20230717193253725"></p>
+<p><img src="/posts/5d8/image-20230717193253725.png" alt="image-20230717193253725"></p>
 <h3 id="TLS让ss流量变成https流量"><a href="#TLS让ss流量变成https流量" class="headerlink" title="TLS让ss流量变成https流量"></a>TLS让ss流量变成https流量</h3><hr>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717194233946.png" alt="image-20230717194233946"></p>
+<p><img src="/posts/5d8/image-20230717194233946.png" alt="image-20230717194233946"></p>
 <p>trojan天生就是用来将数据伪装成https流量来达到科学上网的目的。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717193933263.png" alt="image-20230717193933263"></p>
+<p><img src="/posts/5d8/image-20230717193933263.png" alt="image-20230717193933263"></p>
 <h4 id="TLS原理"><a href="#TLS原理" class="headerlink" title="TLS原理"></a>TLS原理</h4><hr>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717195351719-16895948328541.png" alt="image-20230717195351719"></p>
+<p><img src="/posts/5d8/image-20230717195351719-16895948328541.png" alt="image-20230717195351719"></p>
 <p>必须先有证书。非对称加密算法</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717201022927.png" alt="image-20230717201022927"></p>
+<p><img src="/posts/5d8/image-20230717201022927.png" alt="image-20230717201022927"></p>
 <p>服务器向CA机构申请认证域名和对应的公钥（私钥自己留着），然后我这边要使用https时，首先要先和服务器建立一个tls连接，服务器同意tls连接和发送证书给我。</p>
 <p>然后双方根据公钥和私钥协商出一个对称加密的密钥对http数据内容进行加密。</p>
-<p>sni：网址<img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717201409354.png" alt="image-20230717201409354"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717201422885.png" alt="image-20230717201422885"></p>
+<p>sni：网址<img src="/posts/5d8/image-20230717201409354.png" alt="image-20230717201409354"></p>
+<p><img src="/posts/5d8/image-20230717201422885.png" alt="image-20230717201422885"></p>
 <h4 id="Trojan原理"><a href="#Trojan原理" class="headerlink" title="Trojan原理"></a>Trojan原理</h4><hr>
 <p>模仿https的流量。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717201512136.png" alt="image-20230717201512136"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717201621962.png" alt="image-20230717201621962"></p>
-<p>为什么trojan服务器要进行不属于trojan流量的跳转返回呢？因为防止防火墙的主动探测(发一个https的连接请求,但是trojan服务器能够识别不是来自该来的地方,所以会将一个无害的网址返回给服务器以欺骗服务器)，将一个无害的网站数据返回。<img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717214929949.png" alt="image-20230717214929949"></p>
+<p><img src="/posts/5d8/image-20230717201512136.png" alt="image-20230717201512136"></p>
+<p><img src="/posts/5d8/image-20230717201621962.png" alt="image-20230717201621962"></p>
+<p>为什么trojan服务器要进行不属于trojan流量的跳转返回呢？因为防止防火墙的主动探测(发一个https的连接请求,但是trojan服务器能够识别不是来自该来的地方,所以会将一个无害的网址返回给服务器以欺骗服务器)，将一个无害的网站数据返回。<img src="/posts/5d8/image-20230717214929949.png" alt="image-20230717214929949"></p>
 <h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><hr>
 <p>首先买一个VPS服务是不用说都要的了.</p>
 <p>然后是在服务器上安装trojan-go服务:</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717220334040.png" alt="image-20230717220334040"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717220451146.png" alt="image-20230717220451146"></p>
+<p><img src="/posts/5d8/image-20230717220334040.png" alt="image-20230717220334040"></p>
+<p><img src="/posts/5d8/image-20230717220451146.png" alt="image-20230717220451146"></p>
 <p>linux编译,然后添加config文件,然后申请证书</p>
 <p>使用ACME工具申请证书</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717220521863.png" alt="image-20230717220521863"></p>
+<p><img src="/posts/5d8/image-20230717220521863.png" alt="image-20230717220521863"></p>
 <p>软链接的意思跟windows下快捷方式差不多</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717220616148.png" alt="image-20230717220616148"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717220638070.png" alt="image-20230717220638070"></p>
+<p><img src="/posts/5d8/image-20230717220616148.png" alt="image-20230717220616148"></p>
+<p><img src="/posts/5d8/image-20230717220638070.png" alt="image-20230717220638070"></p>
 <p>注册好,然后开放80端口,独立模式下acme会在80端口创建一个本地服务器。<strong>这个web服务器是由acme脚本自动完成的</strong>。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717220911311.png" alt="image-20230717220911311"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717220808723.png" alt="image-20230717220808723"></p>
+<p><img src="/posts/5d8/image-20230717220911311.png" alt="image-20230717220911311"></p>
+<p><img src="/posts/5d8/image-20230717220808723.png" alt="image-20230717220808723"></p>
 <p>在服务器上可以看到有token的出现，CA过来访问完之后，就会把服务器关掉。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717221007903.png" alt="image-20230717221007903"></p>
-<p>CA机构太忙了，使用命令切换其它的CA颁发机构。默认zerossl。<img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717221222736.png" alt="image-20230717221222736"></p>
+<p><img src="/posts/5d8/image-20230717221007903.png" alt="image-20230717221007903"></p>
+<p>CA机构太忙了，使用命令切换其它的CA颁发机构。默认zerossl。<img src="/posts/5d8/image-20230717221222736.png" alt="image-20230717221222736"></p>
 <p>acme会给服务器发送一个token,若服务器</p>
-<p>安装好证书即可，以下安装成功。<img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717221422770.png" alt="image-20230717221422770"></p>
+<p>安装好证书即可，以下安装成功。<img src="/posts/5d8/image-20230717221422770.png" alt="image-20230717221422770"></p>
 <p>客户端</p>
 <hr>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717221535091.png" alt="image-20230717221535091"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717221653625.png" alt="image-20230717221653625"></p>
+<p><img src="/posts/5d8/image-20230717221535091.png" alt="image-20230717221535091"></p>
+<p><img src="/posts/5d8/image-20230717221653625.png" alt="image-20230717221653625"></p>
 <p>记得开服务器的防火墙</p>
 <p>然后用真连接测试</p>
 <p>伪装</p>
 <p>服务器直接访问的话，会出现下面这个页面：</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717221852084.png" alt="image-20230717221852084"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717221817513.png" alt="image-20230717221817513"></p>
+<p><img src="/posts/5d8/image-20230717221852084.png" alt="image-20230717221852084"></p>
+<p><img src="/posts/5d8/image-20230717221817513.png" alt="image-20230717221817513"></p>
 <h5 id="没有域名的话：服务器地址改成IP地址"><a href="#没有域名的话：服务器地址改成IP地址" class="headerlink" title="没有域名的话：服务器地址改成IP地址"></a>没有域名的话：服务器地址改成IP地址</h5><hr>
 <p>自己做CA，自己给自己签，这种证书叫做自签证书。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717222151084.png" alt="image-20230717222151084"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717222642547.png" alt="image-20230717222642547"></p>
+<p><img src="/posts/5d8/image-20230717222151084.png" alt="image-20230717222151084"></p>
+<p><img src="/posts/5d8/image-20230717222642547.png" alt="image-20230717222642547"></p>
 <p>给bing.com签一个证书，sni那里就要写bing.com</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717222743507.png" alt="image-20230717222743507"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717222618560.png" alt="image-20230717222618560"></p>
+<p><img src="/posts/5d8/image-20230717222743507.png" alt="image-20230717222743507"></p>
+<p><img src="/posts/5d8/image-20230717222618560.png" alt="image-20230717222618560"></p>
 <p>跳过证书验证,或者是添加到电脑的受信任颁发机构里面去.</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717223009633.png" alt="image-20230717223009633"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717223051887.png" alt="image-20230717223051887"></p>
+<p><img src="/posts/5d8/image-20230717223009633.png" alt="image-20230717223009633"></p>
+<p><img src="/posts/5d8/image-20230717223051887.png" alt="image-20230717223051887"></p>
 <p>让trojan可以后台运行</p>
 <p>内容重定向到log那里,打印一些日志文件</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717223327030.png" alt="image-20230717223327030"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717223444201.png" alt="image-20230717223444201"></p>
+<p><img src="/posts/5d8/image-20230717223327030.png" alt="image-20230717223327030"></p>
+<p><img src="/posts/5d8/image-20230717223444201.png" alt="image-20230717223444201"></p>
 <p>纵观所有翻墙协议,最终都走向将流量伪装成正常的https才能最稳定的进行科学上网。最推荐的就是trojan。缺点是效率较低，需要两层TLS。有一个革命性的概念和技术。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717223936896.png" alt="image-20230717223936896"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717224021160.png" alt="image-20230717224021160"></p>
+<p><img src="/posts/5d8/image-20230717223936896.png" alt="image-20230717223936896"></p>
+<p><img src="/posts/5d8/image-20230717224021160.png" alt="image-20230717224021160"></p>
 <h2 id="Vmess协议"><a href="#Vmess协议" class="headerlink" title="Vmess协议"></a>Vmess协议</h2><p>系统时间有关？加密方式可以搞自动选择？</p>
 <p>ss要确定加密协议，为什么这个不用？</p>
 <h2 id="额外的工作"><a href="#额外的工作" class="headerlink" title="额外的工作"></a>额外的工作</h2><hr>
 <p>为了能够使用一款能够批量下载youtube视频的工具,不但支持了乌克兰,还被迫安装了.net的一个环境。</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717170249263.png" alt="image-20230717170249263"></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717170148514.png" alt="image-20230717170148514"></p>
+<p><img src="/posts/5d8/image-20230717170249263.png" alt="image-20230717170249263"></p>
+<p><img src="/posts/5d8/image-20230717170148514.png" alt="image-20230717170148514"></p>
 <p>成功安装，不得不说，国内这些盗取github上面开源的码然后制作app牟利的行为令人不齿，不就是赚的一个墙的信息差和钱吗，果然，那句话哪里有法律，哪里就意味着有钱赚。。。</p>
 <p><a href="https://github.com/Tyrrrz/YoutubeDownloader">此程序Github地址</a></p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717170635671.png" alt="image-20230717170635671"></p>
-<p>成功下载中<img src="/2023/07/17/%E5%B7%A5%E5%85%B7/yt%E4%B8%8D%E8%89%AF%E6%9E%97%E8%87%AA%E6%90%ADVPS%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B/image-20230717171241931.png" alt="image-20230717171241931"></p>
+<p><img src="/posts/5d8/image-20230717170635671.png" alt="image-20230717170635671"></p>
+<p>成功下载中<img src="/posts/5d8/image-20230717171241931.png" alt="image-20230717171241931"></p>
 <p>或许未来可以做一期视频，关于如何利用github寻找你需要的工具。</p>
 <p>因为github实在是一个宝库，有很多简单的功能实现之后，你就不用去寻找那些臃肿的APP来下载了。</p>
 ]]></content>
@@ -734,31 +206,279 @@
       </tags>
   </entry>
   <entry>
+    <title>引至kali，web攻防模拟上传渗透，端口扫描</title>
+    <url>/posts/4109</url>
+    <content><![CDATA[<h3 id="实训课第一节"><a href="#实训课第一节" class="headerlink" title="实训课第一节"></a>实训课第一节</h3><h4 id="CISAW认证"><a href="#CISAW认证" class="headerlink" title="CISAW认证"></a>CISAW认证</h4><p>大学预备级</p>
+<h4 id="网络攻防两个角度"><a href="#网络攻防两个角度" class="headerlink" title="网络攻防两个角度"></a>网络攻防两个角度</h4><p>第一个就是攻击者角度</p>
+<p>第二个就是被攻击者角度</p>
+<p><img src="/posts/410/image-20230710102359531.png" alt="image-20230710102359531"></p>
+<p>看的内容</p>
+<ul>
+<li><p>看数据内容<img src="/posts/410/image-20230710102532407.png" alt="image-20230710102532407"></p>
+</li>
+<li><p>看到SSO,single sign on单点登录功能,只要黑客方能模仿被认证的IP地址,再去访问某个地址就不需要登录直接访问数据库。<img src="/posts/410/image-20230710103727921.png" alt="image-20230710103727921"></p>
+</li>
+<li><p>黑客工具<img src="/posts/410/image-20230710103849128.png" alt="image-20230710103849128"></p>
+<ul>
+<li>导入肉鸡，在同一个宽带之下，就可以获取信息</li>
+<li>积分配合短信验证码，伪造基站收验证码</li>
+</ul>
+</li>
+</ul>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><h5 id="护网"><a href="#护网" class="headerlink" title="护网"></a>护网</h5><p>红黑对抗</p>
+<p>先踩点，获得丰厚的信息。</p>
+<p>单位对外的系统</p>
+<h4 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h4><p>在防火墙对外端口上，能不开就不开，做到最小化。</p>
+<p><img src="/posts/410/image-20230710112503534.png" alt="image-20230710112503534"></p>
+<p>WEB端口工具</p>
+<ul>
+<li>sql注入</li>
+</ul>
+<p>普遍的网络拓扑</p>
+<p>各种云最大的问题：从内往外出的流量几乎不会管。而只管从外面访问里面的流量管得特别严。有些云服务商特别垃圾，要不就全部拒绝，就只能对特定端口进行拒绝，而不能控制对特定端口进行访问。</p>
+<p>机房里面的设备还好。</p>
+<p><img src="/posts/410/image-20230711110022013.png" alt="image-20230711110022013"></p>
+<h3 id="实操-对web服务器进行一次攻防演练"><a href="#实操-对web服务器进行一次攻防演练" class="headerlink" title="实操:对web服务器进行一次攻防演练"></a>实操:对web服务器进行一次攻防演练</h3><p><img src="/posts/410/image-20230710143348548.png" alt="image-20230710143348548"></p>
+<h4 id="首先是踩点-收集信息"><a href="#首先是踩点-收集信息" class="headerlink" title="首先是踩点,收集信息"></a>首先是踩点,收集信息<img src="/posts/410/image-20230710144456315.png" alt="image-20230710144456315"></h4><h5 id="确认好域名-进行端口扫描-查看端口开放情况"><a href="#确认好域名-进行端口扫描-查看端口开放情况" class="headerlink" title="确认好域名,进行端口扫描,查看端口开放情况"></a>确认好域名,进行端口扫描,查看端口开放情况<img src="/posts/410/image-20230710144756866.png" alt="image-20230710144756866"></h5><ul>
+<li><p>模拟环境。同一个局域网下，xp远程连接到kali，扫描ubuntu</p>
+<p><img src="/posts/410/image-20230710145410694.png" alt="image-20230710145410694"></p>
+</li>
+<li><p>先ping一下看看能否正常连接</p>
+</li>
+<li><p>nmap -sT -sV  -P0 -O -n 202.1.160.100，使用这些工具要建立自己的工作表，常用的记住，其它的再去查。</p>
+<p><img src="/posts/410/image-20230710150042770.png" alt="image-20230710150042770"></p>
+</li>
+<li><p>得到端口分析结果<img src="/posts/410/image-20230710150512970.png" alt="image-20230710150512970"></p>
+</li>
+</ul>
+<h5 id="端口扫描防范"><a href="#端口扫描防范" class="headerlink" title="端口扫描防范"></a>端口扫描防范</h5><h4 id><a href="#" class="headerlink" title></a><img src="/posts/410/image-20230710150820527.png" alt="image-20230710150820527"></h4><ul>
+<li><p>防范过程如下，使用iptables</p>
+<ul>
+<li><p>首先登进去，然后查看一下规则<img src="/posts/410/image-20230710151140553.png" alt="image-20230710151140553"></p>
+</li>
+<li><p>添加规则，首先封禁下icmp访问，iptables会先执行上面的规则，下面的若冲突会直接放弃。</p>
+<p><img src="/posts/410/image-20230710151429814.png" alt="image-20230710151429814"></p>
+</li>
+<li><p>只要能穿过企业布置在外面的防火墙，去拿到内网的一台服务器，就能将所有服务器的内容拿到手。因为内网的服务器一般比较脆弱，因为业务需要。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="指纹识别攻击”吗”-没上太懂"><a href="#指纹识别攻击”吗”-没上太懂" class="headerlink" title="指纹识别攻击”吗”:没上太懂"></a>指纹识别攻击”吗”:没上太懂</h5><ul>
+<li><p>netcat（NC工具）做指<strong>纹检测攻击实验</strong>。瑞士军刀写这个的是超级天才。一般要指定端口</p>
+<ul>
+<li>指纹识别理论，所以说知道服务器的版本是很重要的<img src="/posts/410/image-20230710154335851.png" alt="image-20230710154335851"></li>
+<li>burp suiteWEB渗透里面最常用的工具，模拟发包<img src="/posts/410/image-20230710152919368.png" alt="image-20230710152919368"></li>
+</ul>
+</li>
+<li><p>端口上运行着的服务,服务的版本,每个版本都有弱点,不是最新版非常有可能有漏洞,所以说要知道每个端口运行的软件的版本是很重要的,因为这和数据库种记录的每个版本的漏洞一对比,就可以实现高效的一个打击。<img src="/posts/410/image-20230710144938110.png" alt="image-20230710144938110"></p>
+<p><strong>一般使用半连接扫描，也就是回复RST扫描</strong><img src="/posts/410/image-20230710145102613.png" alt="image-20230710145102613"></p>
+<p>使用namp工具，扫描器之王。</p>
+</li>
+<li><p>拿到真实的IP地址，有时候是反向代理。</p>
+</li>
+<li><p>通过域名寻找ip，直接通过IP地址无法用域名访问</p>
+<p><img src="/posts/410/image-20230710144152991.png" alt="image-20230710144152991"></p>
+<p><img src="/posts/410/image-20230710144237525.png"></p>
+<p>freebus看各种安全漏洞</p>
+<p><img src="/posts/410/image-20230710144350854.png" alt="image-20230710144350854"></p>
+</li>
+</ul>
+<p>​		HTTP指纹探测,nc工具获取banner信息</p>
+<p><img src="/posts/410/image-20230711181911052.png" alt="image-20230711181911052"></p>
+<ul>
+<li><p>指纹识别工具:HTTprint来签名<img src="/posts/410/image-20230711182216322.png" alt="image-20230711182216322"></p>
+<p><img src="/posts/410/image-20230711182228407.png" alt="image-20230711182228407"></p>
+</li>
+</ul>
+<h5 id="上传漏洞利用分析"><a href="#上传漏洞利用分析" class="headerlink" title="上传漏洞利用分析"></a>上传漏洞利用分析</h5><ul>
+<li><p>存在就是高危<img src="/posts/410/image-20230710155243374.png" alt="image-20230710155243374"></p>
+</li>
+<li><p>解决方式</p>
+<ul>
+<li>在这个目录的都不能执行</li>
+<li>严格过滤，不允许上传错误的东西</li>
+<li>将对外开放的权限设置的极低</li>
+</ul>
+</li>
+<li><p>存在的条件<img src="/posts/410/image-20230710155633036.png" alt="image-20230710155633036"></p>
+</li>
+<li><p>绕过技术<img src="/posts/410/image-20230711182354949.png" alt="image-20230711182354949"></p>
+<ul>
+<li><p>修改文件的类型<img src="/posts/410/image-20230711182511819.png" alt="image-20230711182511819"></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/71b8b554d9b3">oo截断</a>博文,构造文件名,上传过滤程序以为是jpg文件,实际上,服务器解析该文件时将其当作php文件交由PHP引擎解释和执行.<img src="/posts/410/image-20230711183506893.png" alt="image-20230711183506893"></p>
+</li>
+<li><p>获取到web服务器版本之后,可以使用不同版本下已经出现的解析漏洞<img src="/posts/410/image-20230711183624367.png" alt="image-20230711183624367"></p>
+</li>
+<li><p>这个没看懂<img src="/posts/410/image-20230711183739563.png" alt="image-20230711183739563"></p>
+</li>
+</ul>
+</li>
+<li><p>模拟:登录后台,寻找上传点,创建PHP webshell上传php后门,登录后门</p>
+<ul>
+<li><p>RD工具扫描后台</p>
+</li>
+<li><p>SQL注入拿到账号名和密码</p>
+</li>
+<li><p>上传webshell到后台，如果不筛选上传文件，说明这个系统做得非常垃圾，至少加个扫描文件名，限制后缀为.php的不给上传<img src="/posts/410/image-20230711183933563.png" alt="image-20230711183933563"></p>
+</li>
+<li><p>将某文件夹里面的文件用text执行这个功能取消。也就是要关掉apache的安全加固，将php变成txt来处理。<img src="/posts/410/image-20230711102154913.png" alt="image-20230711102154913"></p>
+<p><img src="/posts/410/image-20230711102317636.png" alt="image-20230711102317636"></p>
+<p><img src="/posts/410/image-20230710160136642.png" alt="image-20230710160136642"></p>
+</li>
+<li><p>暴力破解后台，登进去<img src="/posts/410/image-20230710160508616.png" alt="image-20230710160508616"><img src="/posts/410/image-20230710160500692.png" alt="image-20230710160500692"></p>
+</li>
+<li><p>上传之后，就在后台登进去。最好给木马设置密码，不要给别人做了嫁衣。<img src="/posts/410/image-20230711102527207.png" alt="image-20230711102527207"><img src="/posts/410/image-20230710160646404.png" alt="image-20230710160646404"></p>
+</li>
+<li><p>搜索配置文件，看看有没有密码写明的数据库。<img src="/posts/410/image-20230710161248115.png" alt="image-20230710161248115">这里表示直接网站和数据库在同一个机器上面<img src="/posts/410/image-20230710161202125.png" alt="image-20230710161202125"></p>
+<p>还可以远程代码植入</p>
+<h6 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h6><hr>
+<p><img src="/posts/410/image-20230711184101097.png" alt="image-20230711184101097"></p>
+<p><img src="/posts/410/image-20230711184116712.png" alt="image-20230711184116712"></p>
+</li>
+</ul>
+</li>
+<li><p>上传漏洞监测，开源的企业不会用。无法追责</p>
+<p><img src="/posts/410/image-20230710161805469.png" alt="image-20230710161805469"></p>
+<ul>
+<li>不给用户上传php文件。<img src="/posts/410/image-20230710161914015.png" alt="image-20230710161914015"><ul>
+<li>编写shell文件检查脚本<img src="/posts/410/image-20230710162036339.png" alt="image-20230710162036339"></li>
+<li>加入计划任务，每个星号分，小时，日，月，周<img src="/posts/410/image-20230710162142335.png" alt="image-20230710162142335">crontab -e 用shell脚本执行一遍。<img src="/posts/410/image-20230710162238709.png" alt="image-20230710162238709"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="系统提权分析"><a href="#系统提权分析" class="headerlink" title="系统提权分析"></a>系统提权分析</h5><hr>
+<p><img src="/posts/410/image-20230711184451617.png" alt="image-20230711184451617"></p>
+<h6 id="高难度的一步"><a href="#高难度的一步" class="headerlink" title="高难度的一步"></a>高难度的一步</h6><p><img src="/posts/410/image-20230711184524480.png" alt="image-20230711184524480"></p>
+<ul>
+<li><p>利用UDEV设备管理器的内核漏洞进行提权<img src="/posts/410/image-20230711184657977.png" alt="image-20230711184657977"></p>
+<ul>
+<li><p>步骤<img src="/posts/410/image-20230711184741381.png" alt="image-20230711184741381"></p>
+<ul>
+<li><p>看不懂的一步<img src="/posts/410/image-20230711185018396.png" alt="image-20230711185018396"></p>
+</li>
+<li><p>看懂了:其实就是将服务器中的命令行解释这个功能发送到kali的9999端口上,只要kali监听9999端口,就能在kali上操纵web服务器所在的linux,我的推测是方便于后面编译文件,以及添加执行文件。<img src="/posts/410/image-20230711192005530.png" alt="image-20230711192005530"></p>
+</li>
+<li><p>写run文件配合8572<img src="/posts/410/image-20230711192214065.png" alt="image-20230711192214065"></p>
+</li>
+<li><p>提权成功，结果返回5555号端口，此时的用户uid&#x3D;0，超级无敌权限，接下来随便删文件都行了。<img src="/posts/410/image-20230711192300039.png" alt="image-20230711192300039"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>后台连接</strong></p>
+<p><strong>攻击端</strong>连接</p>
+<p><img src="/posts/410/image-20230711104902455.png" alt="image-20230711104902455"></p>
+<p><img src="/posts/410/image-20230711104921691.png" alt="image-20230711104921691"></p>
+<p><strong>反向连接。</strong>使用服务器去连接黑客自己的端口。正向连接是很容易查出来的。</p>
+<p><img src="/posts/410/image-20230711103910765.png" alt="image-20230711103910765"><img src="/posts/410/image-20230711105013155.png" alt="image-20230711105013155"><img src="/posts/410/image-20230711105027887.png" alt="image-20230711105027887"></p>
+<h5 id="后门植入分析"><a href="#后门植入分析" class="headerlink" title="后门植入分析"></a>后门植入分析</h5><hr>
+<h6 id="后门检测"><a href="#后门检测" class="headerlink" title="后门检测"></a>后门检测</h6><p>使用后门检测</p>
+<p><img src="/posts/410/image-20230711105112683.png" alt="image-20230711105112683"></p>
+<p>接着上传脚本提权，提高用户权力来删库跑路。<img src="/posts/410/image-20230710162552949.png" alt="image-20230710162552949"></p>
+<p>提高到sudo ，<strong>id&#x3D;0的时候最大</strong>。</p>
+<p>github上有，上传到tmp目录，这个目录容易下的文件夹下面能操作的比较多。执行权限管理得比较松。</p>
+<p>udev漏洞</p>
+<h5 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h5><hr>
+<ul>
+<li><p>绝对的高危</p>
+</li>
+<li><p>SQL发生在对方的数据库之上，而且一定有web中间件，不是静态页面，才能搞SQL注入。<img src="/posts/410/image-20230711143418788.png" alt="image-20230711143418788"></p>
+<ul>
+<li>web中间件以为加入的一些指令也是请求，发数据库服务器中去了。请求中，加入一些指令，没有文本化处理。<img src="/posts/410/image-20230711143728149.png" alt="image-20230711143728149"></li>
+</ul>
+</li>
+<li><p>实践</p>
+<ul>
+<li><p>找SQL注入在哪里</p>
+<ul>
+<li>人工试</li>
+<li>使用工具SQLMAP这种工具（装好python环境就行了）扫描windows和linux命令之下有点不同，开始命令有些不同罢了。</li>
+</ul>
+</li>
+<li><p>寻找注入点，加了个and 1&#x3D;&#x3D;1没有报错，成功返回数据，此时属于SQL注入。<img src="/posts/410/image-20230711144741498.png" alt="image-20230711144741498"></p>
+</li>
+<li><p>识别数据库类型（对应的SQL语句不同，SQL语句对应的包围符号一定要成对出现）<img src="/posts/410/image-20230711145108983.png" alt="image-20230711145108983"></p>
+<ul>
+<li>经典的万能密码漏洞<img src="/posts/410/image-20230711150012705.png" alt="image-20230711150012705"></li>
+</ul>
+</li>
+<li><p>猜数据库列长度。union 跟的东西一定要跟字段数（列数）匹配，若不报错就是那个字段。<img src="/posts/410/image-20230711150148190.png" alt="image-20230711150148190"></p>
+<p>这一招非常之漂亮，前面select由于and 1&#x3D;2的原因什么都无法显示，而union将前后两张表的信息联合起来，填上1，2之后，相应的表就会天上对应的数字，且一定要和表中的列匹配才有得显示，此时就能同时知道表的列数以及每列的字段分别表示什么。1&#x3D;2初看不知道什么鸡巴意思，后来发现真尼玛牛逼。</p>
+<p><img src="/posts/410/image-20230711152908506.png" alt="image-20230711152908506"></p>
+</li>
+<li><p>获取数据库版本信息<img src="/posts/410/image-20230711150313125.png" alt="image-20230711150313125"></p>
+</li>
+<li><p>查看数据库用户<img src="/posts/410/image-20230711150324798.png" alt="image-20230711150324798"></p>
+</li>
+<li><p>查看数据库名<img src="/posts/410/image-20230711150335293.png" alt="image-20230711150335293"></p>
+</li>
+<li><p>查看数据库安装路径</p>
+</li>
+<li><p>查看网站数据库中表名一直查到具体的字段值<img src="/posts/410/image-20230711154353230.png" alt="image-20230711154353230"></p>
+</li>
+<li><p>获取的密码若是密文，暴力破解（cmd5.com）。</p>
+</li>
+<li><p>读取文件<img src="/posts/410/image-20230711160041549.png" alt="image-20230711160041549">passwd为用户名信息，shadow为密码。shadow文件权限不够，读不出来的捏。</p>
+</li>
+</ul>
+<h6 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h6><p> <img src="/posts/410/image-20230711162539182.png" alt="image-20230711162539182"></p>
+</li>
+</ul>
+<h4 id="额外查的老师上课装逼不讲明白的名词解释"><a href="#额外查的老师上课装逼不讲明白的名词解释" class="headerlink" title="额外查的老师上课装逼不讲明白的名词解释"></a>额外查的老师上课装逼不讲明白的名词解释</h4><hr>
+<h5 id="SSO：单点登录系统"><a href="#SSO：单点登录系统" class="headerlink" title="SSO：单点登录系统"></a>SSO：单点登录系统</h5><p><img src="/posts/410/image-20230711003957630.png" alt="image-20230711003957630"></p>
+<p><a href="https://zhuanlan.zhihu.com/p/66037342">什么是单点登录？</a></p>
+<h5 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h5><hr>
+<p>POC，proof of Concept，观点证明。漏洞报告中使用。一段说明或者一个攻击的样例。</p>
+<p>EXP。exploit，漏洞利用，对漏洞的利用说明，或者一个演示的漏洞攻击代码，让读者了解漏洞的机理以及利用的方法。</p>
+<p>VUL vulnerability。漏洞</p>
+<p>CVE common vulnerabilities exposure公共漏洞和暴露。广泛认同的信息安全漏洞会有一个公共的名称。在网址上搜CVE名称（相当于番号），就能找到。</p>
+<p>零日漏洞：初体验的漏洞发现。</p>
+<p><img src="/posts/410/image-20230711194740750.png" alt="image-20230711194740750"></p>
+<p><a href="https://blog.csdn.net/heikeyouyou/article/details/130766071?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-5-130766071-blog-88048847.235%5Ev38%5Epc_relevant_sort&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-5-130766071-blog-88048847.235%5Ev38%5Epc_relevant_sort&utm_relevant_index=10">漏洞案例</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/585377081">nmap教程</a></p>
+<p>DMZ 是英文“Demilitarized Zone”的缩写，中文名称为“隔离区”。</p>
+<p><img src="/posts/410/image-20230711195216391.png" alt="image-20230711195216391"></p>
+<p><a href="https://zhuanlan.zhihu.com/p/599801515">2分钟看懂DMZ区</a></p>
+]]></content>
+      <categories>
+        <category>实践</category>
+      </categories>
+      <tags>
+        <tag>网络工程实训</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Hexo布置个人网页的一些问题</title>
-    <url>/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230701202125916.png" alt="image-20230701202125916"></p>
+    <url>/posts/d69f</url>
+    <content><![CDATA[<h3 id="插入图片的问题"><a href="#插入图片的问题" class="headerlink" title="插入图片的问题"></a>插入图片的问题</h3><p><img src="/posts/d69/image-20230701202125916.png" alt="image-20230701202125916"></p>
 <ul>
 <li><p>配置URL</p>
-<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230701202211848.png" alt="image-20230701202211848"></p>
+<p><img src="/posts/d69/image-20230701202211848.png" alt="image-20230701202211848"></p>
 </li>
 <li><p>当初那个图片工具的配置就应该一动不动。</p>
 </li>
 <li><p>我想构造的是一个分类文件夹里面放相同的文件，然后图片存进去img目录中，以文件名建立一个文件夹存。像这样</p>
-<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710174450967.png" alt="image-20230710174450967"></p>
+<p><img src="/posts/d69/image-20230710174450967.png" alt="image-20230710174450967"></p>
 <h4 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h4><ol>
-<li><p>修改markdown内的图片设置,设置如下<img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710174721892.png" alt="image-20230710174721892"></p>
+<li><p>修改markdown内的图片设置,设置如下<img src="/posts/d69/image-20230710174721892.png" alt="image-20230710174721892"></p>
 </li>
-<li><p>此时插进去图片都将变成相对路径只有文件名的样子,需要添加一个typora-root-url,去修改骨架文件夹下的(scaffolds)_post模板文件<img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710174815323.png" alt="image-20230710174815323"></p>
+<li><p>此时插进去图片都将变成相对路径只有文件名的样子,需要添加一个typora-root-url,去修改骨架文件夹下的(scaffolds)_post模板文件<img src="/posts/d69/image-20230710174815323.png" alt="image-20230710174815323"></p>
 </li>
-<li><p>修改为如下<img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710175000041.png" alt="image-20230710175000041"></p>
+<li><p>修改为如下<img src="/posts/d69/image-20230710175000041.png" alt="image-20230710175000041"></p>
 </li>
-<li><p>然后就在typora上可见,部署到网页中也可见啦。没想到本地的话，url不会起作用，所以-s命令看不到照片。然后我就然后这个插件好像无法使用部署耳机目录，会出错，暂时使用这种分类方式了,寻找了一天修改hexo-asset-image这个包的方式无果,就这样吧。<img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232400529.png" alt="image-20230710232400529"></p>
+<li><p>然后就在typora上可见,部署到网页中也可见啦。没想到本地的话，url不会起作用，所以-s命令看不到照片。然后我就然后这个插件好像无法使用部署耳机目录，会出错，暂时使用这种分类方式了,寻找了一天修改hexo-asset-image这个包的方式无果,就这样吧。<img src="/posts/d69/image-20230710232400529.png" alt="image-20230710232400529"></p>
 </li>
-<li><p>修改回配置<img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232525256.png" alt="image-20230710232525256"></p>
+<li><p>修改回配置<img src="/posts/d69/image-20230710232525256.png" alt="image-20230710232525256"></p>
 </li>
 <li><p>成功部署</p>
-<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232643369.png" alt="image-20230710232556693"></p>
-<p><img src="/2023/07/01/%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Hexo%E5%B8%83%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/image-20230710232707053.png" alt="image-20230710232707053"></p>
+<p><img src="/posts/d69/image-20230710232643369.png" alt="image-20230710232556693"></p>
+<p><img src="/posts/d69/image-20230710232707053.png" alt="image-20230710232707053"></p>
 <p>配上hexo-asset-image里的index.js的代码,就是修改这个修改了一天</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">&#x27;cheerio&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这是个获取某个字符或者字符串片段在整个字符串种的起始位置</span></span><br><span class="line"><span class="comment">//split(a,b):根据a进行字符串的划分,结果为大小为b的字符串数组,a不会出现在任何数组元素的部分而返回.</span></span><br><span class="line"><span class="comment">//join(m):将字符串数组使用m来连接而返回比如[&#x27;a&#x27;,&#x27;b&#x27;].join(&#x27;-&#x27;)=&#x27;a-b&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getPosition</span>(<span class="params">str, m, i</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> str.<span class="title function_">split</span>(m, i).<span class="title function_">join</span>(m).<span class="property">length</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_post_render&#x27;</span>, <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.<span class="property">config</span>;</span><br><span class="line">  <span class="keyword">if</span>(config.<span class="property">post_asset_folder</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> link = data.<span class="property">permalink</span>;</span><br><span class="line">    <span class="keyword">var</span> beginPos = <span class="title function_">getPosition</span>(link, <span class="string">&#x27;/&#x27;</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> appendLink = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="comment">// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span></span><br><span class="line">    <span class="comment">// if not with index.html endpos = link.lastIndexOf(&#x27;.&#x27;) + 1 support hexo-abbrlink</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="regexp">/.*\/index\.html$/</span>.<span class="title function_">test</span>(link)) &#123;</span><br><span class="line">      <span class="comment">// when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span></span><br><span class="line">      <span class="comment">// image in xxtitle/ will go to xxtitle/index/</span></span><br><span class="line">      appendLink = <span class="string">&#x27;index/&#x27;</span>;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.<span class="property">length</span>-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    link = link.<span class="title function_">substring</span>(beginPos, endPos) + <span class="string">&#x27;/&#x27;</span> + appendLink;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">&#x27;excerpt&#x27;</span>, <span class="string">&#x27;more&#x27;</span>, <span class="string">&#x27;content&#x27;</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.<span class="property">length</span>; i++)&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.<span class="title function_">load</span>(data[key], &#123;</span><br><span class="line">        <span class="attr">ignoreWhitespace</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">xmlMode</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">lowerCaseTags</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">decodeEntities</span>: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">&#x27;img&#x27;</span>).<span class="title function_">each</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">if</span> ($(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>))&#123;</span><br><span class="line">          <span class="comment">// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span></span><br><span class="line">          <span class="keyword">var</span> src = $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>).<span class="title function_">replace</span>(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">          <span class="keyword">if</span>(!(<span class="regexp">/http[s]*.*|\/\/.*/</span>.<span class="title function_">test</span>(src)</span><br><span class="line">            || <span class="regexp">/^\s+\//</span>.<span class="title function_">test</span>(src)</span><br><span class="line">            || <span class="regexp">/^\s*\/uploads|images\//</span>.<span class="title function_">test</span>(src))) &#123;</span><br><span class="line">            <span class="comment">// For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span></span><br><span class="line">            <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">            <span class="keyword">var</span> linkArray = link.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">var</span> srcArray = src.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span> &amp;&amp; elem != <span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">if</span>(srcArray.<span class="property">length</span> &gt; <span class="number">1</span>)</span><br><span class="line">            srcArray.<span class="title function_">shift</span>();</span><br><span class="line">            src = srcArray.<span class="title function_">join</span>(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line"></span><br><span class="line">            $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>, config.<span class="property">root</span> + link + src);</span><br><span class="line">            <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;update link as:--&gt;&quot;</span>+config.<span class="property">root</span> + link + src);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;no src attr, skipped...&quot;</span>);</span><br><span class="line">          <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>($(<span class="variable language_">this</span>));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.<span class="title function_">html</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -767,7 +487,7 @@
 </ol>
 </li>
 </ul>
-]]></content>
+<h3 id="博客链接映射的问题"><a href="#博客链接映射的问题" class="headerlink" title="博客链接映射的问题"></a>博客链接映射的问题</h3>]]></content>
       <categories>
         <category>工具部署</category>
       </categories>
@@ -776,8 +496,272 @@
       </tags>
   </entry>
   <entry>
+    <title>第三节课</title>
+    <url>/posts/ffbe</url>
+    <content><![CDATA[<h3 id="SQL注入设置后门操作方式"><a href="#SQL注入设置后门操作方式" class="headerlink" title="SQL注入设置后门操作方式"></a>SQL注入设置后门操作方式</h3><hr>
+<p><img src="/posts/ffb/image-20230714200455603.png" alt="image-20230714200455603"></p>
+<p>寻找到SQL注入漏洞,然后注入后门,然后创建一个新linux新用户,</p>
+<p>用新用户远程登录linux,然后反向连接黑客机子,防止防火墙,接着就可以控制服务器了.</p>
+<h4 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h4><hr>
+<h5 id="黑进网站后台"><a href="#黑进网站后台" class="headerlink" title="黑进网站后台"></a>黑进网站后台</h5><p><img src="/posts/ffb/image-20230714200649779.png" alt="image-20230714200649779"></p>
+<p><img src="/posts/ffb/image-20230714200703646.png" alt="image-20230714200703646"></p>
+<p><img src="/posts/ffb/image-20230714200711097.png" alt="image-20230714200711097"></p>
+<p><img src="/posts/ffb/image-20230714200717685.png" alt="image-20230714200717685"></p>
+<p><img src="/posts/ffb/image-20230714200723746.png" alt="image-20230714200723746"></p>
+<p><img src="/posts/ffb/image-20230714200729472.png" alt="image-20230714200729472"></p>
+<p><img src="/posts/ffb/image-20230714200737626.png" alt="image-20230714200737626"></p>
+<h5 id="借助网站后台-黑进linux。"><a href="#借助网站后台-黑进linux。" class="headerlink" title="借助网站后台,黑进linux。"></a>借助网站后台,黑进linux。</h5><p><img src="/posts/ffb/image-20230714200828953.png" alt="image-20230714200828953"></p>
+<p><img src="/posts/ffb/image-20230714200835482.png" alt="image-20230714200835482"></p>
+<p><img src="/posts/ffb/image-20230714200843706.png" alt="image-20230714200843706"></p>
+<p><img src="/posts/ffb/image-20230714200851815.png" alt="image-20230714200851815"></p>
+<p><img src="/posts/ffb/image-20230714200858767.png" alt="image-20230714200858767"></p>
+<p><img src="/posts/ffb/image-20230714200906869.png" alt="image-20230714200906869"></p>
+<p><img src="/posts/ffb/image-20230714200918059.png" alt="image-20230714200918059"></p>
+<p><img src="/posts/ffb/image-20230714200924248.png" alt="image-20230714200924248"></p>
+<p><img src="/posts/ffb/image-20230714200935795.png" alt="image-20230714200935795"></p>
+<p><img src="/posts/ffb/image-20230714200945784.png" alt="image-20230714200945784"></p>
+<p>、<img src="/posts/ffb/image-20230714200952795.png" alt="image-20230714200952795"></p>
+<p><img src="/posts/ffb/image-20230714201000283.png" alt="image-20230714201000283"></p>
+<h5 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h5><hr>
+<p><img src="/posts/ffb/image-20230714201013421.png" alt="image-20230714201013421"></p>
+<p><img src="/posts/ffb/image-20230714201019656.png" alt="image-20230714201019656"></p>
+<p><img src="/posts/ffb/image-20230714201104819.png" alt="image-20230714201104819"></p>
+<p><img src="/posts/ffb/image-20230714201111713.png" alt="image-20230714201111713"></p>
+<p><img src="/posts/ffb/image-20230714201119641.png" alt="image-20230714201119641"></p>
+<p><img src="/posts/ffb/image-20230714201129200.png" alt="image-20230714201129200"></p>
+<p><img src="/posts/ffb/image-20230714201200151.png" alt="image-20230714201200151"></p>
+<p><img src="/posts/ffb/image-20230714201218669.png" alt="image-20230714201218669"></p>
+<p><img src="/posts/ffb/image-20230714201228701.png" alt="image-20230714201228701"></p>
+<p><img src="/posts/ffb/image-20230714201239177.png" alt="image-20230714201239177"></p>
+<p><img src="/posts/ffb/image-20230714201306535.png" alt="image-20230714201306535"></p>
+<p><img src="/posts/ffb/image-20230714201320934.png" alt="image-20230714201320934"></p>
+<h3 id="XSS跨站攻击"><a href="#XSS跨站攻击" class="headerlink" title="XSS跨站攻击"></a>XSS跨站攻击</h3><hr>
+<p><img src="/posts/ffb/image-20230714201418258.png" alt="image-20230714201418258"></p>
+<p><img src="/posts/ffb/image-20230714201433330.png" alt="image-20230714201433330"></p>
+<h5 id="rootkit后门"><a href="#rootkit后门" class="headerlink" title="rootkit后门"></a>rootkit后门</h5><hr>
+<p><img src="/posts/ffb/image-20230714201454309.png" alt="image-20230714201454309"></p>
+<p><img src="/posts/ffb/image-20230714201543258.png" alt="image-20230714201543258"></p>
+<p><img src="/posts/ffb/image-20230714201632198.png" alt="image-20230714201632198"></p>
+<hr>
+<h5 id="解决rootkit后门"><a href="#解决rootkit后门" class="headerlink" title="解决rootkit后门"></a>解决rootkit后门</h5><p><img src="/posts/ffb/image-20230714201741817.png" alt="image-20230714201741817"></p>
+<p><img src="/posts/ffb/image-20230714201749649.png" alt="image-20230714201749649"></p>
+<p><img src="/posts/ffb/image-20230714201829896.png" alt="image-20230714201829896"></p>
+<p><img src="/posts/ffb/image-20230714201842923.png" alt="image-20230714201842923"></p>
+<h5 id="钓鱼攻击"><a href="#钓鱼攻击" class="headerlink" title="钓鱼攻击"></a>钓鱼攻击</h5><hr>
+<p><img src="/posts/ffb/image-20230714201918286.png" alt="image-20230714201918286"></p>
+<h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><hr>
+<p><img src="/posts/ffb/image-20230714201938095.png" alt="image-20230714201938095"></p>
+<p><img src="/posts/ffb/image-20230714201951685.png" alt="image-20230714201951685"></p>
+<h3 id="配置web日志服务器实验"><a href="#配置web日志服务器实验" class="headerlink" title="配置web日志服务器实验"></a>配置web日志服务器实验</h3><hr>
+<p><img src="/posts/ffb/image-20230714202301075.png" alt="image-20230714202301075"></p>
+<p><img src="/posts/ffb/image-20230714202308119.png" alt="image-20230714202308119"></p>
+<p>首先使用公钥和密钥验证免密登录</p>
+<p><img src="/posts/ffb/image-20230714202605880.png" alt="image-20230714202605880"></p>
+<p><img src="/posts/ffb/image-20230714202613058.png" alt="image-20230714202613058"></p>
+<p><img src="/posts/ffb/image-20230714202620019.png" alt="image-20230714202620019"></p>
+<p><img src="/posts/ffb/image-20230714202626205.png" alt="image-20230714202626205"></p>
+<p><img src="/posts/ffb/image-20230714202636307.png" alt="image-20230714202636307"></p>
+<p><img src="/posts/ffb/image-20230714202654149.png" alt="image-20230714202654149"></p>
+<p><img src="/posts/ffb/image-20230714202711708.png" alt="image-20230714202711708"></p>
+<h3 id="系统加固"><a href="#系统加固" class="headerlink" title="系统加固"></a>系统加固</h3><hr>
+<h4 id="mysql加固"><a href="#mysql加固" class="headerlink" title="mysql加固"></a>mysql加固</h4><hr>
+<p>給特定的数据库一个特定的低权限用户</p>
+<p><img src="/posts/ffb/image-20230714202822559.png" alt="image-20230714202822559"></p>
+<p><img src="/posts/ffb/image-20230714202933716.png" alt="image-20230714202933716"></p>
+<p><img src="/posts/ffb/image-20230714202946485.png" alt="image-20230714202946485"></p>
+<h4 id="账户安全策略"><a href="#账户安全策略" class="headerlink" title="账户安全策略"></a>账户安全策略</h4><hr>
+<p><img src="/posts/ffb/image-20230714203146611.png" alt="image-20230714203146611"></p>
+<p><img src="/posts/ffb/image-20230714203153422.png" alt="image-20230714203153422"></p>
+<p><img src="/posts/ffb/image-20230714203238471.png" alt="image-20230714203238471"></p>
+<p><img src="/posts/ffb/image-20230714203309152.png" alt="image-20230714203309152"></p>
+<p><img src="/posts/ffb/image-20230714203324689.png" alt="image-20230714203324689"></p>
+<p><img src="/posts/ffb/image-20230714203333280.png" alt="image-20230714203333280"></p>
+<h5 id="APACHE加固"><a href="#APACHE加固" class="headerlink" title="APACHE加固"></a>APACHE加固</h5><p><img src="/posts/ffb/image-20230714203453529.png" alt="image-20230714203453529"></p>
+<p><img src="/posts/ffb/image-20230714203513690.png" alt="image-20230714203513690"></p>
+<p><img src="/posts/ffb/image-20230714203529936.png" alt="image-20230714203529936"></p>
+<p><img src="/posts/ffb/image-20230714203549853.png" alt="image-20230714203549853"></p>
+<p><img src="/posts/ffb/image-20230714203611312.png" alt="image-20230714203611312"></p>
+<p><img src="/posts/ffb/image-20230714203618670.png" alt="image-20230714203618670"></p>
+<p><img src="/posts/ffb/image-20230714203720915.png" alt="image-20230714203720915"></p>
+<p><img src="/posts/ffb/image-20230714203727400.png" alt="image-20230714203727400"></p>
+<p><img src="/posts/ffb/image-20230714203803336.png" alt="image-20230714203803336"></p>
+<p><img src="/posts/ffb/image-20230714203812132.png" alt="image-20230714203812132"></p>
+<p><img src="/posts/ffb/image-20230714203838928.png" alt="image-20230714203838928"></p>
+<p><img src="/posts/ffb/image-20230714203854174.png" alt="image-20230714203854174"></p>
+<p><img src="/posts/ffb/image-20230714203914094.png" alt="image-20230714203914094"></p>
+<p><img src="/posts/ffb/image-20230714203933980.png" alt="image-20230714203933980"></p>
+<p><img src="/posts/ffb/image-20230714203940408.png" alt="image-20230714203940408"></p>
+]]></content>
+      <categories>
+        <category>实践</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>xss反向注入</title>
+    <url>/posts/c5ce</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><hr>
+<p><img src="/posts/c5c/image-20230712114832040.png" alt="image-20230712114832040"></p>
+<ul>
+<li>绝对的高危,一个网站有一个就是绝对的不行</li>
+</ul>
+<p><img src="/posts/c5c/image-20230712115102097.png" alt="image-20230712115102097"></p>
+<p>有可能考公的就是去做国产化的工作<img src="/posts/c5c/image-20230712115702339.png" alt="image-20230712115702339"></p>
+<p>国产化有很多不完美的地方。但是整个中国就是在推进这个进程。</p>
+<p>能考研就考研，能考编就考编，想工作的考证。</p>
+<p>计算机等级考试三级，相同条件下，比别人更有优势一点。</p>
+<p><img src="/posts/c5c/image-20230712120123241.png" alt="image-20230712120123241"></p>
+<p>网站将该当成文本的字符串当成了可执行命令去执行了</p>
+<h4 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h4><hr>
+<p><img src="/posts/c5c/image-20230712120315081.png" alt="image-20230712120315081"></p>
+<p>用社会工程学去钓鱼。</p>
+<p>XSS</p>
+<p><img src="/posts/c5c/image-20230712121129549.png" alt="image-20230712121129549"></p>
+<p><img src="/posts/c5c/image-20230712121227166.png" alt="image-20230712121227166"></p>
+<p>原理</p>
+<p><img src="/posts/c5c/image-20230712121316898.png" alt="image-20230712121316898"></p>
+<h3 id="过程重现与分析"><a href="#过程重现与分析" class="headerlink" title="过程重现与分析"></a>过程重现与分析</h3><hr>
+<p><img src="/posts/c5c/image-20230712121753786.png" alt="image-20230712121753786"></p>
+<p><img src="/posts/c5c/image-20230712121813933.png" alt="image-20230712121813933"></p>
+<p> <img src="/posts/c5c/image-20230712121928599.png" alt="image-20230712121928599"></p>
+<p><img src="/posts/c5c/image-20230712121942630.png" alt="image-20230712121942630"></p>
+<p><img src="/posts/c5c/image-20230712121953144.png" alt="image-20230712121953144"></p>
+<p><img src="/posts/c5c/image-20230712122005576.png" alt="image-20230712122005576"></p>
+<p><img src="/posts/c5c/image-20230712122015930.png" alt="image-20230712122015930"></p>
+<h5 id="篡改页面"><a href="#篡改页面" class="headerlink" title="篡改页面"></a>篡改页面</h5><p><img src="/posts/c5c/image-20230712122048507.png" alt="image-20230712122048507"></p>
+<p><img src="/posts/c5c/image-20230712122113525.png" alt="image-20230712122113525"></p>
+<h5 id="钓鱼伪造"><a href="#钓鱼伪造" class="headerlink" title="钓鱼伪造"></a>钓鱼伪造</h5><hr>
+<p><img src="/posts/c5c/image-20230712122213599.png" alt="image-20230712122213599"></p>
+<p><img src="/posts/c5c/image-20230712122254360.png" alt="image-20230712122254360"></p>
+<p><img src="/posts/c5c/image-20230712122307298.png" alt="image-20230712122307298"></p>
+<p><img src="/posts/c5c/image-20230712122327134.png" alt="image-20230712122327134"></p>
+<p><img src="/posts/c5c/image-20230712122340657.png" alt="image-20230712122340657"></p>
+<h5 id="xss攻击盗取COokie"><a href="#xss攻击盗取COokie" class="headerlink" title="xss攻击盗取COokie"></a>xss攻击盗取COokie</h5><hr>
+<p><img src="/posts/c5c/image-20230712122406707.png" alt="image-20230712122406707"></p>
+<p><img src="/posts/c5c/image-20230712122416992.png" alt="image-20230712122416992"></p>
+<p><img src="/posts/c5c/image-20230712122428606.png" alt="image-20230712122428606"></p>
+<h5 id="beef框架攻击"><a href="#beef框架攻击" class="headerlink" title="beef框架攻击"></a>beef框架攻击</h5><hr>
+<p><img src="/posts/c5c/image-20230712122451708.png" alt="image-20230712122451708"></p>
+<p><img src="/posts/c5c/image-20230712122500656.png" alt="image-20230712122500656"></p>
+<p><img src="/posts/c5c/image-20230712122513309.png" alt="image-20230712122513309"></p>
+<h4 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h4><hr>
+<p>存储型跨站攻击，成功在数据库中植入一条简单的alert语句</p>
+<p><img src="/posts/c5c/image-20230712123450122.png" alt="image-20230712123450122"></p>
+<p>源代码中可以看见<img src="/posts/c5c/image-20230712124129590.png" alt="image-20230712124129590"></p>
+<ul>
+<li><p>篡改页面<img src="/posts/c5c/image-20230712124455616.png" alt="image-20230712124455616"></p>
+</li>
+<li><p>钓鱼网站</p>
+<p>首先自己搭建一个一模一样的。</p>
+<p><img src="/posts/c5c/image-20230712212135314.png" alt="image-20230712212135314"></p>
+<p><img src="/posts/c5c/image-20230712212255987.png" alt="image-20230712212255987"></p>
+<p><img src="/posts/c5c/image-20230712212342575.png" alt="image-20230712212342575"></p>
+<p><img src="/posts/c5c/image-20230712125050157.png" alt="image-20230712125050157"></p>
+<p>将鱼饵做好</p>
+<p><img src="/posts/c5c/image-20230712142950023.png" alt="image-20230712142950023"></p>
+</li>
+</ul>
+<p>抛勾，提交评论，诱导人去评论（登录两次就是偷）</p>
+<p><img src="/posts/c5c/image-20230712143641230.png" alt="image-20230712143641230"></p>
+<p>上钩</p>
+<p><img src="/posts/c5c/image-20230712212420911.png" alt="image-20230712212420911"></p>
+<p><img src="/posts/c5c/image-20230712212429528.png" alt="image-20230712212429528"></p>
+<p><img src="/posts/c5c/image-20230712212436943.png" alt="image-20230712212436943"></p>
+<p><img src="/posts/c5c/image-20230712212444847.png" alt="image-20230712212444847"></p>
+<h4 id="cookie攻击"><a href="#cookie攻击" class="headerlink" title="cookie攻击"></a>cookie攻击</h4><hr>
+<p>cookie原理</p>
+<p>其实就是存在客户端浏览器的一些和网站交互的信息.</p>
+<p><img src="/posts/c5c/image-20230712212906175.png" alt="image-20230712212906175"></p>
+<p>session原理</p>
+<p><img src="/posts/c5c/image-20230712213025733.png" alt="image-20230712213025733"></p>
+<p>其实就是存在服务器之上的客户端身份信息.</p>
+<p><img src="/posts/c5c/image-20230712213238237.png" alt="image-20230712213238237"></p>
+<p>sessionID还是要通过cookie来返回\返回服务器.</p>
+<h6 id="XSS盗取cookie实验环境"><a href="#XSS盗取cookie实验环境" class="headerlink" title="XSS盗取cookie实验环境"></a>XSS盗取cookie实验环境</h6><p><img src="/posts/c5c/image-20230712213327543.png" alt="image-20230712213327543"></p>
+<p>原理就是冒充了别人的身份(通过使用cookie)</p>
+<hr>
+<p>kali黑客机子装好攻击脚本,功能是将当前网页的cookie发送到黑客的个人网站之中.<img src="/posts/c5c/image-20230712214453380.png" alt="image-20230712214453380"></p>
+<p><img src="/posts/c5c/image-20230712214616253.png" alt="image-20230712214616253"></p>
+<p>JS脚本传来数据,php接收,信息保存到cookie.html文件中</p>
+<p>将html文件清零,同时可以看到xss下有3个文件,专门用来做cookie.</p>
+<p><img src="/posts/c5c/image-20230712214757273.png" alt="image-20230712214757273"></p>
+<p>设置一下目标网站的配置配合实验.<img src="/posts/c5c/image-20230712214907439.png" alt="image-20230712214907439"></p>
+<p>提交评论后就马上刷新了,打开了kali设置的文件</p>
+<p><img src="/posts/c5c/image-20230712215000685.png" alt="image-20230712215000685"></p>
+<p>管理员上钩</p>
+<p><img src="/posts/c5c/image-20230712215050372.png" alt="image-20230712215050372"></p>
+<p>成功看到</p>
+<p><img src="/posts/c5c/image-20230712215100529.png" alt="image-20230712215100529"></p>
+<p>使用一个能自定义cookie访问的工具</p>
+<p>用刚刚获取到的cookie去访问原网站,发现自己不用用户密码,照样能登录后台.</p>
+<p><img src="/posts/c5c/image-20230712215443954.png" alt="image-20230712215443954"></p>
+<p><img src="/posts/c5c/image-20230712215451894.png" alt="image-20230712215451894"></p>
+<h6 id="跨站攻击平台"><a href="#跨站攻击平台" class="headerlink" title="跨站攻击平台"></a>跨站攻击平台</h6><hr>
+<p><img src="/posts/c5c/image-20230712215642843.png" alt="image-20230712215642843"></p>
+<p><img src="/posts/c5c/image-20230712215657677.png" alt="image-20230712215657677"></p>
+<p><img src="/posts/c5c/image-20230712215846501.png" alt="image-20230712215846501"></p>
+<p><img src="/posts/c5c/image-20230712215852694.png" alt="image-20230712215852694"></p>
+<p><img src="/posts/c5c/image-20230712215900426.png" alt="image-20230712215900426"></p>
+<p><img src="/posts/c5c/image-20230712215921973.png" alt="image-20230712215921973"></p>
+<p><img src="/posts/c5c/image-20230712215929779.png" alt="image-20230712215929779"></p>
+<p><img src="/posts/c5c/image-20230712215938099.png" alt="image-20230712215938099"></p>
+<p><img src="/posts/c5c/image-20230712220005675.png" alt="image-20230712220005675"></p>
+<p><img src="/posts/c5c/image-20230712220028895.png" alt="image-20230712220028895"></p>
+<hr>
+<p>在beef黑进去的情况下,进行flash钓鱼攻击</p>
+<p><img src="/posts/c5c/image-20230712220112158.png" alt="image-20230712220112158"></p>
+<p><img src="/posts/c5c/image-20230712220200484.png" alt="image-20230712220200484"></p>
+<p><img src="/posts/c5c/image-20230712220208636.png" alt="image-20230712220208636"></p>
+<p><img src="/posts/c5c/image-20230712220254120.png" alt="image-20230712220254120"></p>
+<h3 id="跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型"><a href="#跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型" class="headerlink" title="跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型"></a>跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型</h3><hr>
+<ul>
+<li><p><img src="/posts/c5c/image-20230712220529105.png" alt="image-20230712220529105"></p>
+<p><img src="/posts/c5c/image-20230712220611942.png" alt="image-20230712220611942"></p>
+<p><img src="/posts/c5c/image-20230712220620638.png" alt="image-20230712220620638"></p>
+<p><img src="/posts/c5c/image-20230712220742950.png" alt="image-20230712220742950"></p>
+<p><img src="/posts/c5c/image-20230712220756658-16891708773671.png" alt="image-20230712220756658"></p>
+<p><img src="/posts/c5c/image-20230712220809506-16891708901293.png" alt="image-20230712220809506"></p>
+<p><img src="/posts/c5c/image-20230712221057950.png" alt="image-20230712221057950"></p>
+<p><img src="/posts/c5c/image-20230712221104685.png" alt="image-20230712221104685"></p>
+</li>
+</ul>
+<p>防范</p>
+<p><img src="/posts/c5c/image-20230712221159317.png" alt="image-20230712221159317"></p>
+<h4 id="跨站请求伪造攻击与防范"><a href="#跨站请求伪造攻击与防范" class="headerlink" title="跨站请求伪造攻击与防范."></a>跨站请求伪造攻击与防范.</h4><hr>
+<p><img src="/posts/c5c/image-20230712221215222.png" alt="image-20230712221215222"></p>
+<p><img src="/posts/c5c/image-20230712221223558.png"></p>
+<p><img src="/posts/c5c/image-20230712221605842.png" alt="image-20230712221605842"></p>
+<p><img src="/posts/c5c/image-20230712221641510.png" alt="image-20230712221641510"></p>
+<p>有着get和post方式</p>
+<p>XSS和CSRF区别</p>
+<p><img src="/posts/c5c/image-20230712221901276.png" alt="image-20230712221901276"></p>
+<h5 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h5><hr>
+<p><img src="/posts/c5c/image-20230712221918754.png" alt="image-20230712221918754"></p>
+]]></content>
+      <categories>
+        <category>实践</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/posts/3eeb</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>使用github来让你的生活变得更方便-(纯小白向)</title>
-    <url>/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/</url>
+    <url>/posts/d794</url>
     <content><![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><hr>
 <ul>
 <li><p>有时候我们上着上着网会需要一个简单的功能，有可能是看着看着油管的视频，你就会想着：tm的好好看啊，能不能将这个全部下载下来啊，然后你开始百度下载工具，不出意外的话，你能寻找到的都是一些需要钱的工具，这些工具不是限速就是需要”VIP“去解锁更多很基础的功能，比如说满速下载等等。</p>
@@ -789,38 +773,38 @@
 </ul>
 <h3 id="以youtube合集下载器为例"><a href="#以youtube合集下载器为例" class="headerlink" title="以youtube合集下载器为例"></a>以youtube合集下载器为例</h3><p>我需要的是直接下载某个频道里面某个系列的全部视频，这就是我的需求。</p>
 <p>想到代码实现也不会很难，于是我马上就会想到Github上去寻找有没有直接的实现，一开始我也是在国内搜索的，找到的不是要钱解锁就是要钱解锁。比如知乎搜索到的软件推荐：</p>
-<p><img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230717234847282.png" alt="image-20230717234847282"></p>
+<p><img src="/posts/d79/image-20230717234847282.png" alt="image-20230717234847282"></p>
 <p><strong>也许国内真的有免费又好用的工具，但是我们所需要的工具在Github上免费找到的可能性是更高的</strong>，这个过程只需要现在的一些学习成本，以后找自己需要的工具将会越来越快，省时间，省力气（不用下载下来安装好之后才发现是要钱的，妈的）</p>
 <h4 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h4><hr>
 <p><strong>实际上真的很简单</strong></p>
 <ol>
 <li>首先是注册一个账号（过程自行搜索），然后就是搜索自己需要的东西，用英语最好，我这次甚至只使用一个youtube就能找到我需要的</li>
 </ol>
-<p><img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230718005512832.png" alt="image-20230718005512832"></p>
+<p><img src="/posts/d79/image-20230718005512832.png" alt="image-20230718005512832"></p>
 <ol start="2">
 <li><p>然后就是在搜索结果中看关键词寻找，细心点，耐心点看</p>
-<p><img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230717235711406.png" alt="image-20230717235711406"></p>
+<p><img src="/posts/d79/image-20230717235711406.png" alt="image-20230717235711406"></p>
 </li>
 <li><p>然后，点进去，拉下去阅读下看看满不满足自己的需求</p>
-<p><img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230718000014528.png" alt="image-20230718000014528"></p>
-<p>看不懂可以调用网页翻译<img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230717235957801.png" alt="image-20230717235957801"></p>
+<p><img src="/posts/d79/image-20230718000014528.png" alt="image-20230718000014528"></p>
+<p>看不懂可以调用网页翻译<img src="/posts/d79/image-20230717235957801.png" alt="image-20230717235957801"></p>
 </li>
 </ol>
 <p>发现<strong>完美符合</strong>的我下载播放列表的需要</p>
 <ol start="4">
 <li><p>寻找安装包</p>
-<p><img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230718001758937.png" alt="image-20230718001758937"></p>
+<p><img src="/posts/d79/image-20230718001758937.png" alt="image-20230718001758937"></p>
 </li>
 <li><p>进去可能发现是这样的：</p>
-<p><img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230718005314769.png" alt="image-20230718005314769"></p>
-<p>下载第一个即可，第二个是源码，第三个是用在linux上的。我后面有那些国别是因为我用了插件的缘故<img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230718002001443.png" alt="image-20230718002001443"></p>
+<p><img src="/posts/d79/image-20230718005314769.png" alt="image-20230718005314769"></p>
+<p>下载第一个即可，第二个是源码，第三个是用在linux上的。我后面有那些国别是因为我用了插件的缘故<img src="/posts/d79/image-20230718002001443.png" alt="image-20230718002001443"></p>
 <p>如果你没有的话，直接点击就可以直接下载了，没有网速再去寻找插件来解决。</p>
 </li>
-<li><p>下载下来后，解压即可<img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230718002219853.png" alt="image-20230718002219853"></p>
+<li><p>下载下来后，解压即可<img src="/posts/d79/image-20230718002219853.png" alt="image-20230718002219853"></p>
 <p>直接打开exe文件，需要安装什么的默认安装即可，有什么问题直接上网查（最好使用沙盒测试一下，不过又是另外一个工具了）。</p>
 <p>成功：</p>
-<p><img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230717170635671.png" alt="image-20230717170635671"></p>
-<p>成功下载目标的视频<img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230717171241931.png" alt="image-20230717171241931"></p>
+<p><img src="/posts/d79/image-20230717170635671.png" alt="image-20230717170635671"></p>
+<p>成功下载目标的视频<img src="/posts/d79/image-20230717171241931.png" alt="image-20230717171241931"></p>
 <p><a href="https://github.com/Tyrrrz/YoutubeDownloader">此程序Github地址</a></p>
 </li>
 </ol>
@@ -828,8 +812,8 @@
 <p>除了这个工具之外，我还找到很多别的工具，比如说PDF合并等工具，这些工具在国内很少能找到免费服务又好的，github确实是一个宝库，用好几乎能提升很多的生产力，大胆猜猜，或许可能是很多国内这些软件的源代码来源。。。</p>
 <p>希望大家能善用Github，不要再让国内无量软件吸血了。<strong>同时多多宣传开源精神，鼓励开源精神，</strong> 生活里也能做到<strong>人人为我，我为人人。</strong></p>
 <p><a href="https://github.com/wmjordan/PDFPatcher">PDD补丁丁源码地址</a></p>
-<p><img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230718003121995.png" alt="image-20230718003121995"></p>
-<p><img src="/2023/07/17/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8github%E6%9D%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%98%E5%BE%97%E6%9B%B4%E6%96%B9%E4%BE%BF-%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%90%91/image-20230718003350408.png" alt="image-20230718003350408"></p>
+<p><img src="/posts/d79/image-20230718003121995.png" alt="image-20230718003121995"></p>
+<p><img src="/posts/d79/image-20230718003350408.png" alt="image-20230718003350408"></p>
 ]]></content>
       <categories>
         <category>-生活</category>
@@ -839,27 +823,43 @@
       </tags>
   </entry>
   <entry>
-    <title>sandBox使用指南</title>
-    <url>/2023/07/17/%E5%B7%A5%E5%85%B7/sandBox%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<h3 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h3><p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/sandBox%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20230717162046833.png" alt="image-20230717162046833"></p>
-<p>点了OK</p>
-<p>这个不知道是什么</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/sandBox%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20230717162334494.png" alt="image-20230717162334494"></p>
-<p>新建沙盒</p>
-<p><img src="/2023/07/17/%E5%B7%A5%E5%85%B7/sandBox%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20230717162731444.png" alt="image-20230717162731444"></p>
-<p>然后就可以随便在沙盒上面打开软件了,有一个和主机系统隔离的运行环境,方便测试,也方便删除。这里用TubeGet试了一下，发现TubeGet是一个很垃圾的软件，然后就清除了快照，电脑本地环境没有受影响，一切的工作和文件夹交由sandbox为我们来创建。好！！</p>
+    <title>selenium爬取动态网页</title>
+    <url>/posts/e506</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
+<li>什么是动态网页?<br>使用异步加载。现在动态网页的数量大于静态网页的数量</li>
+<li>静态网页的爬虫<br>scrapy，beautiful-soup，bs4</li>
+<li>为什么用selenium？<br> a. selenium是网页浏览器的模拟器，通常用来做网页测试-八爪鱼<br> b. 优点：<br> ⅰ. 简单直接：直接模拟用户的行为，用户加载网页获取网页源码<br> ⅱ. 直接和scrapy结合（middlewire中间件）<br> ⅲ. 支持多种浏览器驱动器web-driver：phantomjs（无头，指不用打开，直接访问代码），chorme（le，firefox）<br> c. 用来做爬虫的缺点：<br> ⅰ. 容易被识别<br> ⅱ. 容易崩溃，网速，网站的稳定性都会崩掉<br> ⅲ. 不易做成可执行程序（打包成exe可执行文件，可以直接打开，不用对方安装python或者安装python的各种依赖库。使用pyinstaller）<br> 如何使用</li>
+<li>安装浏览器和驱动器以及对应版本的驱动器</li>
+<li>pip安装selenium</li>
+<li>打开&#x2F;关闭浏览器</li>
+</ol>
 ]]></content>
       <categories>
-        <category>-实用工具</category>
+        <category>python</category>
+        <category>爬虫</category>
       </categories>
       <tags>
-        <tag>-工具</tag>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式</title>
+    <url>/posts/b5e3</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
     <title>instaloader批量下载ins图片</title>
-    <url>/2023/07/12/%E6%9D%82%E9%A1%B9/instaloader%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BDins%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<p><img src="/2023/07/12/%E6%9D%82%E9%A1%B9/instaloader%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BDins%E5%9B%BE%E7%89%87/image-20230712235840974.png" alt="image-20230712235840974"></p>
+    <url>/posts/f1d7</url>
+    <content><![CDATA[<p><img src="/posts/f1d/image-20230712235840974.png" alt="image-20230712235840974"></p>
 ]]></content>
       <categories>
         <category>-工具 -python</category>
