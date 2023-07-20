@@ -365,7 +365,16 @@
 </ol>
 </li>
 </ul>
-<h3 id="博客链接映射的问题"><a href="#博客链接映射的问题" class="headerlink" title="博客链接映射的问题"></a>博客链接映射的问题</h3>]]></content>
+<h3 id="博客链接映射的问题"><a href="#博客链接映射的问题" class="headerlink" title="博客链接映射的问题"></a>博客链接映射的问题</h3><hr>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>config文件中修改</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"># 这里的permalink后面要配这个abbrlink/<span class="punctuation">,</span>而不是abbrlink.html</span><br><span class="line"># 原因乃是因为要使用那个图片插件<span class="punctuation">,</span>使用html会造成一个图片路径无法正常生成</span><br><span class="line"></span><br><span class="line">permalink<span class="punctuation">:</span> posts/<span class="punctuation">:</span>abbrlink/</span><br><span class="line">abbrlink<span class="punctuation">:</span></span><br><span class="line">    alg<span class="punctuation">:</span> crc32</span><br><span class="line">    rep<span class="punctuation">:</span> hex</span><br></pre></td></tr></table></figure>
+
+<p>多去阅读这些源码说明</p>
+<p>而不是看一些消化过后的知识。</p>
+<p><img src="/posts/d69f/image-20230718024525888.png" alt="image-20230718024525888"></p>
+]]></content>
       <categories>
         <category>工具部署</category>
       </categories>
@@ -636,16 +645,16 @@
   <entry>
     <title>yt不良林自搭VPS科学上网教程</title>
     <url>/posts/5d8d/</url>
-    <content><![CDATA[<h2 id="没有GFW时访问国外网站的步骤"><a href="#没有GFW时访问国外网站的步骤" class="headerlink" title="没有GFW时访问国外网站的步骤"></a>没有GFW时访问国外网站的步骤</h2><h3 id="DNS域名解析"><a href="#DNS域名解析" class="headerlink" title="DNS域名解析"></a>DNS域名解析</h3><p>首先先查询本地DNS缓存,然后是本地DNS配置文件,也就是hosts文件。</p>
+    <content><![CDATA[<h2 id="视频链接"><a href="#视频链接" class="headerlink" title="视频链接"></a><a href="https://www.youtube.com/watch?v=_618At72evs">视频链接</a></h2><h3 id="没有GFW时访问国外网站的步骤"><a href="#没有GFW时访问国外网站的步骤" class="headerlink" title="没有GFW时访问国外网站的步骤"></a>没有GFW时访问国外网站的步骤</h3><h4 id="DNS域名解析"><a href="#DNS域名解析" class="headerlink" title="DNS域名解析"></a>DNS域名解析</h4><p>首先先查询本地DNS缓存,然后是本地DNS配置文件,也就是hosts文件。</p>
 <p>查询不到会向设置的DNS服务器发送访问包。</p>
-<h3 id="封装和解封装"><a href="#封装和解封装" class="headerlink" title="封装和解封装"></a>封装和解封装</h3><h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>应用层产生一个有特殊目的的数据包</p>
+<h4 id="封装和解封装"><a href="#封装和解封装" class="headerlink" title="封装和解封装"></a>封装和解封装</h4><h5 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h5><p>应用层产生一个有特殊目的的数据包</p>
 <p>传输层有TCP和UDP协议，同时，会给数据包封装上源端口号和目的端口号。</p>
 <p>网络层封装上源IP地址，目的IP地址。</p>
 <p>数据链路层封装上源MAC地址，目的MAC地址</p>
 <p>物理层通过网卡将数据包传输到其它设备。</p>
-<h4 id="解封装"><a href="#解封装" class="headerlink" title="解封装"></a>解封装</h4><p>多少层的设备就能够解封装到第几层,比如交换机,是一个两层设备，那么就可以读到mac地址头，路由是一个三层设备，（加了NAT功能的路由器有读到端口的功能，因为要建立NAT映射表），就可以读到IP地址层。</p>
+<h5 id="解封装"><a href="#解封装" class="headerlink" title="解封装"></a>解封装</h5><p>多少层的设备就能够解封装到第几层,比如交换机,是一个两层设备，那么就可以读到mac地址头，路由是一个三层设备，（加了NAT功能的路由器有读到端口的功能，因为要建立NAT映射表），就可以读到IP地址层。</p>
 <p><img src="/posts/5d8d/image-20230717181701936.png" alt="image-20230717181701936"></p>
-<h2 id="GFW如何阻断我们和谷歌的连接"><a href="#GFW如何阻断我们和谷歌的连接" class="headerlink" title="GFW如何阻断我们和谷歌的连接"></a>GFW如何阻断我们和谷歌的连接</h2><p>要想如何突破GFW的封锁，首先就是要知道GFW的工作原理，实际上，就是要学会如何做一个GFW。这个和世间所有的道理是相似的，你想行正义之事，那么首先的就是知道如何去做坏事；你想找到一个女朋友，那么首先就该想到的是，如何可以永远找不到一个女朋友。想知道怎么成功，首先就是要去知道怎么失败。这就是我认为的逆向思维。</p>
+<h3 id="GFW如何阻断我们和谷歌的连接"><a href="#GFW如何阻断我们和谷歌的连接" class="headerlink" title="GFW如何阻断我们和谷歌的连接"></a>GFW如何阻断我们和谷歌的连接</h3><p>要想如何突破GFW的封锁，首先就是要知道GFW的工作原理，实际上，就是要学会如何做一个GFW。这个和世间所有的道理是相似的，你想行正义之事，那么首先的就是知道如何去做坏事；你想找到一个女朋友，那么首先就该想到的是，如何可以永远找不到一个女朋友。想知道怎么成功，首先就是要去知道怎么失败。这就是我认为的逆向思维。</p>
 <h4 id="DNS污染"><a href="#DNS污染" class="headerlink" title="DNS污染"></a>DNS污染</h4><hr>
 <p>不让你查到正确的域名IP。</p>
 <p><img src="/posts/5d8d/image-20230717183120232.png" alt="image-20230717183120232"></p>
@@ -732,8 +741,118 @@
 <p>纵观所有翻墙协议,最终都走向将流量伪装成正常的https才能最稳定的进行科学上网。最推荐的就是trojan。缺点是效率较低，需要两层TLS。有一个革命性的概念和技术。</p>
 <p><img src="/posts/5d8d/image-20230717223936896.png" alt="image-20230717223936896"></p>
 <p><img src="/posts/5d8d/image-20230717224021160.png" alt="image-20230717224021160"></p>
-<h2 id="Vmess协议"><a href="#Vmess协议" class="headerlink" title="Vmess协议"></a>Vmess协议</h2><p>系统时间有关？加密方式可以搞自动选择？</p>
+<h3 id="Vmess协议"><a href="#Vmess协议" class="headerlink" title="Vmess协议"></a>Vmess协议</h3><h5 id="加密方式为何可以搞自动选择？"><a href="#加密方式为何可以搞自动选择？" class="headerlink" title="加密方式为何可以搞自动选择？"></a>加密方式为何可以搞自动选择？</h5><p>原因无他,乃是因为客户端将加密数据内容段的<strong>算法和密钥写在了报文头</strong>上。并据此对内容进行一个加密。<img src="/posts/5d8d/image-20230718173722740.png" alt="image-20230718173722740"></p>
+<p>接着，Vmess会使用用户ID，用一种和服务器商量好的方式加密数据头，也就是所使用的算法和解密密钥。</p>
+<h5 id="为何和系统时间有关？"><a href="#为何和系统时间有关？" class="headerlink" title="为何和系统时间有关？"></a>为何和系统时间有关？</h5><p>然后还会在头部加入一个认证信息<img src="/posts/5d8d/image-20230718174127365.png" alt="image-20230718174127365"></p>
+<p>认证信息跟系统时间有关。</p>
+<p>时间戳跟时区无关，从某一个时间一直加1，我们和美国取得的时间戳是一样的。<img src="/posts/5d8d/image-20230718174252983.png" alt="image-20230718174252983"></p>
+<p>原因乃是因为vmess协议加密会使用到时间戳进行一个签名,范围在当前时间的上下30浮动。</p>
+<p>服务器端也会根据当前可能的所有时间戳和用户ID用MD5来计算得到一串数字和客户端发来的一串数字做对比,若是相同,则能够确认身份。才会接受这些数据包，也就是说数据包是合法的。</p>
+<p>确定是合法的，才会去掉认证头部，然后用用户ID用固定方式解密的到加密方式和密钥对数据包进行解密。</p>
+<p><strong>用户ID两端设置一样才能加解密。</strong></p>
+<p>额外ID应对短时间发送大量请求，会出现数据包重复，被GFW探测到。用户ID的可选越多，就会越难探测到。</p>
+<h5 id="存在漏洞，被重放攻击，实际上已经被淘汰。"><a href="#存在漏洞，被重放攻击，实际上已经被淘汰。" class="headerlink" title="存在漏洞，被重放攻击，实际上已经被淘汰。"></a>存在漏洞，被重放攻击，实际上已经被淘汰。</h5><p>引入AEAD加密方式。</p>
+<p><img src="/posts/5d8d/image-20230718175728865.png" alt="image-20230718175728865"></p>
+<p>现在已经是强制开启AEAD</p>
 <p>ss要确定加密协议，为什么这个不用？</p>
+<h4 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h4><hr>
+<p><img src="/posts/5d8d/image-20230718175847976.png" alt="image-20230718175847976"></p>
+<p>使用一键脚本安装</p>
+<p>修改配置文件</p>
+<p><img src="/posts/5d8d/image-20230718180836104.png" alt="image-20230718180836104"></p>
+<h5 id="引入TLS保证传输安全：Vmess-TLS"><a href="#引入TLS保证传输安全：Vmess-TLS" class="headerlink" title="引入TLS保证传输安全：Vmess+TLS"></a>引入TLS保证传输安全：Vmess+TLS</h5><hr>
+<p>证书申请和握手协商流程</p>
+<p>加密方式选择ZERO乃是因为TLS会加密，这里就不使用vmess的加密方式了。</p>
+<p><img src="/posts/5d8d/image-20230718181256160.png" alt="image-20230718181256160"></p>
+<p>none会进行消息认证，zero啥也不会做</p>
+<p>Vmess协议头任何时候都会用AEAD进行加密</p>
+<p><img src="/posts/5d8d/image-20230718181434872.png" alt="image-20230718181434872"></p>
+<p>TLS会对整个Vmess报文进行加密</p>
+<p>将Vmess变成Vmess+TCP+TLS是V2Ray的功能</p>
+<p>Vmess+ws+tls也是v2ray的功能。</p>
+<h4 id="承载和伪装的区别"><a href="#承载和伪装的区别" class="headerlink" title="承载和伪装的区别"></a>承载和伪装的区别</h4><p>应用层的协议要不就是TCP要不就是UDP来承载，比如说Vmess、TLS、HTTP到TCP。<img src="/posts/5d8d/image-20230718182040361.png" alt="image-20230718182040361"></p>
+<p>当传输安全改成TLS之后，也就是需要伪装的时候，承载关系就会发生变化，TLS会承载VMESS数据包（<strong>实际上也就是将VMESS数据包放在TLS的内容部分</strong>），这是用TLS将VMESS伪装起来，再用TCP承载TLS的数据包</p>
+<h5 id="HTTP变成HTTPS"><a href="#HTTP变成HTTPS" class="headerlink" title="HTTP变成HTTPS"></a>HTTP变成HTTPS</h5><hr>
+<p><img src="/posts/5d8d/image-20230718182342983.png" alt="image-20230718182342983"></p>
+<p>http-&gt;TLS-&gt;TCP-&gt;IP</p>
+<h5 id="配置成Vmess-ws-tls"><a href="#配置成Vmess-ws-tls" class="headerlink" title="配置成Vmess+ws+tls"></a>配置成Vmess+ws+tls</h5><p>WS是基于TCP的。为什么要加ws呢</p>
+<p>VMESS-&gt;WS-&gt;TLS-&gt;TCP</p>
+<h5 id="伪装"><a href="#伪装" class="headerlink" title="伪装"></a>伪装</h5><hr>
+<p>给vmess包加上一些头,伪装成http,但是不是用http来承载。</p>
+<h5 id="搭建web网站来伪装"><a href="#搭建web网站来伪装" class="headerlink" title="搭建web网站来伪装"></a>搭建web网站来伪装</h5><hr>
+<p>目标:WS+TLS+VMESS</p>
+<p>为什么要使用WS?</p>
+<p>WS可以套一个路径在头部,可以配合nginx,到达伪装效果,没有这个路径的流量直接重定向到一个正常的网站,而有这个路径的流量定向到服务器段的VMESS代理。</p>
+<p><img src="/posts/5d8d/image-20230718205206529.png" alt="image-20230718205206529"></p>
+<p><img src="/posts/5d8d/image-20230718205251512.png" alt="image-20230718205251512"></p>
+<p>重定向，也是一些镜像站的搭建方式，只有访问那个指定的目录，才会重定向错误，所以只要保证目录不被人知道的话，就能够保证伪装的成功。</p>
+<p><img src="/posts/5d8d/image-20230718205326699.png" alt="image-20230718205326699"></p>
+<p>Vmess的地位：稳定，很多服务商针对这个做了很多定制，生态支持最好，自己搭建的话，可以使用更高效的选择，追求极致的性能体验。</p>
+<p>下节课教Vless。</p>
+<p>通过web服务器来接受不是vmess的流量，并对其进行分流进行伪装。</p>
+<h3 id="Vless"><a href="#Vless" class="headerlink" title="Vless"></a>Vless</h3><p><img src="/posts/5d8d/image-20230719180637373.png" alt="image-20230719180637373"></p>
+<p><img src="/posts/5d8d/image-20230719180711842.png" alt="image-20230719180711842"></p>
+<h4 id="XTLS"><a href="#XTLS" class="headerlink" title="XTLS"></a>XTLS</h4><p><img src="/posts/5d8d/image-20230719180811944.png" alt="image-20230719180811944"></p>
+<p>使用X-Ray</p>
+<h4 id="Vless-xtls-回落-意思就是转发"><a href="#Vless-xtls-回落-意思就是转发" class="headerlink" title="Vless+xtls+回落(意思就是转发)"></a>Vless+xtls+回落(意思就是转发)</h4><hr>
+<p><img src="/posts/5d8d/image-20230719182028138.png" alt="image-20230719182028138"></p>
+<p>两层回落</p>
+<p><img src="/posts/5d8d/image-20230719190234756.png" alt="image-20230719190234756"></p>
+<p>回落的功能就是复用同一个端口,搭建不同的节点,实现流量的转发。 </p>
+<p><img src="/posts/5d8d/image-20230719190241729.png" alt="image-20230719190241729"></p>
+<h5 id="为什么XTLS容易被精准识别？"><a href="#为什么XTLS容易被精准识别？" class="headerlink" title="为什么XTLS容易被精准识别？"></a>为什么XTLS容易被精准识别？</h5><hr>
+<p>XTLS不重复加密数据内容，数据内容部分可能是使用TLS1.2进行加密，而XTLS是使用TLS1.3对头部数据进行加密，这种不重复加密提高了效率，但是也会造成TLS1.3的数据包中含有TLS1.2的特征，让防火墙容易识别。<img src="/posts/5d8d/image-20230719191908479.png" alt="image-20230719191908479"></p>
+<p>考虑到服务器端的处理：</p>
+<p>我们访问的网站有可能是使用TLS1.2（大部分）进行加密的，也就是发回来的数据包中，有可能有TLS1.2的流量特征。</p>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><hr>
+<p><img src="/posts/5d8d/image-20230719193619952.png" alt="image-20230719193619952"></p>
+<h3 id="你的节点为什么这么慢？"><a href="#你的节点为什么这么慢？" class="headerlink" title="你的节点为什么这么慢？"></a>你的节点为什么这么慢？</h3><hr>
+<h4 id="直连"><a href="#直连" class="headerlink" title="直连"></a>直连</h4><p>自治系统全互联</p>
+<p><img src="/posts/5d8d/image-20230719194814556.png" alt="image-20230719194814556"></p>
+<p>BGP边界网关协议</p>
+<p><img src="/posts/5d8d/image-20230719194915092.png" alt="image-20230719194915092"></p>
+<p><img src="/posts/5d8d/image-20230719195022440.png" alt="image-20230719195022440"></p>
+<p>阿里云也是一步一步发展起来的。</p>
+<p>自己建了一个自治系统。</p>
+<p>海底光缆是最重要的物理基础</p>
+<p>IXP：互联网交换中心：性能贼强的交换机</p>
+<p>连到交换机实现互联</p>
+<p><img src="/posts/5d8d/image-20230719201524733.png" alt="image-20230719201524733"></p>
+<p>出口节点带宽是有限的。</p>
+<p>回程走不走CN2很重要，也就是联通的优质网络，服务于有钱人的网络。</p>
+<p><img src="/posts/5d8d/image-20230719202326810.png" alt="image-20230719202326810"></p>
+<p><img src="/posts/5d8d/image-20230719202403033.png" alt="image-20230719202403033"></p>
+<h4 id="中转"><a href="#中转" class="headerlink" title="中转"></a>中转</h4><p><img src="/posts/5d8d/image-20230719202938211.png" alt="image-20230719202938211"></p>
+<p>测试</p>
+<h3 id="如何不花钱提高节点速度"><a href="#如何不花钱提高节点速度" class="headerlink" title="如何不花钱提高节点速度"></a>如何不花钱提高节点速度</h3><hr>
+<p><img src="/posts/5d8d/image-20230719204043941.png" alt="image-20230719204043941"></p>
+<h4 id="vless-ws-tls-web-cdn节点组合搭建"><a href="#vless-ws-tls-web-cdn节点组合搭建" class="headerlink" title="vless+ws+tls+web+cdn节点组合搭建"></a>vless+ws+tls+web+cdn节点组合搭建</h4><hr>
+<h4 id="X-UI图形界面，配置配置文件。"><a href="#X-UI图形界面，配置配置文件。" class="headerlink" title="X-UI图形界面，配置配置文件。"></a>X-UI图形界面，配置配置文件。</h4><p><img src="/posts/5d8d/image-20230719204826486.png" alt="image-20230719204826486"></p>
+<h4 id="内容分布网络（CDN）"><a href="#内容分布网络（CDN）" class="headerlink" title="内容分布网络（CDN）"></a>内容分布网络（CDN）</h4><p><img src="/posts/5d8d/image-20230719205437207.png" alt="image-20230719205437207"></p>
+<p>缓存内容，内容分发，网络加速。</p>
+<p>CDN为什么是一个减速器？</p>
+<ul>
+<li><p>国内要用CDN域名一定要备案，实名制。只能去套国外链路，跟直接代理没什么区别。</p>
+</li>
+<li><p>我们现在套的CDN都是免费的，CF家的CDN的IP段已经被CFW重点关照。</p>
+</li>
+</ul>
+<p>套CF的CDN可以改变路由情况，左上那个是CF的CDN的话</p>
+<p><img src="/posts/5d8d/image-20230719210735650.png" alt="image-20230719210735650"></p>
+<p>拓扑图<img src="/posts/5d8d/image-20230719210758666.png" alt="image-20230719210758666"></p>
+<p>CDN扮演一个中转的角色，但是只有http数据才会接受，这就是为什么要使用ws方式包装一下数据包。也可以用来破下墙，隐藏被墙的服务器。这就是用来预防被墙。这也叫做反向代理（不太明白）。</p>
+<p>切换CDN服务器</p>
+<p><img src="/posts/5d8d/image-20230719211522900.png" alt="image-20230719211522900"></p>
+<h5 id="引出优选IP：选出最好的CDN的IP地址"><a href="#引出优选IP：选出最好的CDN的IP地址" class="headerlink" title="引出优选IP：选出最好的CDN的IP地址"></a>引出优选IP：选出最好的CDN的IP地址</h5><p><img src="/posts/5d8d/image-20230719211543733.png" alt="image-20230719211543733"></p>
+<p><img src="/posts/5d8d/image-20230719211905076.png" alt="image-20230719211905076"></p>
+<p><img src="/posts/5d8d/image-20230719211958563.png" alt="image-20230719211958563"></p>
+<p><img src="/posts/5d8d/image-20230719212007607.png" alt="image-20230719212007607"></p>
+<h4 id><a href="#" class="headerlink" title></a></h4><p><img src="/posts/5d8d/image-20230719211258568.png" alt="image-20230719211258568"></p>
+<h4 id="BBR拥塞控制算法"><a href="#BBR拥塞控制算法" class="headerlink" title="BBR拥塞控制算法"></a>BBR拥塞控制算法</h4><hr>
+<p><img src="/posts/5d8d/image-20230719214358011.png" alt="image-20230719214358011"></p>
+<p>比基于丢包的算法带宽高</p>
+<p><img src="/posts/5d8d/image-20230719214450235.png" alt="image-20230719214450235"></p>
+<p>由谷歌研发的。</p>
 <h2 id="额外的工作"><a href="#额外的工作" class="headerlink" title="额外的工作"></a>额外的工作</h2><hr>
 <p>为了能够使用一款能够批量下载youtube视频的工具,不但支持了乌克兰,还被迫安装了.net的一个环境。</p>
 <p><img src="/posts/5d8d/image-20230717170249263.png" alt="image-20230717170249263"></p>

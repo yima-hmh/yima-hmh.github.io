@@ -37,8 +37,9 @@
 <meta property="og:image" content="https://yima-hmh.github.io/posts/d69f/image-20230710232525256.png">
 <meta property="og:image" content="https://yima-hmh.github.io/posts/d69f/image-20230710232643369.png">
 <meta property="og:image" content="https://yima-hmh.github.io/posts/d69f/image-20230710232707053.png">
+<meta property="og:image" content="https://yima-hmh.github.io/posts/d69f/image-20230718024525888.png">
 <meta property="article:published_time" content="2023-07-01T12:14:06.000Z">
-<meta property="article:modified_time" content="2023-07-17T17:50:47.067Z">
+<meta property="article:modified_time" content="2023-07-17T18:45:55.979Z">
 <meta property="article:author" content="Yima Zheng">
 <meta property="article:tag" content="工具部署">
 <meta name="twitter:card" content="summary">
@@ -236,7 +237,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-18 01:50:47" itemprop="dateModified" datetime="2023-07-18T01:50:47+08:00">2023-07-18</time>
+                <time title="修改时间：2023-07-18 02:45:55" itemprop="dateModified" datetime="2023-07-18T02:45:55+08:00">2023-07-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,7 +261,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3k</span>
+              <span>3.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -311,7 +312,16 @@
 </ol>
 </li>
 </ul>
-<h3 id="博客链接映射的问题"><a href="#博客链接映射的问题" class="headerlink" title="博客链接映射的问题"></a>博客链接映射的问题</h3>
+<h3 id="博客链接映射的问题"><a href="#博客链接映射的问题" class="headerlink" title="博客链接映射的问题"></a>博客链接映射的问题</h3><hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>config文件中修改</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 这里的permalink后面要配这个abbrlink/<span class="punctuation">,</span>而不是abbrlink.html</span><br><span class="line"># 原因乃是因为要使用那个图片插件<span class="punctuation">,</span>使用html会造成一个图片路径无法正常生成</span><br><span class="line"></span><br><span class="line">permalink<span class="punctuation">:</span> posts/<span class="punctuation">:</span>abbrlink/</span><br><span class="line">abbrlink<span class="punctuation">:</span></span><br><span class="line">    alg<span class="punctuation">:</span> crc32</span><br><span class="line">    rep<span class="punctuation">:</span> hex</span><br></pre></td></tr></table></figure>
+
+<p>多去阅读这些源码说明</p>
+<p>而不是看一些消化过后的知识。</p>
+<p><img src="/posts/d69f/image-20230718024525888.png" alt="image-20230718024525888"></p>
+
     </div>
 
     
@@ -457,12 +467,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">14k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">13 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
