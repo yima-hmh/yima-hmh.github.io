@@ -1,107 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>第三节课</title>
-    <url>/posts/ffbe/</url>
-    <content><![CDATA[<h3 id="SQL注入设置后门操作方式"><a href="#SQL注入设置后门操作方式" class="headerlink" title="SQL注入设置后门操作方式"></a>SQL注入设置后门操作方式</h3><hr>
-<p><img src="/posts/ffbe/image-20230714200455603.png" alt="image-20230714200455603"></p>
-<p>寻找到SQL注入漏洞,然后注入后门,然后创建一个新linux新用户,</p>
-<p>用新用户远程登录linux,然后反向连接黑客机子,防止防火墙,接着就可以控制服务器了.</p>
-<h4 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h4><hr>
-<h5 id="黑进网站后台"><a href="#黑进网站后台" class="headerlink" title="黑进网站后台"></a>黑进网站后台</h5><p><img src="/posts/ffbe/image-20230714200649779.png" alt="image-20230714200649779"></p>
-<p><img src="/posts/ffbe/image-20230714200703646.png" alt="image-20230714200703646"></p>
-<p><img src="/posts/ffbe/image-20230714200711097.png" alt="image-20230714200711097"></p>
-<p><img src="/posts/ffbe/image-20230714200717685.png" alt="image-20230714200717685"></p>
-<p><img src="/posts/ffbe/image-20230714200723746.png" alt="image-20230714200723746"></p>
-<p><img src="/posts/ffbe/image-20230714200729472.png" alt="image-20230714200729472"></p>
-<p><img src="/posts/ffbe/image-20230714200737626.png" alt="image-20230714200737626"></p>
-<h5 id="借助网站后台-黑进linux。"><a href="#借助网站后台-黑进linux。" class="headerlink" title="借助网站后台,黑进linux。"></a>借助网站后台,黑进linux。</h5><p><img src="/posts/ffbe/image-20230714200828953.png" alt="image-20230714200828953"></p>
-<p><img src="/posts/ffbe/image-20230714200835482.png" alt="image-20230714200835482"></p>
-<p><img src="/posts/ffbe/image-20230714200843706.png" alt="image-20230714200843706"></p>
-<p><img src="/posts/ffbe/image-20230714200851815.png" alt="image-20230714200851815"></p>
-<p><img src="/posts/ffbe/image-20230714200858767.png" alt="image-20230714200858767"></p>
-<p><img src="/posts/ffbe/image-20230714200906869.png" alt="image-20230714200906869"></p>
-<p><img src="/posts/ffbe/image-20230714200918059.png" alt="image-20230714200918059"></p>
-<p><img src="/posts/ffbe/image-20230714200924248.png" alt="image-20230714200924248"></p>
-<p><img src="/posts/ffbe/image-20230714200935795.png" alt="image-20230714200935795"></p>
-<p><img src="/posts/ffbe/image-20230714200945784.png" alt="image-20230714200945784"></p>
-<p>、<img src="/posts/ffbe/image-20230714200952795.png" alt="image-20230714200952795"></p>
-<p><img src="/posts/ffbe/image-20230714201000283.png" alt="image-20230714201000283"></p>
-<h5 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h5><hr>
-<p><img src="/posts/ffbe/image-20230714201013421.png" alt="image-20230714201013421"></p>
-<p><img src="/posts/ffbe/image-20230714201019656.png" alt="image-20230714201019656"></p>
-<p><img src="/posts/ffbe/image-20230714201104819.png" alt="image-20230714201104819"></p>
-<p><img src="/posts/ffbe/image-20230714201111713.png" alt="image-20230714201111713"></p>
-<p><img src="/posts/ffbe/image-20230714201119641.png" alt="image-20230714201119641"></p>
-<p><img src="/posts/ffbe/image-20230714201129200.png" alt="image-20230714201129200"></p>
-<p><img src="/posts/ffbe/image-20230714201200151.png" alt="image-20230714201200151"></p>
-<p><img src="/posts/ffbe/image-20230714201218669.png" alt="image-20230714201218669"></p>
-<p><img src="/posts/ffbe/image-20230714201228701.png" alt="image-20230714201228701"></p>
-<p><img src="/posts/ffbe/image-20230714201239177.png" alt="image-20230714201239177"></p>
-<p><img src="/posts/ffbe/image-20230714201306535.png" alt="image-20230714201306535"></p>
-<p><img src="/posts/ffbe/image-20230714201320934.png" alt="image-20230714201320934"></p>
-<h3 id="XSS跨站攻击"><a href="#XSS跨站攻击" class="headerlink" title="XSS跨站攻击"></a>XSS跨站攻击</h3><hr>
-<p><img src="/posts/ffbe/image-20230714201418258.png" alt="image-20230714201418258"></p>
-<p><img src="/posts/ffbe/image-20230714201433330.png" alt="image-20230714201433330"></p>
-<h5 id="rootkit后门"><a href="#rootkit后门" class="headerlink" title="rootkit后门"></a>rootkit后门</h5><hr>
-<p><img src="/posts/ffbe/image-20230714201454309.png" alt="image-20230714201454309"></p>
-<p><img src="/posts/ffbe/image-20230714201543258.png" alt="image-20230714201543258"></p>
-<p><img src="/posts/ffbe/image-20230714201632198.png" alt="image-20230714201632198"></p>
-<hr>
-<h5 id="解决rootkit后门"><a href="#解决rootkit后门" class="headerlink" title="解决rootkit后门"></a>解决rootkit后门</h5><p><img src="/posts/ffbe/image-20230714201741817.png" alt="image-20230714201741817"></p>
-<p><img src="/posts/ffbe/image-20230714201749649.png" alt="image-20230714201749649"></p>
-<p><img src="/posts/ffbe/image-20230714201829896.png" alt="image-20230714201829896"></p>
-<p><img src="/posts/ffbe/image-20230714201842923.png" alt="image-20230714201842923"></p>
-<h5 id="钓鱼攻击"><a href="#钓鱼攻击" class="headerlink" title="钓鱼攻击"></a>钓鱼攻击</h5><hr>
-<p><img src="/posts/ffbe/image-20230714201918286.png" alt="image-20230714201918286"></p>
-<h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><hr>
-<p><img src="/posts/ffbe/image-20230714201938095.png" alt="image-20230714201938095"></p>
-<p><img src="/posts/ffbe/image-20230714201951685.png" alt="image-20230714201951685"></p>
-<h3 id="配置web日志服务器实验"><a href="#配置web日志服务器实验" class="headerlink" title="配置web日志服务器实验"></a>配置web日志服务器实验</h3><hr>
-<p><img src="/posts/ffbe/image-20230714202301075.png" alt="image-20230714202301075"></p>
-<p><img src="/posts/ffbe/image-20230714202308119.png" alt="image-20230714202308119"></p>
-<p>首先使用公钥和密钥验证免密登录</p>
-<p><img src="/posts/ffbe/image-20230714202605880.png" alt="image-20230714202605880"></p>
-<p><img src="/posts/ffbe/image-20230714202613058.png" alt="image-20230714202613058"></p>
-<p><img src="/posts/ffbe/image-20230714202620019.png" alt="image-20230714202620019"></p>
-<p><img src="/posts/ffbe/image-20230714202626205.png" alt="image-20230714202626205"></p>
-<p><img src="/posts/ffbe/image-20230714202636307.png" alt="image-20230714202636307"></p>
-<p><img src="/posts/ffbe/image-20230714202654149.png" alt="image-20230714202654149"></p>
-<p><img src="/posts/ffbe/image-20230714202711708.png" alt="image-20230714202711708"></p>
-<h3 id="系统加固"><a href="#系统加固" class="headerlink" title="系统加固"></a>系统加固</h3><hr>
-<h4 id="mysql加固"><a href="#mysql加固" class="headerlink" title="mysql加固"></a>mysql加固</h4><hr>
-<p>給特定的数据库一个特定的低权限用户</p>
-<p><img src="/posts/ffbe/image-20230714202822559.png" alt="image-20230714202822559"></p>
-<p><img src="/posts/ffbe/image-20230714202933716.png" alt="image-20230714202933716"></p>
-<p><img src="/posts/ffbe/image-20230714202946485.png" alt="image-20230714202946485"></p>
-<h4 id="账户安全策略"><a href="#账户安全策略" class="headerlink" title="账户安全策略"></a>账户安全策略</h4><hr>
-<p><img src="/posts/ffbe/image-20230714203146611.png" alt="image-20230714203146611"></p>
-<p><img src="/posts/ffbe/image-20230714203153422.png" alt="image-20230714203153422"></p>
-<p><img src="/posts/ffbe/image-20230714203238471.png" alt="image-20230714203238471"></p>
-<p><img src="/posts/ffbe/image-20230714203309152.png" alt="image-20230714203309152"></p>
-<p><img src="/posts/ffbe/image-20230714203324689.png" alt="image-20230714203324689"></p>
-<p><img src="/posts/ffbe/image-20230714203333280.png" alt="image-20230714203333280"></p>
-<h5 id="APACHE加固"><a href="#APACHE加固" class="headerlink" title="APACHE加固"></a>APACHE加固</h5><p><img src="/posts/ffbe/image-20230714203453529.png" alt="image-20230714203453529"></p>
-<p><img src="/posts/ffbe/image-20230714203513690.png" alt="image-20230714203513690"></p>
-<p><img src="/posts/ffbe/image-20230714203529936.png" alt="image-20230714203529936"></p>
-<p><img src="/posts/ffbe/image-20230714203549853.png" alt="image-20230714203549853"></p>
-<p><img src="/posts/ffbe/image-20230714203611312.png" alt="image-20230714203611312"></p>
-<p><img src="/posts/ffbe/image-20230714203618670.png" alt="image-20230714203618670"></p>
-<p><img src="/posts/ffbe/image-20230714203720915.png" alt="image-20230714203720915"></p>
-<p><img src="/posts/ffbe/image-20230714203727400.png" alt="image-20230714203727400"></p>
-<p><img src="/posts/ffbe/image-20230714203803336.png" alt="image-20230714203803336"></p>
-<p><img src="/posts/ffbe/image-20230714203812132.png" alt="image-20230714203812132"></p>
-<p><img src="/posts/ffbe/image-20230714203838928.png" alt="image-20230714203838928"></p>
-<p><img src="/posts/ffbe/image-20230714203854174.png" alt="image-20230714203854174"></p>
-<p><img src="/posts/ffbe/image-20230714203914094.png" alt="image-20230714203914094"></p>
-<p><img src="/posts/ffbe/image-20230714203933980.png" alt="image-20230714203933980"></p>
-<p><img src="/posts/ffbe/image-20230714203940408.png" alt="image-20230714203940408"></p>
-]]></content>
-      <categories>
-        <category>实践</category>
-      </categories>
-  </entry>
-  <entry>
     <title>leetcode每日一题</title>
     <url>/posts/41ea/</url>
     <content><![CDATA[]]></content>
@@ -167,151 +66,6 @@
       <tags>
         <tag>Linux</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>xss反向注入</title>
-    <url>/posts/c5ce/</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><hr>
-<p><img src="/posts/c5ce/image-20230712114832040.png" alt="image-20230712114832040"></p>
-<ul>
-<li>绝对的高危,一个网站有一个就是绝对的不行</li>
-</ul>
-<p><img src="/posts/c5ce/image-20230712115102097.png" alt="image-20230712115102097"></p>
-<p>有可能考公的就是去做国产化的工作<img src="/posts/c5ce/image-20230712115702339.png" alt="image-20230712115702339"></p>
-<p>国产化有很多不完美的地方。但是整个中国就是在推进这个进程。</p>
-<p>能考研就考研，能考编就考编，想工作的考证。</p>
-<p>计算机等级考试三级，相同条件下，比别人更有优势一点。</p>
-<p><img src="/posts/c5ce/image-20230712120123241.png" alt="image-20230712120123241"></p>
-<p>网站将该当成文本的字符串当成了可执行命令去执行了</p>
-<h4 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h4><hr>
-<p><img src="/posts/c5ce/image-20230712120315081.png" alt="image-20230712120315081"></p>
-<p>用社会工程学去钓鱼。</p>
-<p>XSS</p>
-<p><img src="/posts/c5ce/image-20230712121129549.png" alt="image-20230712121129549"></p>
-<p><img src="/posts/c5ce/image-20230712121227166.png" alt="image-20230712121227166"></p>
-<p>原理</p>
-<p><img src="/posts/c5ce/image-20230712121316898.png" alt="image-20230712121316898"></p>
-<h3 id="过程重现与分析"><a href="#过程重现与分析" class="headerlink" title="过程重现与分析"></a>过程重现与分析</h3><hr>
-<p><img src="/posts/c5ce/image-20230712121753786.png" alt="image-20230712121753786"></p>
-<p><img src="/posts/c5ce/image-20230712121813933.png" alt="image-20230712121813933"></p>
-<p> <img src="/posts/c5ce/image-20230712121928599.png" alt="image-20230712121928599"></p>
-<p><img src="/posts/c5ce/image-20230712121942630.png" alt="image-20230712121942630"></p>
-<p><img src="/posts/c5ce/image-20230712121953144.png" alt="image-20230712121953144"></p>
-<p><img src="/posts/c5ce/image-20230712122005576.png" alt="image-20230712122005576"></p>
-<p><img src="/posts/c5ce/image-20230712122015930.png" alt="image-20230712122015930"></p>
-<h5 id="篡改页面"><a href="#篡改页面" class="headerlink" title="篡改页面"></a>篡改页面</h5><p><img src="/posts/c5ce/image-20230712122048507.png" alt="image-20230712122048507"></p>
-<p><img src="/posts/c5ce/image-20230712122113525.png" alt="image-20230712122113525"></p>
-<h5 id="钓鱼伪造"><a href="#钓鱼伪造" class="headerlink" title="钓鱼伪造"></a>钓鱼伪造</h5><hr>
-<p><img src="/posts/c5ce/image-20230712122213599.png" alt="image-20230712122213599"></p>
-<p><img src="/posts/c5ce/image-20230712122254360.png" alt="image-20230712122254360"></p>
-<p><img src="/posts/c5ce/image-20230712122307298.png" alt="image-20230712122307298"></p>
-<p><img src="/posts/c5ce/image-20230712122327134.png" alt="image-20230712122327134"></p>
-<p><img src="/posts/c5ce/image-20230712122340657.png" alt="image-20230712122340657"></p>
-<h5 id="xss攻击盗取COokie"><a href="#xss攻击盗取COokie" class="headerlink" title="xss攻击盗取COokie"></a>xss攻击盗取COokie</h5><hr>
-<p><img src="/posts/c5ce/image-20230712122406707.png" alt="image-20230712122406707"></p>
-<p><img src="/posts/c5ce/image-20230712122416992.png" alt="image-20230712122416992"></p>
-<p><img src="/posts/c5ce/image-20230712122428606.png" alt="image-20230712122428606"></p>
-<h5 id="beef框架攻击"><a href="#beef框架攻击" class="headerlink" title="beef框架攻击"></a>beef框架攻击</h5><hr>
-<p><img src="/posts/c5ce/image-20230712122451708.png" alt="image-20230712122451708"></p>
-<p><img src="/posts/c5ce/image-20230712122500656.png" alt="image-20230712122500656"></p>
-<p><img src="/posts/c5ce/image-20230712122513309.png" alt="image-20230712122513309"></p>
-<h4 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h4><hr>
-<p>存储型跨站攻击，成功在数据库中植入一条简单的alert语句</p>
-<p><img src="/posts/c5ce/image-20230712123450122.png" alt="image-20230712123450122"></p>
-<p>源代码中可以看见<img src="/posts/c5ce/image-20230712124129590.png" alt="image-20230712124129590"></p>
-<ul>
-<li><p>篡改页面<img src="/posts/c5ce/image-20230712124455616.png" alt="image-20230712124455616"></p>
-</li>
-<li><p>钓鱼网站</p>
-<p>首先自己搭建一个一模一样的。</p>
-<p><img src="/posts/c5ce/image-20230712212135314.png" alt="image-20230712212135314"></p>
-<p><img src="/posts/c5ce/image-20230712212255987.png" alt="image-20230712212255987"></p>
-<p><img src="/posts/c5ce/image-20230712212342575.png" alt="image-20230712212342575"></p>
-<p><img src="/posts/c5ce/image-20230712125050157.png" alt="image-20230712125050157"></p>
-<p>将鱼饵做好</p>
-<p><img src="/posts/c5ce/image-20230712142950023.png" alt="image-20230712142950023"></p>
-</li>
-</ul>
-<p>抛勾，提交评论，诱导人去评论（登录两次就是偷）</p>
-<p><img src="/posts/c5ce/image-20230712143641230.png" alt="image-20230712143641230"></p>
-<p>上钩</p>
-<p><img src="/posts/c5ce/image-20230712212420911.png" alt="image-20230712212420911"></p>
-<p><img src="/posts/c5ce/image-20230712212429528.png" alt="image-20230712212429528"></p>
-<p><img src="/posts/c5ce/image-20230712212436943.png" alt="image-20230712212436943"></p>
-<p><img src="/posts/c5ce/image-20230712212444847.png" alt="image-20230712212444847"></p>
-<h4 id="cookie攻击"><a href="#cookie攻击" class="headerlink" title="cookie攻击"></a>cookie攻击</h4><hr>
-<p>cookie原理</p>
-<p>其实就是存在客户端浏览器的一些和网站交互的信息.</p>
-<p><img src="/posts/c5ce/image-20230712212906175.png" alt="image-20230712212906175"></p>
-<p>session原理</p>
-<p><img src="/posts/c5ce/image-20230712213025733.png" alt="image-20230712213025733"></p>
-<p>其实就是存在服务器之上的客户端身份信息.</p>
-<p><img src="/posts/c5ce/image-20230712213238237.png" alt="image-20230712213238237"></p>
-<p>sessionID还是要通过cookie来返回\返回服务器.</p>
-<h6 id="XSS盗取cookie实验环境"><a href="#XSS盗取cookie实验环境" class="headerlink" title="XSS盗取cookie实验环境"></a>XSS盗取cookie实验环境</h6><p><img src="/posts/c5ce/image-20230712213327543.png" alt="image-20230712213327543"></p>
-<p>原理就是冒充了别人的身份(通过使用cookie)</p>
-<hr>
-<p>kali黑客机子装好攻击脚本,功能是将当前网页的cookie发送到黑客的个人网站之中.<img src="/posts/c5ce/image-20230712214453380.png" alt="image-20230712214453380"></p>
-<p><img src="/posts/c5ce/image-20230712214616253.png" alt="image-20230712214616253"></p>
-<p>JS脚本传来数据,php接收,信息保存到cookie.html文件中</p>
-<p>将html文件清零,同时可以看到xss下有3个文件,专门用来做cookie.</p>
-<p><img src="/posts/c5ce/image-20230712214757273.png" alt="image-20230712214757273"></p>
-<p>设置一下目标网站的配置配合实验.<img src="/posts/c5ce/image-20230712214907439.png" alt="image-20230712214907439"></p>
-<p>提交评论后就马上刷新了,打开了kali设置的文件</p>
-<p><img src="/posts/c5ce/image-20230712215000685.png" alt="image-20230712215000685"></p>
-<p>管理员上钩</p>
-<p><img src="/posts/c5ce/image-20230712215050372.png" alt="image-20230712215050372"></p>
-<p>成功看到</p>
-<p><img src="/posts/c5ce/image-20230712215100529.png" alt="image-20230712215100529"></p>
-<p>使用一个能自定义cookie访问的工具</p>
-<p>用刚刚获取到的cookie去访问原网站,发现自己不用用户密码,照样能登录后台.</p>
-<p><img src="/posts/c5ce/image-20230712215443954.png" alt="image-20230712215443954"></p>
-<p><img src="/posts/c5ce/image-20230712215451894.png" alt="image-20230712215451894"></p>
-<h6 id="跨站攻击平台"><a href="#跨站攻击平台" class="headerlink" title="跨站攻击平台"></a>跨站攻击平台</h6><hr>
-<p><img src="/posts/c5ce/image-20230712215642843.png" alt="image-20230712215642843"></p>
-<p><img src="/posts/c5ce/image-20230712215657677.png" alt="image-20230712215657677"></p>
-<p><img src="/posts/c5ce/image-20230712215846501.png" alt="image-20230712215846501"></p>
-<p><img src="/posts/c5ce/image-20230712215852694.png" alt="image-20230712215852694"></p>
-<p><img src="/posts/c5ce/image-20230712215900426.png" alt="image-20230712215900426"></p>
-<p><img src="/posts/c5ce/image-20230712215921973.png" alt="image-20230712215921973"></p>
-<p><img src="/posts/c5ce/image-20230712215929779.png" alt="image-20230712215929779"></p>
-<p><img src="/posts/c5ce/image-20230712215938099.png" alt="image-20230712215938099"></p>
-<p><img src="/posts/c5ce/image-20230712220005675.png" alt="image-20230712220005675"></p>
-<p><img src="/posts/c5ce/image-20230712220028895.png" alt="image-20230712220028895"></p>
-<hr>
-<p>在beef黑进去的情况下,进行flash钓鱼攻击</p>
-<p><img src="/posts/c5ce/image-20230712220112158.png" alt="image-20230712220112158"></p>
-<p><img src="/posts/c5ce/image-20230712220200484.png" alt="image-20230712220200484"></p>
-<p><img src="/posts/c5ce/image-20230712220208636.png" alt="image-20230712220208636"></p>
-<p><img src="/posts/c5ce/image-20230712220254120.png" alt="image-20230712220254120"></p>
-<h3 id="跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型"><a href="#跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型" class="headerlink" title="跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型"></a>跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型</h3><hr>
-<ul>
-<li><p><img src="/posts/c5ce/image-20230712220529105.png" alt="image-20230712220529105"></p>
-<p><img src="/posts/c5ce/image-20230712220611942.png" alt="image-20230712220611942"></p>
-<p><img src="/posts/c5ce/image-20230712220620638.png" alt="image-20230712220620638"></p>
-<p><img src="/posts/c5ce/image-20230712220742950.png" alt="image-20230712220742950"></p>
-<p><img src="/posts/c5ce/image-20230712220756658-16891708773671.png" alt="image-20230712220756658"></p>
-<p><img src="/posts/c5ce/image-20230712220809506-16891708901293.png" alt="image-20230712220809506"></p>
-<p><img src="/posts/c5ce/image-20230712221057950.png" alt="image-20230712221057950"></p>
-<p><img src="/posts/c5ce/image-20230712221104685.png" alt="image-20230712221104685"></p>
-</li>
-</ul>
-<p>防范</p>
-<p><img src="/posts/c5ce/image-20230712221159317.png" alt="image-20230712221159317"></p>
-<h4 id="跨站请求伪造攻击与防范"><a href="#跨站请求伪造攻击与防范" class="headerlink" title="跨站请求伪造攻击与防范."></a>跨站请求伪造攻击与防范.</h4><hr>
-<p><img src="/posts/c5ce/image-20230712221215222.png" alt="image-20230712221215222"></p>
-<p><img src="/posts/c5ce/image-20230712221223558.png"></p>
-<p><img src="/posts/c5ce/image-20230712221605842.png" alt="image-20230712221605842"></p>
-<p><img src="/posts/c5ce/image-20230712221641510.png" alt="image-20230712221641510"></p>
-<p>有着get和post方式</p>
-<p>XSS和CSRF区别</p>
-<p><img src="/posts/c5ce/image-20230712221901276.png" alt="image-20230712221901276"></p>
-<h5 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h5><hr>
-<p><img src="/posts/c5ce/image-20230712221918754.png" alt="image-20230712221918754"></p>
-]]></content>
-      <categories>
-        <category>实践</category>
-      </categories>
   </entry>
   <entry>
     <title>sandBox使用指南</title>
@@ -635,12 +389,6 @@
 <p><img src="/posts/4109/image-20230711195216391.png" alt="image-20230711195216391"></p>
 <p><a href="https://zhuanlan.zhihu.com/p/599801515">2分钟看懂DMZ区</a></p>
 ]]></content>
-      <categories>
-        <category>实践</category>
-      </categories>
-      <tags>
-        <tag>网络工程实训</tag>
-      </tags>
   </entry>
   <entry>
     <title>yt不良林自搭VPS科学上网教程</title>
@@ -1013,6 +761,575 @@
       </categories>
       <tags>
         <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>支醉第0期:找资源</title>
+    <url>/posts/5fe0/</url>
+    <content><![CDATA[<h3 id="条文关键字"><a href="#条文关键字" class="headerlink" title="条文关键字"></a>条文关键字</h3><hr>
+<p><img src="/posts/5fe0/image-20230721014137312.png" alt="image-20230721014137312"></p>
+<p><img src="/posts/5fe0/image-20230721014210034.png" alt="image-20230721014210034"></p>
+<p><img src="/posts/5fe0/image-20230721014423250.png" alt="image-20230721014423250"></p>
+<p><img src="/posts/5fe0/image-20230721014531712.png" alt="image-20230721014531712"></p>
+<p><img src="/posts/5fe0/image-20230721014546041.png" alt="image-20230721014546041"></p>
+<p><img src="/posts/5fe0/image-20230721014720832.png" alt="image-20230721014720832"></p>
+<p><img src="/posts/5fe0/image-20230721014744634.png" alt="image-20230721014744634"></p>
+<p><img src="/posts/5fe0/image-20230721014753466.png" alt="image-20230721014753466"></p>
+<p><img src="/posts/5fe0/image-20230721014840587.png" alt="image-20230721014840587"></p>
+<p><img src="/posts/5fe0/image-20230721014914675.png" alt="image-20230721014914675"></p>
+<h3 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h3><hr>
+<p>TV,DVD,BD</p>
+<p><img src="/posts/5fe0/image-20230721015317109.png" alt="image-20230721015317109"></p>
+<p>TV版电视台播放,画面不干净,有台标,有和谐</p>
+<p>DVD&lt;BD</p>
+<p><img src="/posts/5fe0/image-20230721015553454.png" alt="image-20230721015553454"></p>
+<p>BD分多次发售,每月发一VOL,每VOL几集。</p>
+<p><img src="/posts/5fe0/image-20230721015656223.png" alt="image-20230721015656223"></p>
+<p><img src="/posts/5fe0/image-20230721015712711.png" alt="image-20230721015712711"></p>
+<p><img src="/posts/5fe0/image-20230721015734010.png" alt="image-20230721015734010"></p>
+<p><img src="/posts/5fe0/image-20230721020057811.png" alt="image-20230721020057811"></p>
+<p>一般都下BDrip，犯不着找那么大的无损。</p>
+<p>收藏家才会去注意。</p>
+<p>SP是特典。<img src="/posts/5fe0/image-20230721020307784.png" alt="image-20230721020307784"></p>
+<p>NCOP和NCED同理，也就是无工作人员片源</p>
+<p><img src="/posts/5fe0/image-20230721020323402.png" alt="image-20230721020323402"></p>
+<p><img src="/posts/5fe0/image-20230721020347796.png" alt="image-20230721020347796"></p>
+<p>去国外搜的时候，除了搜NC以外，还要搜creditless<img src="/posts/5fe0/image-20230721020547425.png" alt="image-20230721020547425"></p>
+<p>若要去yt上扒，搜下textless看看有没有</p>
+<p><img src="/posts/5fe0/image-20230721020648462.png" alt="image-20230721020648462"></p>
+<p>· <img src="/posts/5fe0/image-20230721021725824.png" alt="image-20230721021725824"></p>
+<p>I帧关键帧</p>
+<p><img src="/posts/5fe0/image-20230721022457102.png" alt="image-20230721022457102"></p>
+<p> <img src="/posts/5fe0/image-20230721023116372.png" alt="image-20230721023116372"></p>
+<p><img src="/posts/5fe0/image-20230721023145104.png" alt="image-20230721023145104"></p>
+<p>remastered重置</p>
+<p>导演剪辑版</p>
+<p><img src="/posts/5fe0/image-20230721023256587.png" alt="image-20230721023256587"></p>
+<p><img src="/posts/5fe0/image-20230721023331607.png" alt="image-20230721023331607"></p>
+<p><img src="/posts/5fe0/image-20230721023340318.png" alt="image-20230721023340318"></p>
+<h3 id="浅谈视频各常见名词"><a href="#浅谈视频各常见名词" class="headerlink" title="浅谈视频各常见名词"></a>浅谈视频各常见名词</h3><hr>
+<p>像素</p>
+<p><img src="/posts/5fe0/image-20230721023616947.png" alt="image-20230721023616947"></p>
+<p><img src="/posts/5fe0/image-20230721023715939.png" alt="image-20230721023715939"></p>
+<p><img src="/posts/5fe0/image-20230721023745961.png" alt="image-20230721023745961"></p>
+<p><img src="/posts/5fe0/image-20230721023828538.png" alt="image-20230721023828538"></p>
+<p><img src="/posts/5fe0/image-20230721023915267.png" alt="image-20230721023915267"></p>
+<p>4K是1080p的四倍，也就是宽为1080p乘2，高为1920p*2。</p>
+<p>8k是1080P的16倍,是4k的四倍</p>
+<p><img src="/posts/5fe0/image-20230721024759104.png" alt="image-20230721024759104"></p>
+<h5 id="长宽比"><a href="#长宽比" class="headerlink" title="长宽比"></a>长宽比</h5><p><img src="/posts/5fe0/image-20230721024840979.png" alt="image-20230721024840979"></p>
+<h5 id="帧"><a href="#帧" class="headerlink" title="帧"></a>帧</h5><p><img src="/posts/5fe0/image-20230721030558830.png" alt="image-20230721030558830"></p>
+<p><img src="/posts/5fe0/image-20230721030822976.png" alt="image-20230721030822976"></p>
+<p><img src="/posts/5fe0/image-20230721031205756.png" alt="image-20230721031205756"></p>
+<p>blade-shuttle</p>
+<p><img src="/posts/5fe0/image-20230721033029839.png" alt="image-20230721033029839"></p>
+<p><img src="/posts/5fe0/image-20230721033344896.png" alt="image-20230721033344896"></p>
+<p><img src="/posts/5fe0/image-20230721033457216.png" alt="image-20230721033457216"></p>
+<h4 id="电视制式"><a href="#电视制式" class="headerlink" title="电视制式"></a>电视制式</h4><p><img src="/posts/5fe0/image-20230721033547140.png" alt="image-20230721033547140"></p>
+<p><img src="/posts/5fe0/image-20230721033632606.png" alt="image-20230721033632606"></p>
+<h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><hr>
+<p><img src="/posts/5fe0/image-20230721142844669.png" alt="image-20230721142844669"></p>
+<p><img src="/posts/5fe0/image-20230721143002913.png" alt="image-20230721143002913"></p>
+]]></content>
+      <categories>
+        <category>-剪辑</category>
+      </categories>
+      <tags>
+        <tag>-剪辑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>xss反向注入</title>
+    <url>/posts/c5ce/</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><hr>
+<p><img src="/posts/c5ce/image-20230712114832040.png" alt="image-20230712114832040"></p>
+<ul>
+<li>绝对的高危,一个网站有一个就是绝对的不行</li>
+</ul>
+<p><img src="/posts/c5ce/image-20230712115102097.png" alt="image-20230712115102097"></p>
+<p>有可能考公的就是去做国产化的工作<img src="/posts/c5ce/image-20230712115702339.png" alt="image-20230712115702339"></p>
+<p>国产化有很多不完美的地方。但是整个中国就是在推进这个进程。</p>
+<p>能考研就考研，能考编就考编，想工作的考证。</p>
+<p>计算机等级考试三级，相同条件下，比别人更有优势一点。</p>
+<p><img src="/posts/c5ce/image-20230712120123241.png" alt="image-20230712120123241"></p>
+<p>网站将该当成文本的字符串当成了可执行命令去执行了</p>
+<h4 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h4><hr>
+<p><img src="/posts/c5ce/image-20230712120315081.png" alt="image-20230712120315081"></p>
+<p>用社会工程学去钓鱼。</p>
+<p>XSS</p>
+<p><img src="/posts/c5ce/image-20230712121129549.png" alt="image-20230712121129549"></p>
+<p><img src="/posts/c5ce/image-20230712121227166.png" alt="image-20230712121227166"></p>
+<p>原理</p>
+<p><img src="/posts/c5ce/image-20230712121316898.png" alt="image-20230712121316898"></p>
+<h3 id="过程重现与分析"><a href="#过程重现与分析" class="headerlink" title="过程重现与分析"></a>过程重现与分析</h3><hr>
+<p><img src="/posts/c5ce/image-20230712121753786.png" alt="image-20230712121753786"></p>
+<p><img src="/posts/c5ce/image-20230712121813933.png" alt="image-20230712121813933"></p>
+<p> <img src="/posts/c5ce/image-20230712121928599.png" alt="image-20230712121928599"></p>
+<p><img src="/posts/c5ce/image-20230712121942630.png" alt="image-20230712121942630"></p>
+<p><img src="/posts/c5ce/image-20230712121953144.png" alt="image-20230712121953144"></p>
+<p><img src="/posts/c5ce/image-20230712122005576.png" alt="image-20230712122005576"></p>
+<p><img src="/posts/c5ce/image-20230712122015930.png" alt="image-20230712122015930"></p>
+<h5 id="篡改页面"><a href="#篡改页面" class="headerlink" title="篡改页面"></a>篡改页面</h5><p><img src="/posts/c5ce/image-20230712122048507.png" alt="image-20230712122048507"></p>
+<p><img src="/posts/c5ce/image-20230712122113525.png" alt="image-20230712122113525"></p>
+<h5 id="钓鱼伪造"><a href="#钓鱼伪造" class="headerlink" title="钓鱼伪造"></a>钓鱼伪造</h5><hr>
+<p><img src="/posts/c5ce/image-20230712122213599.png" alt="image-20230712122213599"></p>
+<p><img src="/posts/c5ce/image-20230712122254360.png" alt="image-20230712122254360"></p>
+<p><img src="/posts/c5ce/image-20230712122307298.png" alt="image-20230712122307298"></p>
+<p><img src="/posts/c5ce/image-20230712122327134.png" alt="image-20230712122327134"></p>
+<p><img src="/posts/c5ce/image-20230712122340657.png" alt="image-20230712122340657"></p>
+<h5 id="xss攻击盗取COokie"><a href="#xss攻击盗取COokie" class="headerlink" title="xss攻击盗取COokie"></a>xss攻击盗取COokie</h5><hr>
+<p><img src="/posts/c5ce/image-20230712122406707.png" alt="image-20230712122406707"></p>
+<p><img src="/posts/c5ce/image-20230712122416992.png" alt="image-20230712122416992"></p>
+<p><img src="/posts/c5ce/image-20230712122428606.png" alt="image-20230712122428606"></p>
+<h5 id="beef框架攻击"><a href="#beef框架攻击" class="headerlink" title="beef框架攻击"></a>beef框架攻击</h5><hr>
+<p><img src="/posts/c5ce/image-20230712122451708.png" alt="image-20230712122451708"></p>
+<p><img src="/posts/c5ce/image-20230712122500656.png" alt="image-20230712122500656"></p>
+<p><img src="/posts/c5ce/image-20230712122513309.png" alt="image-20230712122513309"></p>
+<h4 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h4><hr>
+<p>存储型跨站攻击，成功在数据库中植入一条简单的alert语句</p>
+<p><img src="/posts/c5ce/image-20230712123450122.png" alt="image-20230712123450122"></p>
+<p>源代码中可以看见<img src="/posts/c5ce/image-20230712124129590.png" alt="image-20230712124129590"></p>
+<ul>
+<li><p>篡改页面<img src="/posts/c5ce/image-20230712124455616.png" alt="image-20230712124455616"></p>
+</li>
+<li><p>钓鱼网站</p>
+<p>首先自己搭建一个一模一样的。</p>
+<p><img src="/posts/c5ce/image-20230712212135314.png" alt="image-20230712212135314"></p>
+<p><img src="/posts/c5ce/image-20230712212255987.png" alt="image-20230712212255987"></p>
+<p><img src="/posts/c5ce/image-20230712212342575.png" alt="image-20230712212342575"></p>
+<p><img src="/posts/c5ce/image-20230712125050157.png" alt="image-20230712125050157"></p>
+<p>将鱼饵做好</p>
+<p><img src="/posts/c5ce/image-20230712142950023.png" alt="image-20230712142950023"></p>
+</li>
+</ul>
+<p>抛勾，提交评论，诱导人去评论（登录两次就是偷）</p>
+<p><img src="/posts/c5ce/image-20230712143641230.png" alt="image-20230712143641230"></p>
+<p>上钩</p>
+<p><img src="/posts/c5ce/image-20230712212420911.png" alt="image-20230712212420911"></p>
+<p><img src="/posts/c5ce/image-20230712212429528.png" alt="image-20230712212429528"></p>
+<p><img src="/posts/c5ce/image-20230712212436943.png" alt="image-20230712212436943"></p>
+<p><img src="/posts/c5ce/image-20230712212444847.png" alt="image-20230712212444847"></p>
+<h4 id="cookie攻击"><a href="#cookie攻击" class="headerlink" title="cookie攻击"></a>cookie攻击</h4><hr>
+<p>cookie原理</p>
+<p>其实就是存在客户端浏览器的一些和网站交互的信息.</p>
+<p><img src="/posts/c5ce/image-20230712212906175.png" alt="image-20230712212906175"></p>
+<p>session原理</p>
+<p><img src="/posts/c5ce/image-20230712213025733.png" alt="image-20230712213025733"></p>
+<p>其实就是存在服务器之上的客户端身份信息.</p>
+<p><img src="/posts/c5ce/image-20230712213238237.png" alt="image-20230712213238237"></p>
+<p>sessionID还是要通过cookie来返回\返回服务器.</p>
+<h6 id="XSS盗取cookie实验环境"><a href="#XSS盗取cookie实验环境" class="headerlink" title="XSS盗取cookie实验环境"></a>XSS盗取cookie实验环境</h6><p><img src="/posts/c5ce/image-20230712213327543.png" alt="image-20230712213327543"></p>
+<p>原理就是冒充了别人的身份(通过使用cookie)</p>
+<hr>
+<p>kali黑客机子装好攻击脚本,功能是将当前网页的cookie发送到黑客的个人网站之中.<img src="/posts/c5ce/image-20230712214453380.png" alt="image-20230712214453380"></p>
+<p><img src="/posts/c5ce/image-20230712214616253.png" alt="image-20230712214616253"></p>
+<p>JS脚本传来数据,php接收,信息保存到cookie.html文件中</p>
+<p>将html文件清零,同时可以看到xss下有3个文件,专门用来做cookie.</p>
+<p><img src="/posts/c5ce/image-20230712214757273.png" alt="image-20230712214757273"></p>
+<p>设置一下目标网站的配置配合实验.<img src="/posts/c5ce/image-20230712214907439.png" alt="image-20230712214907439"></p>
+<p>提交评论后就马上刷新了,打开了kali设置的文件</p>
+<p><img src="/posts/c5ce/image-20230712215000685.png" alt="image-20230712215000685"></p>
+<p>管理员上钩</p>
+<p><img src="/posts/c5ce/image-20230712215050372.png" alt="image-20230712215050372"></p>
+<p>成功看到</p>
+<p><img src="/posts/c5ce/image-20230712215100529.png" alt="image-20230712215100529"></p>
+<p>使用一个能自定义cookie访问的工具</p>
+<p>用刚刚获取到的cookie去访问原网站,发现自己不用用户密码,照样能登录后台.</p>
+<p><img src="/posts/c5ce/image-20230712215443954.png" alt="image-20230712215443954"></p>
+<p><img src="/posts/c5ce/image-20230712215451894.png" alt="image-20230712215451894"></p>
+<h6 id="跨站攻击平台"><a href="#跨站攻击平台" class="headerlink" title="跨站攻击平台"></a>跨站攻击平台</h6><hr>
+<p><img src="/posts/c5ce/image-20230712215642843.png" alt="image-20230712215642843"></p>
+<p><img src="/posts/c5ce/image-20230712215657677.png" alt="image-20230712215657677"></p>
+<p><img src="/posts/c5ce/image-20230712215846501.png" alt="image-20230712215846501"></p>
+<p><img src="/posts/c5ce/image-20230712215852694.png" alt="image-20230712215852694"></p>
+<p><img src="/posts/c5ce/image-20230712215900426.png" alt="image-20230712215900426"></p>
+<p><img src="/posts/c5ce/image-20230712215921973.png" alt="image-20230712215921973"></p>
+<p><img src="/posts/c5ce/image-20230712215929779.png" alt="image-20230712215929779"></p>
+<p><img src="/posts/c5ce/image-20230712215938099.png" alt="image-20230712215938099"></p>
+<p><img src="/posts/c5ce/image-20230712220005675.png" alt="image-20230712220005675"></p>
+<p><img src="/posts/c5ce/image-20230712220028895.png" alt="image-20230712220028895"></p>
+<hr>
+<p>在beef黑进去的情况下,进行flash钓鱼攻击</p>
+<p><img src="/posts/c5ce/image-20230712220112158.png" alt="image-20230712220112158"></p>
+<p><img src="/posts/c5ce/image-20230712220200484.png" alt="image-20230712220200484"></p>
+<p><img src="/posts/c5ce/image-20230712220208636.png" alt="image-20230712220208636"></p>
+<p><img src="/posts/c5ce/image-20230712220254120.png" alt="image-20230712220254120"></p>
+<h3 id="跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型"><a href="#跨站攻击检测-关闭XSS管理-然后用上课的方法检查反射型和存储型" class="headerlink" title="跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型"></a>跨站攻击检测:关闭XSS管理,然后用上课的方法检查反射型和存储型</h3><hr>
+<ul>
+<li><p><img src="/posts/c5ce/image-20230712220529105.png" alt="image-20230712220529105"></p>
+<p><img src="/posts/c5ce/image-20230712220611942.png" alt="image-20230712220611942"></p>
+<p><img src="/posts/c5ce/image-20230712220620638.png" alt="image-20230712220620638"></p>
+<p><img src="/posts/c5ce/image-20230712220742950.png" alt="image-20230712220742950"></p>
+<p><img src="/posts/c5ce/image-20230712220756658-16891708773671.png" alt="image-20230712220756658"></p>
+<p><img src="/posts/c5ce/image-20230712220809506-16891708901293.png" alt="image-20230712220809506"></p>
+<p><img src="/posts/c5ce/image-20230712221057950.png" alt="image-20230712221057950"></p>
+<p><img src="/posts/c5ce/image-20230712221104685.png" alt="image-20230712221104685"></p>
+</li>
+</ul>
+<p>防范</p>
+<p><img src="/posts/c5ce/image-20230712221159317.png" alt="image-20230712221159317"></p>
+<h4 id="跨站请求伪造攻击与防范"><a href="#跨站请求伪造攻击与防范" class="headerlink" title="跨站请求伪造攻击与防范."></a>跨站请求伪造攻击与防范.</h4><hr>
+<p><img src="/posts/c5ce/image-20230712221215222.png" alt="image-20230712221215222"></p>
+<p><img src="/posts/c5ce/image-20230712221223558.png"></p>
+<p><img src="/posts/c5ce/image-20230712221605842.png" alt="image-20230712221605842"></p>
+<p><img src="/posts/c5ce/image-20230712221641510.png" alt="image-20230712221641510"></p>
+<p>有着get和post方式</p>
+<p>XSS和CSRF区别</p>
+<p><img src="/posts/c5ce/image-20230712221901276.png" alt="image-20230712221901276"></p>
+<h5 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h5><hr>
+<p><img src="/posts/c5ce/image-20230712221918754.png" alt="image-20230712221918754"></p>
+]]></content>
+      <categories>
+        <category>实践</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>第三节课</title>
+    <url>/posts/ffbe/</url>
+    <content><![CDATA[<h3 id="SQL注入设置后门操作方式"><a href="#SQL注入设置后门操作方式" class="headerlink" title="SQL注入设置后门操作方式"></a>SQL注入设置后门操作方式</h3><hr>
+<p><img src="/posts/ffbe/image-20230714200455603.png" alt="image-20230714200455603"></p>
+<p>寻找到SQL注入漏洞,然后注入后门,然后创建一个新linux新用户,</p>
+<p>用新用户远程登录linux,然后反向连接黑客机子,防止防火墙,接着就可以控制服务器了.</p>
+<h4 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h4><hr>
+<h5 id="黑进网站后台"><a href="#黑进网站后台" class="headerlink" title="黑进网站后台"></a>黑进网站后台</h5><p><img src="/posts/ffbe/image-20230714200649779.png" alt="image-20230714200649779"></p>
+<p><img src="/posts/ffbe/image-20230714200703646.png" alt="image-20230714200703646"></p>
+<p><img src="/posts/ffbe/image-20230714200711097.png" alt="image-20230714200711097"></p>
+<p><img src="/posts/ffbe/image-20230714200717685.png" alt="image-20230714200717685"></p>
+<p><img src="/posts/ffbe/image-20230714200723746.png" alt="image-20230714200723746"></p>
+<p><img src="/posts/ffbe/image-20230714200729472.png" alt="image-20230714200729472"></p>
+<p><img src="/posts/ffbe/image-20230714200737626.png" alt="image-20230714200737626"></p>
+<h5 id="借助网站后台-黑进linux。"><a href="#借助网站后台-黑进linux。" class="headerlink" title="借助网站后台,黑进linux。"></a>借助网站后台,黑进linux。</h5><p><img src="/posts/ffbe/image-20230714200828953.png" alt="image-20230714200828953"></p>
+<p><img src="/posts/ffbe/image-20230714200835482.png" alt="image-20230714200835482"></p>
+<p><img src="/posts/ffbe/image-20230714200843706.png" alt="image-20230714200843706"></p>
+<p><img src="/posts/ffbe/image-20230714200851815.png" alt="image-20230714200851815"></p>
+<p><img src="/posts/ffbe/image-20230714200858767.png" alt="image-20230714200858767"></p>
+<p><img src="/posts/ffbe/image-20230714200906869.png" alt="image-20230714200906869"></p>
+<p><img src="/posts/ffbe/image-20230714200918059.png" alt="image-20230714200918059"></p>
+<p><img src="/posts/ffbe/image-20230714200924248.png" alt="image-20230714200924248"></p>
+<p><img src="/posts/ffbe/image-20230714200935795.png" alt="image-20230714200935795"></p>
+<p><img src="/posts/ffbe/image-20230714200945784.png" alt="image-20230714200945784"></p>
+<p>、<img src="/posts/ffbe/image-20230714200952795.png" alt="image-20230714200952795"></p>
+<p><img src="/posts/ffbe/image-20230714201000283.png" alt="image-20230714201000283"></p>
+<h5 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h5><hr>
+<p><img src="/posts/ffbe/image-20230714201013421.png" alt="image-20230714201013421"></p>
+<p><img src="/posts/ffbe/image-20230714201019656.png" alt="image-20230714201019656"></p>
+<p><img src="/posts/ffbe/image-20230714201104819.png" alt="image-20230714201104819"></p>
+<p><img src="/posts/ffbe/image-20230714201111713.png" alt="image-20230714201111713"></p>
+<p><img src="/posts/ffbe/image-20230714201119641.png" alt="image-20230714201119641"></p>
+<p><img src="/posts/ffbe/image-20230714201129200.png" alt="image-20230714201129200"></p>
+<p><img src="/posts/ffbe/image-20230714201200151.png" alt="image-20230714201200151"></p>
+<p><img src="/posts/ffbe/image-20230714201218669.png" alt="image-20230714201218669"></p>
+<p><img src="/posts/ffbe/image-20230714201228701.png" alt="image-20230714201228701"></p>
+<p><img src="/posts/ffbe/image-20230714201239177.png" alt="image-20230714201239177"></p>
+<p><img src="/posts/ffbe/image-20230714201306535.png" alt="image-20230714201306535"></p>
+<p><img src="/posts/ffbe/image-20230714201320934.png" alt="image-20230714201320934"></p>
+<h3 id="XSS跨站攻击"><a href="#XSS跨站攻击" class="headerlink" title="XSS跨站攻击"></a>XSS跨站攻击</h3><hr>
+<p><img src="/posts/ffbe/image-20230714201418258.png" alt="image-20230714201418258"></p>
+<p><img src="/posts/ffbe/image-20230714201433330.png" alt="image-20230714201433330"></p>
+<h5 id="rootkit后门"><a href="#rootkit后门" class="headerlink" title="rootkit后门"></a>rootkit后门</h5><hr>
+<p><img src="/posts/ffbe/image-20230714201454309.png" alt="image-20230714201454309"></p>
+<p><img src="/posts/ffbe/image-20230714201543258.png" alt="image-20230714201543258"></p>
+<p><img src="/posts/ffbe/image-20230714201632198.png" alt="image-20230714201632198"></p>
+<hr>
+<h5 id="解决rootkit后门"><a href="#解决rootkit后门" class="headerlink" title="解决rootkit后门"></a>解决rootkit后门</h5><p><img src="/posts/ffbe/image-20230714201741817.png" alt="image-20230714201741817"></p>
+<p><img src="/posts/ffbe/image-20230714201749649.png" alt="image-20230714201749649"></p>
+<p><img src="/posts/ffbe/image-20230714201829896.png" alt="image-20230714201829896"></p>
+<p><img src="/posts/ffbe/image-20230714201842923.png" alt="image-20230714201842923"></p>
+<h5 id="钓鱼攻击"><a href="#钓鱼攻击" class="headerlink" title="钓鱼攻击"></a>钓鱼攻击</h5><hr>
+<p><img src="/posts/ffbe/image-20230714201918286.png" alt="image-20230714201918286"></p>
+<h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><hr>
+<p><img src="/posts/ffbe/image-20230714201938095.png" alt="image-20230714201938095"></p>
+<p><img src="/posts/ffbe/image-20230714201951685.png" alt="image-20230714201951685"></p>
+<h3 id="配置web日志服务器实验"><a href="#配置web日志服务器实验" class="headerlink" title="配置web日志服务器实验"></a>配置web日志服务器实验</h3><hr>
+<p><img src="/posts/ffbe/image-20230714202301075.png" alt="image-20230714202301075"></p>
+<p><img src="/posts/ffbe/image-20230714202308119.png" alt="image-20230714202308119"></p>
+<p>首先使用公钥和密钥验证免密登录</p>
+<p><img src="/posts/ffbe/image-20230714202605880.png" alt="image-20230714202605880"></p>
+<p><img src="/posts/ffbe/image-20230714202613058.png" alt="image-20230714202613058"></p>
+<p><img src="/posts/ffbe/image-20230714202620019.png" alt="image-20230714202620019"></p>
+<p><img src="/posts/ffbe/image-20230714202626205.png" alt="image-20230714202626205"></p>
+<p><img src="/posts/ffbe/image-20230714202636307.png" alt="image-20230714202636307"></p>
+<p><img src="/posts/ffbe/image-20230714202654149.png" alt="image-20230714202654149"></p>
+<p><img src="/posts/ffbe/image-20230714202711708.png" alt="image-20230714202711708"></p>
+<h3 id="系统加固"><a href="#系统加固" class="headerlink" title="系统加固"></a>系统加固</h3><hr>
+<h4 id="mysql加固"><a href="#mysql加固" class="headerlink" title="mysql加固"></a>mysql加固</h4><hr>
+<p>給特定的数据库一个特定的低权限用户</p>
+<p><img src="/posts/ffbe/image-20230714202822559.png" alt="image-20230714202822559"></p>
+<p><img src="/posts/ffbe/image-20230714202933716.png" alt="image-20230714202933716"></p>
+<p><img src="/posts/ffbe/image-20230714202946485.png" alt="image-20230714202946485"></p>
+<h4 id="账户安全策略"><a href="#账户安全策略" class="headerlink" title="账户安全策略"></a>账户安全策略</h4><hr>
+<p><img src="/posts/ffbe/image-20230714203146611.png" alt="image-20230714203146611"></p>
+<p><img src="/posts/ffbe/image-20230714203153422.png" alt="image-20230714203153422"></p>
+<p><img src="/posts/ffbe/image-20230714203238471.png" alt="image-20230714203238471"></p>
+<p><img src="/posts/ffbe/image-20230714203309152.png" alt="image-20230714203309152"></p>
+<p><img src="/posts/ffbe/image-20230714203324689.png" alt="image-20230714203324689"></p>
+<p><img src="/posts/ffbe/image-20230714203333280.png" alt="image-20230714203333280"></p>
+<h5 id="APACHE加固"><a href="#APACHE加固" class="headerlink" title="APACHE加固"></a>APACHE加固</h5><p><img src="/posts/ffbe/image-20230714203453529.png" alt="image-20230714203453529"></p>
+<p><img src="/posts/ffbe/image-20230714203513690.png" alt="image-20230714203513690"></p>
+<p><img src="/posts/ffbe/image-20230714203529936.png" alt="image-20230714203529936"></p>
+<p><img src="/posts/ffbe/image-20230714203549853.png" alt="image-20230714203549853"></p>
+<p><img src="/posts/ffbe/image-20230714203611312.png" alt="image-20230714203611312"></p>
+<p><img src="/posts/ffbe/image-20230714203618670.png" alt="image-20230714203618670"></p>
+<p><img src="/posts/ffbe/image-20230714203720915.png" alt="image-20230714203720915"></p>
+<p><img src="/posts/ffbe/image-20230714203727400.png" alt="image-20230714203727400"></p>
+<p><img src="/posts/ffbe/image-20230714203803336.png" alt="image-20230714203803336"></p>
+<p><img src="/posts/ffbe/image-20230714203812132.png" alt="image-20230714203812132"></p>
+<p><img src="/posts/ffbe/image-20230714203838928.png" alt="image-20230714203838928"></p>
+<p><img src="/posts/ffbe/image-20230714203854174.png" alt="image-20230714203854174"></p>
+<p><img src="/posts/ffbe/image-20230714203914094.png" alt="image-20230714203914094"></p>
+<p><img src="/posts/ffbe/image-20230714203933980.png" alt="image-20230714203933980"></p>
+<p><img src="/posts/ffbe/image-20230714203940408.png" alt="image-20230714203940408"></p>
+]]></content>
+      <categories>
+        <category>实践</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>引至kali，web攻防模拟上传渗透，端口扫描</title>
+    <url>/posts/4109/</url>
+    <content><![CDATA[<h3 id="实训课第一节"><a href="#实训课第一节" class="headerlink" title="实训课第一节"></a>实训课第一节</h3><h4 id="CISAW认证"><a href="#CISAW认证" class="headerlink" title="CISAW认证"></a>CISAW认证</h4><p>大学预备级</p>
+<h4 id="网络攻防两个角度"><a href="#网络攻防两个角度" class="headerlink" title="网络攻防两个角度"></a>网络攻防两个角度</h4><p>第一个就是攻击者角度</p>
+<p>第二个就是被攻击者角度</p>
+<p><img src="/posts/4109/image-20230710102359531.png" alt="image-20230710102359531"></p>
+<p>看的内容</p>
+<ul>
+<li><p>看数据内容<img src="/posts/4109/image-20230710102532407.png" alt="image-20230710102532407"></p>
+</li>
+<li><p>看到SSO,single sign on单点登录功能,只要黑客方能模仿被认证的IP地址,再去访问某个地址就不需要登录直接访问数据库。<img src="/posts/4109/image-20230710103727921.png" alt="image-20230710103727921"></p>
+</li>
+<li><p>黑客工具<img src="/posts/4109/image-20230710103849128.png" alt="image-20230710103849128"></p>
+<ul>
+<li>导入肉鸡，在同一个宽带之下，就可以获取信息</li>
+<li>积分配合短信验证码，伪造基站收验证码</li>
+</ul>
+</li>
+</ul>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><h5 id="护网"><a href="#护网" class="headerlink" title="护网"></a>护网</h5><p>红黑对抗</p>
+<p>先踩点，获得丰厚的信息。</p>
+<p>单位对外的系统</p>
+<h4 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h4><p>在防火墙对外端口上，能不开就不开，做到最小化。</p>
+<p><img src="/posts/4109/image-20230710112503534.png" alt="image-20230710112503534"></p>
+<p>WEB端口工具</p>
+<ul>
+<li>sql注入</li>
+</ul>
+<p>普遍的网络拓扑</p>
+<p>各种云最大的问题：从内往外出的流量几乎不会管。而只管从外面访问里面的流量管得特别严。有些云服务商特别垃圾，要不就全部拒绝，就只能对特定端口进行拒绝，而不能控制对特定端口进行访问。</p>
+<p>机房里面的设备还好。</p>
+<p><img src="/posts/4109/image-20230711110022013.png" alt="image-20230711110022013"></p>
+<h3 id="实操-对web服务器进行一次攻防演练"><a href="#实操-对web服务器进行一次攻防演练" class="headerlink" title="实操:对web服务器进行一次攻防演练"></a>实操:对web服务器进行一次攻防演练</h3><p><img src="/posts/4109/image-20230710143348548.png" alt="image-20230710143348548"></p>
+<h4 id="首先是踩点-收集信息"><a href="#首先是踩点-收集信息" class="headerlink" title="首先是踩点,收集信息"></a>首先是踩点,收集信息<img src="/posts/4109/image-20230710144456315.png" alt="image-20230710144456315"></h4><h5 id="确认好域名-进行端口扫描-查看端口开放情况"><a href="#确认好域名-进行端口扫描-查看端口开放情况" class="headerlink" title="确认好域名,进行端口扫描,查看端口开放情况"></a>确认好域名,进行端口扫描,查看端口开放情况<img src="/posts/4109/image-20230710144756866.png" alt="image-20230710144756866"></h5><ul>
+<li><p>模拟环境。同一个局域网下，xp远程连接到kali，扫描ubuntu</p>
+<p><img src="/posts/4109/image-20230710145410694.png" alt="image-20230710145410694"></p>
+</li>
+<li><p>先ping一下看看能否正常连接</p>
+</li>
+<li><p>nmap -sT -sV  -P0 -O -n 202.1.160.100，使用这些工具要建立自己的工作表，常用的记住，其它的再去查。</p>
+<p><img src="/posts/4109/image-20230710150042770.png" alt="image-20230710150042770"></p>
+</li>
+<li><p>得到端口分析结果<img src="/posts/4109/image-20230710150512970.png" alt="image-20230710150512970"></p>
+</li>
+</ul>
+<h5 id="端口扫描防范"><a href="#端口扫描防范" class="headerlink" title="端口扫描防范"></a>端口扫描防范</h5><h4 id><a href="#" class="headerlink" title></a><img src="/posts/4109/image-20230710150820527.png" alt="image-20230710150820527"></h4><ul>
+<li><p>防范过程如下，使用iptables</p>
+<ul>
+<li><p>首先登进去，然后查看一下规则<img src="/posts/4109/image-20230710151140553.png" alt="image-20230710151140553"></p>
+</li>
+<li><p>添加规则，首先封禁下icmp访问，iptables会先执行上面的规则，下面的若冲突会直接放弃。</p>
+<p><img src="/posts/4109/image-20230710151429814.png" alt="image-20230710151429814"></p>
+</li>
+<li><p>只要能穿过企业布置在外面的防火墙，去拿到内网的一台服务器，就能将所有服务器的内容拿到手。因为内网的服务器一般比较脆弱，因为业务需要。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="指纹识别攻击”吗”-没上太懂"><a href="#指纹识别攻击”吗”-没上太懂" class="headerlink" title="指纹识别攻击”吗”:没上太懂"></a>指纹识别攻击”吗”:没上太懂</h5><ul>
+<li><p>netcat（NC工具）做指<strong>纹检测攻击实验</strong>。瑞士军刀写这个的是超级天才。一般要指定端口</p>
+<ul>
+<li>指纹识别理论，所以说知道服务器的版本是很重要的<img src="/posts/4109/image-20230710154335851.png" alt="image-20230710154335851"></li>
+<li>burp suiteWEB渗透里面最常用的工具，模拟发包<img src="/posts/4109/image-20230710152919368.png" alt="image-20230710152919368"></li>
+</ul>
+</li>
+<li><p>端口上运行着的服务,服务的版本,每个版本都有弱点,不是最新版非常有可能有漏洞,所以说要知道每个端口运行的软件的版本是很重要的,因为这和数据库种记录的每个版本的漏洞一对比,就可以实现高效的一个打击。<img src="/posts/4109/image-20230710144938110.png" alt="image-20230710144938110"></p>
+<p><strong>一般使用半连接扫描，也就是回复RST扫描</strong><img src="/posts/4109/image-20230710145102613.png" alt="image-20230710145102613"></p>
+<p>使用namp工具，扫描器之王。</p>
+</li>
+<li><p>拿到真实的IP地址，有时候是反向代理。</p>
+</li>
+<li><p>通过域名寻找ip，直接通过IP地址无法用域名访问</p>
+<p><img src="/posts/4109/image-20230710144152991.png" alt="image-20230710144152991"></p>
+<p><img src="/posts/4109/image-20230710144237525.png"></p>
+<p>freebus看各种安全漏洞</p>
+<p><img src="/posts/4109/image-20230710144350854.png" alt="image-20230710144350854"></p>
+</li>
+</ul>
+<p>​		HTTP指纹探测,nc工具获取banner信息</p>
+<p><img src="/posts/4109/image-20230711181911052.png" alt="image-20230711181911052"></p>
+<ul>
+<li><p>指纹识别工具:HTTprint来签名<img src="/posts/4109/image-20230711182216322.png" alt="image-20230711182216322"></p>
+<p><img src="/posts/4109/image-20230711182228407.png" alt="image-20230711182228407"></p>
+</li>
+</ul>
+<h5 id="上传漏洞利用分析"><a href="#上传漏洞利用分析" class="headerlink" title="上传漏洞利用分析"></a>上传漏洞利用分析</h5><ul>
+<li><p>存在就是高危<img src="/posts/4109/image-20230710155243374.png" alt="image-20230710155243374"></p>
+</li>
+<li><p>解决方式</p>
+<ul>
+<li>在这个目录的都不能执行</li>
+<li>严格过滤，不允许上传错误的东西</li>
+<li>将对外开放的权限设置的极低</li>
+</ul>
+</li>
+<li><p>存在的条件<img src="/posts/4109/image-20230710155633036.png" alt="image-20230710155633036"></p>
+</li>
+<li><p>绕过技术<img src="/posts/4109/image-20230711182354949.png" alt="image-20230711182354949"></p>
+<ul>
+<li><p>修改文件的类型<img src="/posts/4109/image-20230711182511819.png" alt="image-20230711182511819"></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/71b8b554d9b3">oo截断</a>博文,构造文件名,上传过滤程序以为是jpg文件,实际上,服务器解析该文件时将其当作php文件交由PHP引擎解释和执行.<img src="/posts/4109/image-20230711183506893.png" alt="image-20230711183506893"></p>
+</li>
+<li><p>获取到web服务器版本之后,可以使用不同版本下已经出现的解析漏洞<img src="/posts/4109/image-20230711183624367.png" alt="image-20230711183624367"></p>
+</li>
+<li><p>这个没看懂<img src="/posts/4109/image-20230711183739563.png" alt="image-20230711183739563"></p>
+</li>
+</ul>
+</li>
+<li><p>模拟:登录后台,寻找上传点,创建PHP webshell上传php后门,登录后门</p>
+<ul>
+<li><p>RD工具扫描后台</p>
+</li>
+<li><p>SQL注入拿到账号名和密码</p>
+</li>
+<li><p>上传webshell到后台，如果不筛选上传文件，说明这个系统做得非常垃圾，至少加个扫描文件名，限制后缀为.php的不给上传<img src="/posts/4109/image-20230711183933563.png" alt="image-20230711183933563"></p>
+</li>
+<li><p>将某文件夹里面的文件用text执行这个功能取消。也就是要关掉apache的安全加固，将php变成txt来处理。<img src="/posts/4109/image-20230711102154913.png" alt="image-20230711102154913"></p>
+<p><img src="/posts/4109/image-20230711102317636.png" alt="image-20230711102317636"></p>
+<p><img src="/posts/4109/image-20230710160136642.png" alt="image-20230710160136642"></p>
+</li>
+<li><p>暴力破解后台，登进去<img src="/posts/4109/image-20230710160508616.png" alt="image-20230710160508616"><img src="/posts/4109/image-20230710160500692.png" alt="image-20230710160500692"></p>
+</li>
+<li><p>上传之后，就在后台登进去。最好给木马设置密码，不要给别人做了嫁衣。<img src="/posts/4109/image-20230711102527207.png" alt="image-20230711102527207"><img src="/posts/4109/image-20230710160646404.png" alt="image-20230710160646404"></p>
+</li>
+<li><p>搜索配置文件，看看有没有密码写明的数据库。<img src="/posts/4109/image-20230710161248115.png" alt="image-20230710161248115">这里表示直接网站和数据库在同一个机器上面<img src="/posts/4109/image-20230710161202125.png" alt="image-20230710161202125"></p>
+<p>还可以远程代码植入</p>
+<h6 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h6><hr>
+<p><img src="/posts/4109/image-20230711184101097.png" alt="image-20230711184101097"></p>
+<p><img src="/posts/4109/image-20230711184116712.png" alt="image-20230711184116712"></p>
+</li>
+</ul>
+</li>
+<li><p>上传漏洞监测，开源的企业不会用。无法追责</p>
+<p><img src="/posts/4109/image-20230710161805469.png" alt="image-20230710161805469"></p>
+<ul>
+<li>不给用户上传php文件。<img src="/posts/4109/image-20230710161914015.png" alt="image-20230710161914015"><ul>
+<li>编写shell文件检查脚本<img src="/posts/4109/image-20230710162036339.png" alt="image-20230710162036339"></li>
+<li>加入计划任务，每个星号分，小时，日，月，周<img src="/posts/4109/image-20230710162142335.png" alt="image-20230710162142335">crontab -e 用shell脚本执行一遍。<img src="/posts/4109/image-20230710162238709.png" alt="image-20230710162238709"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="系统提权分析"><a href="#系统提权分析" class="headerlink" title="系统提权分析"></a>系统提权分析</h5><hr>
+<p><img src="/posts/4109/image-20230711184451617.png" alt="image-20230711184451617"></p>
+<h6 id="高难度的一步"><a href="#高难度的一步" class="headerlink" title="高难度的一步"></a>高难度的一步</h6><p><img src="/posts/4109/image-20230711184524480.png" alt="image-20230711184524480"></p>
+<ul>
+<li><p>利用UDEV设备管理器的内核漏洞进行提权<img src="/posts/4109/image-20230711184657977.png" alt="image-20230711184657977"></p>
+<ul>
+<li><p>步骤<img src="/posts/4109/image-20230711184741381.png" alt="image-20230711184741381"></p>
+<ul>
+<li><p>看不懂的一步<img src="/posts/4109/image-20230711185018396.png" alt="image-20230711185018396"></p>
+</li>
+<li><p>看懂了:其实就是将服务器中的命令行解释这个功能发送到kali的9999端口上,只要kali监听9999端口,就能在kali上操纵web服务器所在的linux,我的推测是方便于后面编译文件,以及添加执行文件。<img src="/posts/4109/image-20230711192005530.png" alt="image-20230711192005530"></p>
+</li>
+<li><p>写run文件配合8572<img src="/posts/4109/image-20230711192214065.png" alt="image-20230711192214065"></p>
+</li>
+<li><p>提权成功，结果返回5555号端口，此时的用户uid&#x3D;0，超级无敌权限，接下来随便删文件都行了。<img src="/posts/4109/image-20230711192300039.png" alt="image-20230711192300039"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>后台连接</strong></p>
+<p><strong>攻击端</strong>连接</p>
+<p><img src="/posts/4109/image-20230711104902455.png" alt="image-20230711104902455"></p>
+<p><img src="/posts/4109/image-20230711104921691.png" alt="image-20230711104921691"></p>
+<p><strong>反向连接。</strong>使用服务器去连接黑客自己的端口。正向连接是很容易查出来的。</p>
+<p><img src="/posts/4109/image-20230711103910765.png" alt="image-20230711103910765"><img src="/posts/4109/image-20230711105013155.png" alt="image-20230711105013155"><img src="/posts/4109/image-20230711105027887.png" alt="image-20230711105027887"></p>
+<h5 id="后门植入分析"><a href="#后门植入分析" class="headerlink" title="后门植入分析"></a>后门植入分析</h5><hr>
+<h6 id="后门检测"><a href="#后门检测" class="headerlink" title="后门检测"></a>后门检测</h6><p>使用后门检测</p>
+<p><img src="/posts/4109/image-20230711105112683.png" alt="image-20230711105112683"></p>
+<p>接着上传脚本提权，提高用户权力来删库跑路。<img src="/posts/4109/image-20230710162552949.png" alt="image-20230710162552949"></p>
+<p>提高到sudo ，<strong>id&#x3D;0的时候最大</strong>。</p>
+<p>github上有，上传到tmp目录，这个目录容易下的文件夹下面能操作的比较多。执行权限管理得比较松。</p>
+<p>udev漏洞</p>
+<h5 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h5><hr>
+<ul>
+<li><p>绝对的高危</p>
+</li>
+<li><p>SQL发生在对方的数据库之上，而且一定有web中间件，不是静态页面，才能搞SQL注入。<img src="/posts/4109/image-20230711143418788.png" alt="image-20230711143418788"></p>
+<ul>
+<li>web中间件以为加入的一些指令也是请求，发数据库服务器中去了。请求中，加入一些指令，没有文本化处理。<img src="/posts/4109/image-20230711143728149.png" alt="image-20230711143728149"></li>
+</ul>
+</li>
+<li><p>实践</p>
+<ul>
+<li><p>找SQL注入在哪里</p>
+<ul>
+<li>人工试</li>
+<li>使用工具SQLMAP这种工具（装好python环境就行了）扫描windows和linux命令之下有点不同，开始命令有些不同罢了。</li>
+</ul>
+</li>
+<li><p>寻找注入点，加了个and 1&#x3D;&#x3D;1没有报错，成功返回数据，此时属于SQL注入。<img src="/posts/4109/image-20230711144741498.png" alt="image-20230711144741498"></p>
+</li>
+<li><p>识别数据库类型（对应的SQL语句不同，SQL语句对应的包围符号一定要成对出现）<img src="/posts/4109/image-20230711145108983.png" alt="image-20230711145108983"></p>
+<ul>
+<li>经典的万能密码漏洞<img src="/posts/4109/image-20230711150012705.png" alt="image-20230711150012705"></li>
+</ul>
+</li>
+<li><p>猜数据库列长度。union 跟的东西一定要跟字段数（列数）匹配，若不报错就是那个字段。<img src="/posts/4109/image-20230711150148190.png" alt="image-20230711150148190"></p>
+<p>这一招非常之漂亮，前面select由于and 1&#x3D;2的原因什么都无法显示，而union将前后两张表的信息联合起来，填上1，2之后，相应的表就会天上对应的数字，且一定要和表中的列匹配才有得显示，此时就能同时知道表的列数以及每列的字段分别表示什么。1&#x3D;2初看不知道什么鸡巴意思，后来发现真尼玛牛逼。</p>
+<p><img src="/posts/4109/image-20230711152908506.png" alt="image-20230711152908506"></p>
+</li>
+<li><p>获取数据库版本信息<img src="/posts/4109/image-20230711150313125.png" alt="image-20230711150313125"></p>
+</li>
+<li><p>查看数据库用户<img src="/posts/4109/image-20230711150324798.png" alt="image-20230711150324798"></p>
+</li>
+<li><p>查看数据库名<img src="/posts/4109/image-20230711150335293.png" alt="image-20230711150335293"></p>
+</li>
+<li><p>查看数据库安装路径</p>
+</li>
+<li><p>查看网站数据库中表名一直查到具体的字段值<img src="/posts/4109/image-20230711154353230.png" alt="image-20230711154353230"></p>
+</li>
+<li><p>获取的密码若是密文，暴力破解（cmd5.com）。</p>
+</li>
+<li><p>读取文件<img src="/posts/4109/image-20230711160041549.png" alt="image-20230711160041549">passwd为用户名信息，shadow为密码。shadow文件权限不够，读不出来的捏。</p>
+</li>
+</ul>
+<h6 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h6><p> <img src="/posts/4109/image-20230711162539182.png" alt="image-20230711162539182"></p>
+</li>
+</ul>
+<h4 id="额外查的老师上课装逼不讲明白的名词解释"><a href="#额外查的老师上课装逼不讲明白的名词解释" class="headerlink" title="额外查的老师上课装逼不讲明白的名词解释"></a>额外查的老师上课装逼不讲明白的名词解释</h4><hr>
+<h5 id="SSO：单点登录系统"><a href="#SSO：单点登录系统" class="headerlink" title="SSO：单点登录系统"></a>SSO：单点登录系统</h5><p><img src="/posts/4109/image-20230711003957630.png" alt="image-20230711003957630"></p>
+<p><a href="https://zhuanlan.zhihu.com/p/66037342">什么是单点登录？</a></p>
+<h5 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h5><hr>
+<p>POC，proof of Concept，观点证明。漏洞报告中使用。一段说明或者一个攻击的样例。</p>
+<p>EXP。exploit，漏洞利用，对漏洞的利用说明，或者一个演示的漏洞攻击代码，让读者了解漏洞的机理以及利用的方法。</p>
+<p>VUL vulnerability。漏洞</p>
+<p>CVE common vulnerabilities exposure公共漏洞和暴露。广泛认同的信息安全漏洞会有一个公共的名称。在网址上搜CVE名称（相当于番号），就能找到。</p>
+<p>零日漏洞：初体验的漏洞发现。</p>
+<p><img src="/posts/4109/image-20230711194740750.png" alt="image-20230711194740750"></p>
+<p><a href="https://blog.csdn.net/heikeyouyou/article/details/130766071?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-5-130766071-blog-88048847.235%5Ev38%5Epc_relevant_sort&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-5-130766071-blog-88048847.235%5Ev38%5Epc_relevant_sort&utm_relevant_index=10">漏洞案例</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/585377081">nmap教程</a></p>
+<p>DMZ 是英文“Demilitarized Zone”的缩写，中文名称为“隔离区”。</p>
+<p><img src="/posts/4109/image-20230711195216391.png" alt="image-20230711195216391"></p>
+<p><a href="https://zhuanlan.zhihu.com/p/599801515">2分钟看懂DMZ区</a></p>
+]]></content>
+      <categories>
+        <category>实践</category>
+      </categories>
+      <tags>
+        <tag>网络工程实训</tag>
       </tags>
   </entry>
 </search>
